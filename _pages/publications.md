@@ -25,3 +25,9 @@ nav_order: 2
 <div class="publications">
 
 {% bibliography -f {{ site.scholar.talks }} %}
+
+<h2 class="post-title">data</h2>
+
+<div class="publications">
+
+{% bibliography -f {{ site.scholar.data }} %}
