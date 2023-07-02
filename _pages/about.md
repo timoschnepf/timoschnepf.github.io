@@ -7,7 +7,7 @@ subtitle:
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   address: >
    
 
@@ -17,8 +17,13 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hihihi... test test... Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hello! My name ist Timo and I work as a **research associate** at the Federal Institute for Vocational Education 
+and Training ([BIBB](https://www.bibb.de/)) in Bonn, Germany.
+I graduated with a Master of Science in Sociology and Social Research at the University Cologne.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I'm an applied social scientist interested in **quantitative data analysis**, causal inference, data visualisation and 
+**computational methods**. 
+I'm particulary interested in **occupational inequality** and how people perceive it.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+At BIBB, I'm leading the development of a new online data portal called the [Occupations and Skills Radar](https://www.bibb.de/de/170512.php).
+The BMBF-funded project aims to provide a unified database and research tool for occupations and skills. 

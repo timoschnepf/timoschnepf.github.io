@@ -104,7 +104,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Write me an Email
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -269,14 +269,16 @@ display_categories: ['blockquotes'] # these categories will be displayed on the 
 
 scholar:
 
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Schnepf]
+  first_name: [Timo]
 
   style: apa
   locale: en
 
   source: /_bibliography/
-  bibliography: papers.bib
+  peer: peer_reviewed.bib
+  others: others.bib
+  talks: talks.bib
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
