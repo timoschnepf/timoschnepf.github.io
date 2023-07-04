@@ -23,7 +23,7 @@ I graduated with a Master of Science in Sociology and Social Research at the Uni
 
 I'm an applied social scientist interested in **quantitative data analysis**, causal inference, data visualisation and 
 **computational methods**. 
-I'm particulary interested in **occupational inequality** and how people perceive it.
+I'm particularly interested in **occupational inequality** and how people perceive it.
 
 At BIBB, I'm currently leading the development of a new data portal called the [Occupations and Skills Radar](https://www.bibb.de/de/170512.php).
 The BMBF-funded project aims to provide an unified database and research tool for the user-friendly study of occupations and skills.

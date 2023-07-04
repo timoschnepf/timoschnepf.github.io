@@ -276,6 +276,9 @@ scholar:
   locale: en
 
   source: /_bibliography/
+  # for project pages bibkeys:
+  bibliography: bibliography.bib
+  # for publication categories:
   peer: peer_reviewed.bib
   others: others.bib
   talks: talks.bib

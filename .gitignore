@@ -1,4 +1,5 @@
 _site
+_projects.layout.md
 .bundle
 .sass-cache
 .jekyll-cache
@@ -8,4 +9,3 @@ _site
 .tweet-cache
 Gemfile.lock
 vendor
-
