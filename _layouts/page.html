@@ -19,7 +19,7 @@ layout: default
     </style>
     {%- endif %}
   </head>
-  
+
         <div class="post">
 
           <header class="post-header">
@@ -36,19 +36,10 @@ layout: default
 			<d-citation-list></d-citation-list>
 		  </d-appendix>
 
-		  <d-bibliography src="{{ '/assets/bibliography/bibliography' | relative_url }}"></d-bibliography>
-
-		  {%- if site.disqus_shortname and page.disqus_comments -%}
-			{% include disqus.html %}
-		  {%- endif %}
-		  {%- if site.giscus.repo and page.giscus_comments -%}
-			{% include giscus.html %}
-		  {%- endif -%}
-
-        </div>
+      <d-bibliography src="{{ page.bibliography | prepend: '/assets/bibliography/' }}"></d-bibliography>
 
 
-
-
+    </div>
+  
 </html>
     
