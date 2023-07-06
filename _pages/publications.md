@@ -14,11 +14,18 @@ nav_order: 2
 
 {% bibliography -f {{ site.scholar.peer }} %}
 
+
 <h2 class="post-title">others</h2>
 
 <div class="publications">
 
 {% bibliography -f {{ site.scholar.others }} %}
+
+<h2 class="post-title">data</h2>
+
+<div class="publications">
+
+{% bibliography -f {{ site.scholar.data }} %}
 
 <h2 class="post-title">talks</h2>
 
@@ -26,8 +33,8 @@ nav_order: 2
 
 {% bibliography -f {{ site.scholar.talks }} %}
 
-<h2 class="post-title">data</h2>
+<h2 class="post-title">poster sessions</h2>
 
 <div class="publications">
 
-{% bibliography -f {{ site.scholar.data }} %}
+{% bibliography -f {{ site.scholar.posters }} %}
