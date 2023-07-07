@@ -25,9 +25,9 @@ I considered this bias by applying a Heckman-two-stage regression.
 
 <br>
 
-<div class="row">
+<div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/coursework/peru_1.png" title="Population with postsecondary education" class="img-fluid rounded z-depth-2" zoomable=true %}
+        {% include figure.html path="assets/img/coursework/peru_1.png" title="Population with postsecondary education" class="img-fluid rounded z-depth-1" zoomable=false %}
     </div>
 </div>
 <div class="caption">
@@ -42,7 +42,7 @@ The more urban a district gets, the higher the share of inhabitants with PSE ran
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/coursework/peru_2.png" title="Mean hourly income by level" class="img-fluid rounded z-depth-2" zoomable=true %}
+        {% include figure.html path="assets/img/coursework/peru_2.png" title="Mean hourly income by level" class="img-fluid rounded z-depth-2" zoomable=false %}
     </div>
 </div>
 <div class="caption">
@@ -77,7 +77,7 @@ have the highest hourly mean income with 16.57 S/ (4.20 €).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/coursework/peru_3.png" title="Mean hourly income by field" class="img-fluid rounded z-depth-2" zoomable=true %}
+        {% include figure.html path="assets/img/coursework/peru_3.png" title="Mean hourly income by field" class="img-fluid rounded z-depth-2" zoomable=false %}
     </div>
 </div>
 <div class="caption">
@@ -115,7 +115,7 @@ between each other.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/coursework/refugees_1.png" title="negative_flight_experience" class="img-fluid rounded z-depth-2" zoomable=true %}
+        {% include figure.html path="assets/img/coursework/refugees_1.png" title="negative_flight_experience" class="img-fluid rounded z-depth-2" zoomable=false %}
     </div>
 </div>
 <div class="caption">
@@ -130,7 +130,7 @@ of all Syrians refugees experienced a shipwreck.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/coursework/refugees_2.png" title="negative_flight_experience" class="img-fluid rounded z-depth-2" zoomable=true %}
+        {% include figure.html path="assets/img/coursework/refugees_2.png" title="negative_flight_experience" class="img-fluid rounded z-depth-2" zoomable=false %}
     </div>
 </div>
 <div class="caption">
@@ -187,7 +187,7 @@ of web-based platform work consists of those types of task.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/coursework/platformwork_2.png" title="platformwork_map" class="img-fluid rounded z-depth-2" zoomable=true %}
+        {% include figure.html path="assets/img/coursework/platformwork_2.png" title="platformwork_map" class="img-fluid rounded z-depth-2" zoomable=false %}
     </div>
 </div>
 <div class="caption">
@@ -232,7 +232,7 @@ Belgium. Definitely, a strong showing of fragmentation and weakness" (ibid., p. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/coursework/income_inequality_1.png" title="income_inequality" class="img-fluid rounded z-depth-2" zoomable=true %}
+        {% include figure.html path="assets/img/coursework/income_inequality_1.png" title="income_inequality" class="img-fluid rounded z-depth-2" zoomable=false %}
     </div>
 </div>
 <div class="caption">
