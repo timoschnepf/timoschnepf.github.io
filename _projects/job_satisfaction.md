@@ -1,6 +1,6 @@
 ---
 layout: page
-title: <font size='5'> Arbeitszufriedenheit </font>
+title: Zufriedenheit
 description: Description text
 img: assets/img/unsplash_art6.jpg
 importance: 1
@@ -10,7 +10,7 @@ bibliography: projects.bib
 
 
 
-## Was erzählen uns Daten zur Arbeitszufriedenheit in Berufen?
+## Und, wie zufrieden bist du in deinem Job?
 
 <br>
 
@@ -19,7 +19,13 @@ Bla bla bla
 <br>
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/full_time_employment_by_decile.html' | relative_url }}" frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/map.html' | relative_url }}" 
+			scrolling='no' 
+			frameborder='0'
+			padding_bottom='56.25%'
+			height="400" 
+			width="100%">
+	</iframe>
 </div>
 
 <br>
@@ -32,7 +38,7 @@ to restrain wages.
 <br>
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/gute_arbeit1.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/linechart.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
 
 <br>

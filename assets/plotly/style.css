@@ -1,0 +1,11 @@
+#container {
+    width: 100%; /* Set the iframe width to 100% to match its container's width; 100% or for dev 800px */
+    height: auto; /* Allow the iframe to adjust its height based on content; auto or for dev 600px */
+    margin: 0 auto;
+}
+
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}

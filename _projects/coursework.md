@@ -3,7 +3,7 @@ layout: page
 title: Coursework
 description: Four selected research projects of my graduate coursework.
 img: assets/img/unsplash_art2.jpg
-importance: 1
+importance: 2
 category: work
 toc:
   sidebar: left
