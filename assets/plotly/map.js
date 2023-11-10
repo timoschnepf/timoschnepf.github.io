@@ -1,115 +1,87 @@
 (async () => {
+  const topology = await fetch(
+    'https://code.highcharts.com/mapdata/custom/european-union.topo.json'
+  ).then(response => response.json());
 
-    const topology = await fetch(
-        'https://code.highcharts.com/mapdata/custom/european-union.topo.json'
-    ).then(response => response.json());
+  const data = [
+    ['mt', 75],   // Malta
+    ['se', 69],   // Sweden
+    ['ch', 66],   // Switzerland
+    ['dk', 65],   // Denmark
+    ['lv', 58],   // Latvia
+    ['lt', 58],   // Lithuania
+    ['ee', 58],   // Estonia
+    ['at', 55],   // Austria
+    ['it', 53],   // Italy
+    ['no', 52],   // Norway
+    ['si', 51],   // Slovenia
+    ['be', 50],   // Belgium
+    ['cz', 49],   // Czechia
+    ['ie', 49],   // Ireland
+    ['es', 47],   // Spain
+    ['is', 46],   // Iceland
+    ['gb', 46],   // United Kingdom
+    ['hu', 46],   // Hungary
+    ['cy', 43],   // Cyprus
+    ['gr', 42],   // Greece
+    ['pl', 42],   // Poland
+    ['hr', 42],   // Croatia
+    ['fr', 38],   // France
+    ['sk', 35],   // Slovakia
+    ['fi', 33],   // Finland
+    ['de', 32],   // Germany
+    ['nl', 32],   // Netherlands
+    ['pt', 31],   // Portugal
+    ['lu', 30],   // Luxembourg
+    ['ro', 28],   // Romania
+    ['bg', 27],   // Bulgaria
+    ['tr', 17],   // Türkiye
+  ];
 
-    // Prepare demo data. The data is joined to map using value of 'hc-key'
-    // property by default. See API docs for 'joinBy' for more info on linking
-    // data and map.
-
-const data = [
-    ['be', 23.5],  // Belgium
-    ['bg', 18.2],  // Bulgaria
-    ['cz', 30.1],  // Czechia
-    ['dk', 39.6],  // Denmark
-    ['de', 25.0],  // Germany
-    ['ee', 33.3],  // Estonia
-    ['ie', 38.4],  // Ireland
-    ['gr', 12.1],  // Greece
-    ['es', 25.6],  // Spain
-    ['fr', 20.7],  // France
-    ['hr', 25.1],  // Croatia
-    ['it', 18.9],  // Italy
-    ['cy', 25.0],  // Cyprus
-    ['lv', 27.5],  // Latvia
-    ['lt', 26.0],  // Lithuania
-    ['lu', 22.7],  // Luxembourg
-    ['hu', 22.6],  // Hungary
-    ['mt', 28.4],  // Malta
-    ['nl', 20.8],  // Netherlands
-    ['at', 40.2],  // Austria
-    ['pl', 27.7],  // Poland
-    ['pt', 23.7],  // Portugal
-    ['ro', 21.6],  // Romania
-    ['si', 30.3],  // Slovenia
-    ['sk', 27.7],  // Slovakia
-    ['fi', 41.4],  // Finland
-    ['se', 35.1],  // Sweden
-    ['is', 43.1],  // Iceland
-    ['no', 41.8],  // Norway
-    ['ch', 34.2],  // Switzerland
-    ['gb', 29.0],  // United Kingdom
-    ['me', 24.7],  // Montenegro
-    ['mk', 19.4],  // North Macedonia
-    ['al', 4.3],   // Albania
-    ['rs', 14.5],  // Serbia
-    ['tr', 19.1],  // Türkiye
-    ['xk', 26.2]   // Kosovo
-];
-
-
-    // Create the chart
-    Highcharts.mapChart('container', {
-        chart: {
-            map: topology,
-            marginLeft: 0,   // Remove left margin
-            marginRight: 0,  // Remove right margin
-            //marginTop: 0,    // Remove top margin
-            marginBottom: 100, // Remove bottom margin
-            //width: 800,   // Set the width
-            //height: 600, // Set the height
+  // Create the chart
+  Highcharts.mapChart('container', {
+    chart: {
+      map: topology,
+      marginLeft: 0,
+      marginRight: 0,
+      marginBottom: 100,
+    },
+    title: {
+      text: '',
+    },
+    subtitle: {
+      text: '',
+    },
+    mapNavigation: {
+      enabled: false,
+      buttonOptions: {
+        verticalAlign: 'bottom',
+      },
+    },
+    colorAxis: {
+      minColor: '#F8FEF8',
+      maxColor: '#8FED8F', 
+      min: 30,
+      max: 50,
+    },
+    exporting: {
+      enabled: true,
+    },
+    credits: {
+      enabled: false,
+    },
+    series: [{
+      data: data,
+      name: 'Anteil der "sehr zufriedenen" Befragten',
+      states: {
+        hover: {
+          color: '#BADA55',
         },
-
-        title: {
-            text: ''
-        },
-
-        subtitle: {
-            text: 'Percentage of high job satisfaction'
-        },
-
-        mapNavigation: {
-            enabled: false,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
-
-        colorAxis: {
-            min: 20,
-            max: 35, // Maximum value for the color scale
-            //type: 'logarithmic'
-        },
-/*
-        tooltip: {
-            formatter: function () {
-                return '<b>Country:</b> ' + this.point.name + '<br>' +
-                    '<b>Value:</b> ' + this.point.value;
-            },
-*/
-
-        exporting: {
-            enabled: false, // Disable the export button
-        },
-
-        credits: {
-            enabled: false, // Hide the "Highcharts.js" credit text
-        },
-
-        series: [{
-            data: data,
-            name: 'Percentage with high job Satisfaction',
-            states: {
-                hover: {
-                    color: '#BADA55'
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.value}'
-            }
-        }]
-    });
-
+      },
+      dataLabels: {
+        enabled: true,
+        format: '{point.value}%',
+      },
+    }],
+  });
 })();
