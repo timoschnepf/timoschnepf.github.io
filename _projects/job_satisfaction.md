@@ -138,7 +138,7 @@ leicht an von 7 auf 9 Prozent</strong><d-footnote>Dieser Trend wird mit dem DGB 
   <iframe src="{{ '/assets/plotly/3d_scatter_zufrieden_kldb2010_5.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
 <div class="caption">
-  <a style="font-size: 16px;" href="http://127.0.0.1:4000/3d_scatter/">Vollbild hier klicken</a> <br>
+  <a style="font-size: 16px;" href="http://www.timoschnepf.de/3d_scatter/">Vollbild hier klicken</a> <br>
  Quelle:  <a href="https://www.bibb.de/de/1386.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
 </div>
 
