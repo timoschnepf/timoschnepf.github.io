@@ -132,6 +132,8 @@ leicht an von 7 auf 9 Prozent</strong><d-footnote>Dieser Trend wird mit dem DGB 
 
 <br>
 
+<!---
+
 ### Berufe im Blick
 
 <div class="l-page">
@@ -172,3 +174,4 @@ damit in etwa so hoch wie die von Ärztinnen, Psychotherapeutinnen und Pilotinne
 
 </p>
 
+-->
