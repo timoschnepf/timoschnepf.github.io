@@ -1,7 +1,7 @@
 ---
 layout: page
 title: jobzufriedenheit
-description: Wie zufrieden sind Erwerbstätige mit ihrer Arbeit?
+description: Alles wird gut, oder doch nicht?
 img: assets/img/unsplash_art6.jpg
 importance: 1
 category: work
@@ -17,25 +17,26 @@ toc:
 </style>
 
 
-## In welchen Berufen sind die Menschen am zufriedensten?
+## Wie zufrieden sind die Menschen in ihren Berufen?
 
+<br>
 
 <p class="my-text"> 
 <strong>
 
-Wie zufrieden sind die Erwerbstätigen mit ihrer Arbeit? 
 Wie stehen die Deutschen im europäischen Vergleich da? 
 Wie entwickelt sich die Arbeitszufriedenheit im Zeitverlauf? 
 Und in welchen Berufen arbeiten die zufriedensten Menschen? 
-Dieser Blog gibt Antworten, indem er Statistiken aus verschiedenen Quellen zusammenträgt. 
-Außerdem kann jeder in interaktiven Grafiken nachschauen, wie es um die Zufriedenheit im eigenen Job bestellt ist.
+Dieser Blog gibt Antworten, indem er Statistiken aus verschiedenen Forschungsergebnissen zusammenträgt und miteinander vergleicht. 
 </strong>
 
 </p>
 
 <br>
 
-### Deutschland im europäischen Vergleich
+### Deutsche im EU Vergleich unzufriedener
+
+<br>
 
 <div class="l-page">
   <iframe src="{{ '/assets/plotly/map.html' | relative_url }}" 
@@ -62,10 +63,9 @@ deutscher Erwerbstätiger kommt. Spannend, denn die Frage ist die gleiche, nur d
 im Gegensatz zu 1 bis 4 bei LFS und ETB. Legt man den <a href="https://www.dgb.de/themen/++co++ebe87ffe-edc5-11e8-a379-52540088cada">Gute Arbeit Index</a> zugrunde, haben sogar nur 
 13 Prozent der Beschäftigten in Deutschland "gute Arbeit" (S. 15). Je nachdem, wie man "sehr zufrieden" 
 oder "gute Arbeit" definiert, kommt man also zu sehr unterschiedlichen Ergebnissen. <strong>Vergleichszahlen 
-können helfen, der Realität ein Stück näher zu kommen.</strong></i></d-footnote>. Im europäischen Vergleich ist dies ein 
+können helfen, der Realität ein Stück näher zu kommen.</strong></i></d-footnote>. Im EU Vergleich ist dies ein 
 unterdurchschnittlicher Wert. 
-Im Durchschnitt aller 28 Teilnehmerländer liegt der Anteil der "sehr Zufriedenen" 
-mit 42 Prozent um 10 Prozentpunkte höher als in Deutschland.
+Lag doch der Schnitt aller 28 Teilnehmerländer mit 42 Prozent um 10 Prozentpunkte höher als für Deutschland.
 
 </p>
 
@@ -92,57 +92,136 @@ gefolgt von Bulgarien (27 Prozent) und Rumänien (28 Prozent).
 <br>
 
 <p class="my-text">
-Werfen wir einen detaillierteren Blick auf die 34 Millionen <a href="https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Erwerbstaetigkeit/Tabellen/atyp-kernerwerb-erwerbsform-zr.html">sog. "Kernerwerbsätigen"</a> 
+Werfen wir einen detaillierteren Blick auf die 34 Millionen <a href="https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Erwerbstaetigkeit/Tabellen/atyp-kernerwerb-erwerbsform-zr.html">sog. "Kernerwerbstätigen"</a> 
 in Deuschland. Der größte 
-Teil ist "sehr zufrieden" (32 Prozent) oder 
-zumindest "zufrieden" (59 Prozent). 7,5 Prozent sind "weniger" und 1,5 Prozent sind
+Teil gab 2018 an, "sehr zufrieden" (32 Prozent) oder 
+zumindest "zufrieden" (59 Prozent) zu sein. 7,5 Prozent waren "weniger" und 1,5 Prozent
 "nicht zufrieden" mit ihrer Arbeitssituation.
 </p>
 
 <br>
 
-### Die Entwicklung der letzten 10 Jahre
+### Die Entwicklung im Zeitverlauf ist positiv
 
 
 <br>
 
+
+{% tabs log %}
+
+{% tab log DGB Index %}
+
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/linechart.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/dgb_zeitverlauf.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
+<div class="caption">
+ Quelle: <a href="https://index-gute-arbeit.dgb.de/veroeffentlichungen/copy_of_jahresreports/++co++b20b2d92-507f-11ed-b251-001a4a160123" target="_blank">DGB Index Gute Arbeit</a>, eigene Darstellung.
+</div>
+
+<p class="my-text">
+Die Grafiken oben zeigen die Entwicklung der Gesamtzufriedenheit im Zeitverlauf.
+Du kannst mithilfe der Tabs selbst entscheiden, welche Datenquelle du betrachten möchtest.
+
+Der Gute Arbeit Index<d-footnote>Der Index wird jeweils aus mehreren Fragen gebildet. Vorteil ist eine vielleicht 
+genauere Messung von nicht greifbaren Dingen wie "Beschäftigungssicherheit". Dadurch geht aber etwas die
+einfache Interpretierbarkeit der Zahlen verloren.</d-footnote> zeigt für neun Merkmale von Berufen die Entwicklung zwischen 2012 und 2022. 
+Insgesamt zeigt sich sowohl im Gesamtindex als für viele andere Dimensionen der Zufriedenheit eine durchgängig <strong>positive Entwicklung 
+in den letzten 10 Jahren</strong>. 
+Befragte gaben seltener an, sich "Sorgen um die berufliche Zukunft" oder den "Arbeitsplatzverlust" zu machen. 
+Damit wuchs der Index für Beschäftigungssicherheit von 69 auf 79 Punkte. <strong>Die Angst vor dem Verlust des Arbeitsplatzes nahm also
+deutlich ab</strong>.
+Sie gaben häufiger an, dass das Einkommen in "hohem Maße" angemessen sei und zum "Leben reiche". 
+Der Einkommensindex wuchs dadurch um 7 Punkte von 46 auf 53.
+
+</p>
+
+{% endtab %}
+
+{% tab log ETB  %}
+
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/etb_zeitverlauf.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+</div>
+<div class="caption">
+    Quelle:  <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
+</div>
+
+<p class="my-text">
+
+Die positive Entwicklung des Index Gute Arbeit wird von der Erbwerbstätigenbefragung bestätigt. 
+Zwischen 2012 und 2018 stieg der Anteil der "alles in allem sehr zufriedenen" 
+Erwerbstätigen um 4 Prozentpunkte von 28 auf 32 Prozent. 
+Wie beim DGB Index zeigt sich die <b>auffälligste Veränderung beim Thema Beschäftigungssicherheit</b>.
+Sahen 2012 noch 46 Prozent "überhaupt keine Gefahr in nächster Zeit vom Betrieb entlassen" zu werden,
+so lag der Anteil 2018 bereits bei 56 Prozent. Rechnet man diese Anteile auf alle Kernerwerbstätigen hoch, so 
+handelt es sich um eine Zunahme von 15,6 Millionen auf etwa 19 Millionen Menschen.
+Ebenfalls stärkere Entwicklungen zeigen sich bei der Zufriedenheit mit dem Einkommen. Hier
+nahm der Anteil der "sehr Zufriedenen" um 5 Prozentpunkte von 13 auf 18 Prozent zu. 
+<b>Die Zufriedenheit mit den Arbeitszeiten
+hat sich ebenfalls um 7 Prozentpunkte deutlich verbessert </b>. 
+Die geringsten Veränderungen gab es beim der Zufriedenheit mit dem Betriebsklima (+-33 Prozent) und dem/der Vorgesetzten 
+(+- 32 Prozent).
+
+</p>
+
+{% endtab %}
+
+
+{% endtabs %}
+
+<br>
+
+### Nimmt auch der Anteil der Unzufriedenen zu?
 
 <br>
 
 <p class="my-text">
-Die Grafik oben zeigt für fünf Merkmale von Berufen die Entwicklung zwischen 2012 und 2022. 
-Insgesamt zeigt sich sowohl im Gesamtindex (Gelb) als für diverse Einzelmerkmale durchgängig eine <strong>positive Entwicklung 
-für die letzten 10 Jahre</strong>. Lohn und Beschäftigsungssicherheit zeigen die positivsten Entwicklugnen.
-So gaben Befragte im Zeitverlauf immer bessere Auskunft über die drei Fragen, ob das Einkommen angemessen
-sei, es zum Leben reiche sowie ob die Rente später einmal ausreichend sei. Der Index wuchs um 7 Punkte von 46 auf 53.
-Am stärksten wuchs der Index für Beschäftigungssicherheit von 69 auf 79 Punkte. <strong>Die Angst vor dem Verlust des Arbeitsplatzes nahm also
-deutlich ab</strong>.
 
-<br><br>  
-Die positive Entwicklung bestätigt die ETB. Zwischen 2012 und 2018 stieg der Anteil der sehr zufriedenen 
-Erwerbstätigen um 5 Prozentpunkte von 27 auf die bereits oben genannten 32 Prozent. Findet sich eine
-Polarisierung der Antworten? Das heißt, sind gleichzeitig nun mehr Menschen zufriedener und gleichzeitig
-unzufriedener mit ihrer Arbeitssituation? <strong>Auch der Anteil der "unzufriedenen" stieg zwischen 2012 und 2018 
-leicht an von 7 auf 9 Prozent</strong><d-footnote>Dieser Trend wird mit dem DGB Index nicht bestätigt.</d-footnote>.
+Die Daten erlauben eine Antwort auf die Frage, ob es neben mehr "sehr Zufriedenen" auch gleichzeit mehr "sehr Unzufriedene" Erwerbstätige 
+gibt. Also ob der deutsche Arbeitsmarkt immer mehr "Gewinner" und "Verlierer" erzeugt. 
+Verschwindet also der Anteil der "Mittel-Zufriedenen"? Laut ETB stieg der Anteil der "Unzufriedenen" tatsächlich zwischen 2012 und 2018 
+leicht an von 7 auf 9 Prozent. In den meisten anderen Zufriedenheits-Merkmalen zeigt sich nahezu keine Veränderung des Anteils
+der "weniger" und "nicht Zufriedenen". Die stärksten Zunahmen finden sich bei der Unzufriedenheit mit dem 
+Betriebsklima (von 13 auf 15 Prozent) und dem/der Vorgesetzten (von 15 auf 17 Prozent). Das heißt, <strong> im Trend 
+hat der Anteil der "Mittel-Zufriedenen" abgenommen, das liegt aber vor allem daran, das nun deutlich mehr
+Erwerbstätige "sehr Zufrieden" sind </strong>.
+
+<br>
+
+Der DGB Index zeichnet gar ein deutlich positiveres Gesamtbild. Hier verharrte der Anteil "schlechter Arbeit" nicht
+etwa auf dem gleichen Niveau. Sie sank deutlich von 2012 (23 Prozent) bis 2018 (19 Prozent)
+und sogar noch weiter bis 2022 (15 Prozent).
 
 </p>
 
 <br>
 
-<!---
+<!----
 
-### Berufe im Blick
+### Welche Berufe haben die zufriedensten Erwerbstätigen?
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/3d_scatter_zufrieden_kldb2010_5.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/3d_scatter_zufrieden_kldb2010_3_5.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
 <div class="caption">
   <a style="font-size: 16px;" href="http://www.timoschnepf.de/3d_scatter/">Vollbild hier klicken</a> <br>
  Quelle:  <a href="https://www.bibb.de/de/1386.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
 </div>
+{% details Was zeigt die Grafik? %}
+<div style="background-color: rgb(240,235,255);">
+
+
+
+ <ul>
+  <li>Jede Kugel steht für eine Berufsgruppe (KldB2010 3-Steller und Anforderungsniveau)</li>
+  <li>Die Größe der Kugeln deutet an, wie viele Leute befragt wurden. Das ist auch ein Hinweis auf die Größe der Berufsgruppe in der Bevölkerung.</li>
+  <li>Die Farbe deutet den Anteil der "sehr Zufriedenen" an. Umso gelber, umso zufriedener.</li>
+  <li>Umso weiter rechts im Raum, umso zufriedener die Befragten mit ihrem Einkommen.</li>
+  <li>Umso weiter links im Raum, umso zufriedener die Befragten mit ihren Arbeitszeiten.</li>
+</ul> 
+</div>
+{% enddetails %}
+
 
 {% details Was kann ich mit der Grafik machen? %}
 <div style="background-color: rgb(240,235,255);">
@@ -174,4 +253,8 @@ damit in etwa so hoch wie die von Ärztinnen, Psychotherapeutinnen und Pilotinne
 
 </p>
 
--->
+
+<br><br>
+
+
+---->

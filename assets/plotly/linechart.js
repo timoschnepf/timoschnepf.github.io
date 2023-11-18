@@ -13,13 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 fontWeight: 'bold', // Title font weight
             }
         },
-        subtitle: {
-            text: 'Quelle: <a href="https://index-gute-arbeit.dgb.de/veroeffentlichungen/copy_of_jahresreports/++co++b20b2d92-507f-11ed-b251-001a4a160123" target="_blank">DGB Gute Arbeit Index</a>',
-            style: {
-                color: '#333', // Subtitle text color
-                fontSize: '12px', // Subtitle font size
-            },
-        },
         legend: {
             itemStyle: {
                 color: '#666', // Legend item text color
