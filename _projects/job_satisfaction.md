@@ -24,8 +24,16 @@ toc:
 <p class="my-text"> 
 <strong>
 
+Etwa die Hälfte aller Deutschen nimmt in der ein oder
+anderen Form am Erwerbsleben teil. Arbeit gehört zum
+Leben dazu. Da stellt sich unmittelbar die Frage nach deren 
+Qualität. Und wer könnte das besser beantworten als die
+Erwerbstätigen selbst?
+Zufriedenheit im Job ist wichtig fürs das körperliche und
+seelische Wohlbefinden. 
 Wie stehen die Deutschen im europäischen Vergleich da? 
-Wie entwickelt sich die Arbeitszufriedenheit im Zeitverlauf? 
+Wie entwickelt sich verschiedene Merkmale der Arbeitszufriedenheit im Zeitverlauf? 
+Sieht man eine zunehmende Spaltung der Erwerbstätigen in "Zufriedene" und "Unzufriedene"?
 Und in welchen Berufen arbeiten die zufriedensten Menschen? 
 Dieser Blog gibt Antworten, indem er Statistiken aus verschiedenen Forschungsergebnissen zusammenträgt und miteinander vergleicht. 
 </strong>
@@ -37,6 +45,10 @@ Dieser Blog gibt Antworten, indem er Statistiken aus verschiedenen Forschungserg
 ### Deutsche im EU Vergleich unzufriedener
 
 <br>
+
+{% tabs map %}
+
+{% tab map Zufrieden %}
 
 <div class="l-page">
   <iframe src="{{ '/assets/plotly/map.html' | relative_url }}" 
@@ -51,9 +63,30 @@ Dieser Blog gibt Antworten, indem er Statistiken aus verschiedenen Forschungserg
     Quelle:  <a href="https://ec.europa.eu/eurostat/databrowser/view/LFSO_17JSED__custom_8324295/default/table"> Labour Force Survey 2017 </a>, eigene Darstellung.
 </div>
 
+{% endtab %}
+
+{% tab map Unzufrieden%}
+
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/map_unzufrieden.html' | relative_url }}" 
+			scrolling='no' 
+			frameborder='0'
+			padding_bottom='56.25%'
+			height="400" 
+			width="100%">
+	</iframe>
+</div>
+<div class="caption">
+    Quelle:  <a href="https://ec.europa.eu/eurostat/databrowser/view/LFSO_17JSED__custom_8324295/default/table"> Labour Force Survey 2017 </a>, eigene Darstellung.
+</div>
+
+{% endtab %}
+
+{% endtabs %}
+
 <p class="my-text">
-<strong>32 Prozent</strong> der Erwerbstätigen in Deutschland gaben sowohl im <a href="https://ec.europa.eu/eurostat/databrowser/view/LFSO_17JSED__custom_8324295/default/table"> Labour Force Survey 2017</a>
-als auch in der <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA-Erwerbstätigenbefragung 2017/2018</a> an, mit ihrer Arbeit "sehr zufrieden" 
+<strong>Einer von drei</strong> Erwerbstätigen in Deutschland gab sowohl im <a href="https://ec.europa.eu/eurostat/databrowser/view/LFSO_17JSED__custom_8324295/default/table"> Labour Force Survey 2017</a>
+als auch in der <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA-Erwerbstätigenbefragung 2017/2018</a> an, mit der Arbeit <strong>"sehr zufrieden"</strong> 
 zu sein<d-footnote><i>Die sehr ähnliche Fragestellung erlaubt einen Vergleich der beiden Erhebungen. 
 Ein leichter Unterschied ist allerdings zu erwarten, da die ETB im Gegensatz zur LFS 
 nur Erwerbstätige mit mehr als 10 Wochenstunden befragt. Bemerkenswert ist auch, dass 
@@ -97,19 +130,64 @@ in Deuschland. Der größte
 Teil gab 2018 an, "sehr zufrieden" (32 Prozent) oder 
 zumindest "zufrieden" (59 Prozent) zu sein. 7,5 Prozent waren "weniger" und 1,5 Prozent
 "nicht zufrieden" mit ihrer Arbeitssituation.
+
+<br><br>
+
+Die unterschiedlichen Formen von Zufriedenheit im Job lassen sich grob aufteilen.
+Die untere Grafik mit den ETB Daten zeigt, dass die Erwerbstätigen mit dem Einkommen, den körperlichen Arbeitsbedingungen 
+und den Weiterbildungsmöglichkeiten am wenigsten zufrieden sind (ein Fünftel).
+Hingegen ist etwa jede/r Dritte Erwerbstätige mit Art und Inhalt der Tätigkeit,
+dem Betriebsklima und der/dem Vorgesetzten sehr zufrieden. Etwa 55 Prozent sehen keinerlei Gefahr, in 
+nächster Zeit vom Betrieb ungewollt gekündigt zu werden.
+
 </p>
 
 <br>
 
-### Die Entwicklung im Zeitverlauf ist positiv
+### Die Entwicklung im Zeitverlauf ist positiv, aber nicht für alle
 
 
 <br>
 
 
-{% tabs log %}
+{% tabs zeitverlauf %}
 
-{% tab log DGB Index %}
+{% tab zeitverlauf ETB %}
+
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/etb_zeitverlauf.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+</div>
+<div class="caption">
+    Quelle:  <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
+</div>
+
+<br>
+
+<p class="my-text">
+Die Balkendiagramme oben zeigen die Entwicklung der Gesamtzufriedenheit im Zeitverlauf.
+Du kannst mithilfe der Tabs selbst entscheiden, ob du dir den Anteil "sehr Zufriedener" der ETB oder 
+den DGB Gute Arbeit Index <d-footnote>Der Index 
+wird jeweils aus mehreren Fragen gebildet. Vorteil ist eine vielleicht 
+genauere Messung von nicht greifbaren Dingen wie "Beschäftigungssicherheit". Dies geht aber etwas
+auf Kosten der Intrepretierbarkeit der Zahlen.</d-footnote> anschauen möchtest.
+
+In der Zeit von 2012 bis 2018 stieg der Anteil der Erwerbstätigen, die insgesamt sehr zufrieden waren, 
+um 5 Prozentpunkte von 28 auf 32 Prozent an. Ähnlich wie beim DGB-Index zeigt sich die <b>auffälligste 
+Veränderung im Bereich der Beschäftigungssicherheit</b>. Im Jahr 2012 sahen noch 46 Prozent keinerlei 
+Gefahr, in naher Zukunft ihren Job zu verlieren, während dieser Anteil im Jahr 2018 bereits bei 55 Prozent lag. 
+Wenn man diese Zahlen auf alle Kernerwerbstätigen hochrechnet, bedeutet das eine Zunahme von 15,6 Millionen auf 
+etwa 19 Millionen Menschen. Die Zufriedenheit mit dem Einkommen zeigte ebenfalls eine deutliche Steigerung. 
+Der Anteil der sehr zufriedenen Personen stieg um 5 Prozentpunkte von 13 auf 18 Prozent an. <b>Auch die Zufriedenheit 
+mit den Arbeitszeiten hat sich um beachtliche 7 Prozentpunkte verbessert</b>.
+
+</p>
+
+<br>
+
+{% endtab %}
+
+{% tab zeitverlauf DGB Index  %}
+
 
 <div class="l-page">
   <iframe src="{{ '/assets/plotly/dgb_zeitverlauf.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
@@ -119,12 +197,8 @@ zumindest "zufrieden" (59 Prozent) zu sein. 7,5 Prozent waren "weniger" und 1,5 
 </div>
 
 <p class="my-text">
-Die Grafiken oben zeigen die Entwicklung der Gesamtzufriedenheit im Zeitverlauf.
-Du kannst mithilfe der Tabs selbst entscheiden, welche Datenquelle du betrachten möchtest.
 
-Der Gute Arbeit Index<d-footnote>Der Index wird jeweils aus mehreren Fragen gebildet. Vorteil ist eine vielleicht 
-genauere Messung von nicht greifbaren Dingen wie "Beschäftigungssicherheit". Dadurch geht aber etwas die
-einfache Interpretierbarkeit der Zahlen verloren.</d-footnote> zeigt für neun Merkmale von Berufen die Entwicklung zwischen 2012 und 2022. 
+Der Gute Arbeit Index bestätigt die positive Entwicklung der ETB Anteilswerte.
 Insgesamt zeigt sich sowohl im Gesamtindex als für viele andere Dimensionen der Zufriedenheit eine durchgängig <strong>positive Entwicklung 
 in den letzten 10 Jahren</strong>. 
 Befragte gaben seltener an, sich "Sorgen um die berufliche Zukunft" oder den "Arbeitsplatzverlust" zu machen. 
@@ -133,68 +207,82 @@ deutlich ab</strong>.
 Sie gaben häufiger an, dass das Einkommen in "hohem Maße" angemessen sei und zum "Leben reiche". 
 Der Einkommensindex wuchs dadurch um 7 Punkte von 46 auf 53.
 
-</p>
-
-{% endtab %}
-
-{% tab log ETB  %}
-
-<div class="l-page">
-  <iframe src="{{ '/assets/plotly/etb_zeitverlauf.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
-</div>
-<div class="caption">
-    Quelle:  <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
-</div>
-
-<p class="my-text">
-
-Die positive Entwicklung des Index Gute Arbeit wird von der Erbwerbstätigenbefragung bestätigt. 
-Zwischen 2012 und 2018 stieg der Anteil der "alles in allem sehr zufriedenen" 
-Erwerbstätigen um 4 Prozentpunkte von 28 auf 32 Prozent. 
-Wie beim DGB Index zeigt sich die <b>auffälligste Veränderung beim Thema Beschäftigungssicherheit</b>.
-Sahen 2012 noch 46 Prozent "überhaupt keine Gefahr in nächster Zeit vom Betrieb entlassen" zu werden,
-so lag der Anteil 2018 bereits bei 56 Prozent. Rechnet man diese Anteile auf alle Kernerwerbstätigen hoch, so 
-handelt es sich um eine Zunahme von 15,6 Millionen auf etwa 19 Millionen Menschen.
-Ebenfalls stärkere Entwicklungen zeigen sich bei der Zufriedenheit mit dem Einkommen. Hier
-nahm der Anteil der "sehr Zufriedenen" um 5 Prozentpunkte von 13 auf 18 Prozent zu. 
-<b>Die Zufriedenheit mit den Arbeitszeiten
-hat sich ebenfalls um 7 Prozentpunkte deutlich verbessert </b>. 
-Die geringsten Veränderungen gab es beim der Zufriedenheit mit dem Betriebsklima (+-33 Prozent) und dem/der Vorgesetzten 
-(+- 32 Prozent).
 
 </p>
+
 
 {% endtab %}
 
 
 {% endtabs %}
 
-<br>
 
-### Nimmt auch der Anteil der Unzufriedenen zu?
 
-<br>
+{% tabs linechart %}
+
+{% tab linechart ETB %}
+
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/linechart_etb.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+</div>
+<div class="caption">
+Quelle:  <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
+</div>
+
+{% endtab %}
+
+{% tab linechart DGB Index  %}
+
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/linechart_dgb.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+</div>
+<div class="caption">
+ Quelle: <a href="https://index-gute-arbeit.dgb.de/veroeffentlichungen/copy_of_jahresreports/++co++b20b2d92-507f-11ed-b251-001a4a160123" target="_blank">DGB Index Gute Arbeit</a>, eigene Darstellung.
+</div>
+
+{% endtab %}
+
+
+{% endtabs %}
+
+
+
 
 <p class="my-text">
 
-Die Daten erlauben eine Antwort auf die Frage, ob es neben mehr "sehr Zufriedenen" auch gleichzeit mehr "sehr Unzufriedene" Erwerbstätige 
-gibt. Also ob der deutsche Arbeitsmarkt immer mehr "Gewinner" und "Verlierer" erzeugt. 
-Verschwindet also der Anteil der "Mittel-Zufriedenen"? Laut ETB stieg der Anteil der "Unzufriedenen" tatsächlich zwischen 2012 und 2018 
-leicht an von 7 auf 9 Prozent. In den meisten anderen Zufriedenheits-Merkmalen zeigt sich nahezu keine Veränderung des Anteils
-der "weniger" und "nicht Zufriedenen". Die stärksten Zunahmen finden sich bei der Unzufriedenheit mit dem 
-Betriebsklima (von 13 auf 15 Prozent) und dem/der Vorgesetzten (von 15 auf 17 Prozent). Das heißt, <strong> im Trend 
-hat der Anteil der "Mittel-Zufriedenen" abgenommen, das liegt aber vor allem daran, das nun deutlich mehr
-Erwerbstätige "sehr Zufrieden" sind </strong>.
+Die vorliegenden Daten liefern eine Antwort auf die Frage, ob es neben einer Zunahme an 
+"sehr zufriedenen" Erwerbstätigen auch eine steigende Anzahl an "sehr Unzufriedenen" gibt. Entwickelt 
+sich der deutsche Arbeitsmarkt also so, dass es immer mehr 
+"Gewinner" und "Verlierer" gibt? Oder <strong>führt die gestiegene Anzahl an "sehr zufriedenen" 
+Erwerbstätigen zu einer positiveren Einschätzung der Arbeitssituation aller Erwerbstätigen?</strong>
 
-<br>
+Gemäß den Ergebnissen des ETB stieg der Anteil der "Unzufriedenen" <d-footnote>Definiert 
+als der Anteil der Befragten die
+angaben, "weniger" und "nicht zufrieden" zu sein.</d-footnote> tatsächlich leicht an, und 
+zwar von 7 auf 9 Prozent (vgl. gelbe Männchen oben). In den meisten anderen Aspekten 
+der Zufriedenheit zeigt sich jedoch kaum eine Veränderung. Die stärksten Zunahmen sind bei der Unzufriedenheit mit dem Betriebsklima 
+(13 auf 15 Prozent) und mit den Vorgesetzten (15 auf 17 Prozent) zu verzeichnen. 
+<strong>Das bedeutet, dass überwiegend die "Mittel-Zufriedenen" profitiert haben, während der Anteil der 
+"Unzufriedenen" bedauerlicherweise nicht gesunken, sondern tendenziell sogar leicht gestiegen ist.</strong>
 
-Der DGB Index zeichnet gar ein deutlich positiveres Gesamtbild. Hier verharrte der Anteil "schlechter Arbeit" nicht
-etwa auf dem gleichen Niveau. Sie sank deutlich von 2012 (23 Prozent) bis 2018 (19 Prozent)
-und sogar noch weiter bis 2022 (15 Prozent).
+<br><br>
+
+Im Vergleich zur ETB zeichnet der DGB-Index interessanterweise ein insgesamt positiveres Bild. Hier ist der Anteil an 
+"schlechter Arbeit" keineswegs auf dem gleichen Niveau geblieben, sondern deutlich gefallen von 23 Prozent (2012) auf 
+19 Prozent (2018). In der aktuellsten Messung 2022 lag er gar nur noch bei 15 Prozent.
+
+<br><br>
+
+Was bedeutet das, dass der differenzierte Index einen positiven Trend zeigt, während die direkte, einfachere, subjektive Frage
+keine Veränderung bei den "Unzufriedenen" feststellt?
 
 </p>
 
 <br>
+
+
+
+
 
 <!----
 

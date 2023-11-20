@@ -7,7 +7,7 @@ Highcharts.chart('container', {
         align: 'left'
     },
     xAxis: {
-        categories: ['Insgesamt', 'Sicherheit (ungew.)', 'Einkommen', 'Arbeitszeit', 'Tätigkeit', 'Körperlichkeit', 
+        categories: ['Insgesamt', 'Sicherheit', 'Einkommen', 'Arbeitszeit', 'Tätigkeit', 'Körperlichkeit', 
         'Betriebsklima', 'Vorgesezte/r', 'Weiterbildung'],
         title: {
             text: null
@@ -37,6 +37,7 @@ Highcharts.chart('container', {
 			y: point.plotY + labelHeight + 0
 			};
 		},
+		hideDelay: 1,
     },
     plotOptions: {
         bar: {
@@ -66,9 +67,9 @@ Highcharts.chart('container', {
     },
     series: [{
         name: 'Jahr 2012',
-        data: [27, 46, 13, 17, 29, 18, 33, 31, 18]
+        data: [28, 46, 13, 17, 29, 18, 33, 31, 18]
     }, {
         name: 'Jahr 2018',
-        data: [32, 56, 18, 24, 32, 22, 34, 33, 22]
+        data: [32, 55, 18, 24, 32, 22, 34, 33, 22]
     }]
 });

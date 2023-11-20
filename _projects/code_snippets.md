@@ -1,30 +1,23 @@
 ### First tabs
 
-{% tabs log %}
+(https://github.com/Ovski4/jekyll-tabs)[see here for tutorial]
 
-{% tab log map %}
-<div class="l-page">
-  <iframe src="{{ '/assets/plotly/map.html' | relative_url }}" 
-			scrolling='no' 
-			frameborder='0'
-			padding_bottom='56.25%'
-			height="400" 
-			width="100%">
-	</iframe>
-</div>
-<div class="caption">
-    Quelle:  <a href="https://ec.europa.eu/eurostat/databrowser/view/LFSO_17JSED__custom_8324295/default/table"> Labour Force Survey 2017 </a>
-</div>
+{% tabs tabsfortext %}
+
+{% tab Text1 %}
+
+<p> text1 </p>
+
 {% endtab %}
 
-{% tab log bar-chart %}
-<div class="l-page">
-  <iframe src="{{ '/assets/plotly/linechart.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
-</div>
-{% endtab %}
+{% tab Text2 %}
 
+<p> text2 </p>
+
+{% endtab %}
 
 {% endtabs %}
+
 
 ## Infofeld aufklappbar
 

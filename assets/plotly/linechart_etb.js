@@ -21,18 +21,25 @@ document.addEventListener("DOMContentLoaded", function() {
         tooltip: {
             // Updated tooltip configuration
             formatter: function () {
-                return '<span style="font-size: 10px;">Kategorie: <b>' + this.series.name + '</span></b><br>' + 'Im Jahr <b>' + this.x + '</b> lag der Anteil der <br> Erwerbstätigen bei <b>' + this.y + ' </b>Prozent.<br>';
+                return 'Im Jahr <b>' + this.x + '</b> lag der Anteil der <br><b>' + this.series.name + 'en</b> Erwerbstätigen bei <b>' + this.y + ' </b>Prozent.<br>';
             },
+/*
             positioner: function (labelWidth, labelHeight, point) {
                 return {
                     x: point.plotX - labelWidth / 3,
                     y: point.plotY + labelHeight + 0
                 };
             },
+            */
+           positioner: function () {
+            return { x: 240, y: -10 };
+        },
+        shadow: false,
+        borderWidth: 0,
 		hideDelay: 1,
     },
         xAxis: {
-            categories: ['2012', '2018', '2022'],
+            categories: ['2012', '2018'],
             labels: {
                 style: {
                     color: '#333', // X-axis label text color
@@ -41,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         yAxis: {
             min: 0,    // Set the minimum value for the y-axis
-            max: 40,  // Set the maximum value for the y-axis
+            max: 70,  // Set the maximum value for the y-axis
             title: {
                 text: 'Prozent Erwerbstätige',
                 style: {
@@ -59,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
             enabled: false, // Remove the credits
         },
         series: [{
-            name: 'Gute Arbeit',
-            data: [8, 13, 15],
+            name: 'sehr zufrieden',
+            data: [28, 32],
             color: '#90EE90', 
             dataLabels: {
                 enabled: true,
@@ -72,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             lineDashStyle: 'Solid', // Line type (solid)
         }, {
-            name: 'Oberes Mittelfeld',
-            data: [33, 36, 40],
+            name: 'zufrieden',
+            data: [64, 59],
             color: '#ADD8E6', 
             dataLabels: {
                 enabled: true,
@@ -81,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 alignTo: 'toPlotEdges',
             },
         }, {
-            name: 'Unteres Mittelfeld',
-            data: [36, 32, 30],
+            name: 'weniger zufrieden',
+            data: [6, 8],
             color: '#5F9EA0', 
             dataLabels: {
                 enabled: true,
@@ -90,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 alignTo: 'toPlotEdges',
             },
         }, {
-            name: 'Schlechte Arbeit',
-            data: [23, 19, 15],
+            name: 'nicht zufrieden',
+            data: [1, 2],
             color: '#F08080', 
             dataLabels: {
                 enabled: true,

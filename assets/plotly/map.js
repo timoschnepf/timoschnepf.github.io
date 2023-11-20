@@ -1,6 +1,6 @@
 (async () => {
   const topology = await fetch(
-    'https://code.highcharts.com/mapdata/custom/european-union.topo.json'
+    'https://code.highcharts.com/mapdata/custom/europe.topo.json'
   ).then(response => response.json());
 
 const data = [
@@ -44,9 +44,7 @@ const data = [
   Highcharts.mapChart('container', {
     chart: {
       map: topology,
-      marginLeft: 0,
-      marginRight: 0,
-      marginBottom: 100,
+      margin: [0, 0, 0, 0]
     },
     title: {
       text: '',
@@ -57,21 +55,61 @@ const data = [
         tooltip: {
             formatter: function() {
                 var germanName = data.find(item => item[0] === this.point['hc-key'])[2];
-                return 'Anteil der "sehr  Zufriedenen" in <b>' + germanName + ': ' + this.point.value + '</b> Prozent';
-            }
-        },
-    mapNavigation: {
-      enabled: false,
-      buttonOptions: {
-        verticalAlign: 'bottom',
-      },
+                return 'Anteil der "sehr  Zufriedenen" in <br><b>' + germanName + ': ' + this.point.value + '</b> Prozent';
+            },
+		hideDelay: 0,
     },
-    colorAxis: {
-      minColor: '#F8FEF8',
-      maxColor: '#8FED8F', 
+        legend: {
+            title: {
+                text: 'Prozent "sehr zufrieden"'
+            },
+            //align: 'left',
+           // verticalAlign: 'middle',
+           y: 0,
+            floating: true,
+            align: 'right',
+            verticalAlign: 'top',
+            layout: 'vertical',
+            borderWidth: 0,
+            backgroundColor: 'white',
+            x: 0,
+            y: 50,
+            valueSuffix: ' %',
+		},
+		mapNavigation: {
+		  enabled: false,
+		  floating: true,
+		  itemMarginTop: 0,
+		  buttonOptions: {
+			verticalAlign: 'bottom',
+		  },
+    },
+		// Continuous color scheme:
+/*    colorAxis: {
+      minColor: '#90EE90',
+      maxColor: '#006400', 
       min: 30,
       max: 50,
     },
+*/
+	// For a categorical color scheme:
+	colorAxis: {
+		dataClasses: [{
+			to: 30,
+			color: '#90EE90'
+		}, {
+			from: 30,
+			to: 40,
+			color: '#32CD32'
+		}, {
+			from: 40,
+			to: 50,
+			color: '#228B22'
+		}, {
+			from: 50,
+			color: '#006400'
+		}]
+	},
     exporting: {
       enabled: true,
     },
@@ -80,6 +118,7 @@ const data = [
     },
     series: [{
       data: data,
+      allAreas: false,	// Only consider countries in the data
       name: 'Anteil der "sehr zufriedenen" Befragten',
       states: {
         hover: {

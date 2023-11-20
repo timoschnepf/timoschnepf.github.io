@@ -36,6 +36,7 @@ Highcharts.chart('container', {
 			y: point.plotY + labelHeight + 0
 			};
 		},
+		hideDelay: 1,
     },
     plotOptions: {
         bar: {
