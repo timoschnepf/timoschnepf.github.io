@@ -289,7 +289,7 @@ keine Veränderung bei den "Unzufriedenen" feststellt?
 ### Welche Berufe haben die zufriedensten Erwerbstätigen?
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/3d_scatter_zufrieden_kldb2010_3_5.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/3d_scatter_zufrieden_kldb2010_5.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
 <div class="caption">
   <a style="font-size: 16px;" href="http://www.timoschnepf.de/3d_scatter/">Vollbild hier klicken</a> <br>
