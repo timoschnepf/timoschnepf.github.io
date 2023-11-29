@@ -17,7 +17,7 @@ toc:
 </style>
 
 
-## Wie zufrieden sind die Menschen in ihren Berufen?
+## Werden Erwerbstätige immer unzufriedener mit ihren Jobs?
 
 <br>
 
@@ -26,16 +26,16 @@ toc:
 
 Etwa die Hälfte aller Deutschen nimmt in der ein oder
 anderen Form am Erwerbsleben teil. Arbeit gehört zum
-Leben dazu. Da stellt sich unmittelbar die Frage nach deren 
-Qualität. Und wer könnte das besser beantworten als die
+Leben dazu. Da stellt sich unmittelbar die Frage, wie zufrieden die Menschen 
+mit ihren Jobs und Tätigkeiten sind. Und wer könnte das besser beantworten als die
 Erwerbstätigen selbst?
-Zufriedenheit im Job ist wichtig fürs das körperliche und
-seelische Wohlbefinden. 
-Wie stehen die Deutschen im europäischen Vergleich da? 
-Wie entwickelt sich verschiedene Merkmale der Arbeitszufriedenheit im Zeitverlauf? 
-Sieht man eine zunehmende Spaltung der Erwerbstätigen in "Zufriedene" und "Unzufriedene"?
-Und in welchen Berufen arbeiten die zufriedensten Menschen? 
-Dieser Blog gibt Antworten, indem er Statistiken aus verschiedenen Forschungsergebnissen zusammenträgt und miteinander vergleicht. 
+Dieser Beitrag diskutiert kritisch die Arbeitszufriedenheit in Deutschland. 
+Sind die Deutschen zufriedener oder unzufriedener als der Rest in Europa?
+Hat sich die Arbeitszufriedenheit in den letzten 10 Jahren verbessert? Wie hat sich die
+Zufriedenheit mit dem Einkommen, der Jobsicherheit und vielen anderen Berufsmerkmalen 
+entwickelt? Zuletzt geht der Beitrag der Frage nach, ob es zu einer "Spaltung"
+des Arbeitsmarktes im letzten Jahrzehnt kam. Nahm die Anzahl der mittelzufriedenen
+Erwerbstätigen ab und stieg gleichzeitig die Anzahl der Unzufriedenen und sehr Zufriedenen?
 </strong>
 
 </p>
@@ -271,6 +271,9 @@ Im Vergleich zur ETB zeichnet der DGB-Index interessanterweise ein insgesamt pos
 "schlechter Arbeit" keineswegs auf dem gleichen Niveau geblieben, sondern deutlich gefallen von 23 Prozent (2012) auf 
 19 Prozent (2018). In der aktuellsten Messung 2022 lag er gar nur noch bei 15 Prozent.
 
+
+<!----
+
 <br><br>
 
 Was bedeutet das, dass der differenzierte Index einen positiven Trend zeigt, während die direkte, einfachere, subjektive Frage
@@ -284,7 +287,6 @@ keine Veränderung bei den "Unzufriedenen" feststellt?
 
 
 
-<!----
 
 ### Welche Berufe haben die zufriedensten Erwerbstätigen?
 
