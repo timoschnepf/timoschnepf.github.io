@@ -29,11 +29,23 @@ This page leads to supplementary material such as dashboards and word lists to t
 "Join us to turn the world greener! - Investigating online apprenticeship advertisements’ reference to environmental sustainability".
 
 <br><br>
-
-See the dashboard <a style="font-size: 16px;" href="http://www.timoschnepf.de/green_apprenticeships/">here</a>.<br>
-For the publication see <a style="font-size: 16px;" href="https://www.bibb.de/dienst/publikationen/de/19032?referrer=/dienst/publikationen/de/suche?publication_search_result_voe%255BfreeTextSearch%255D%3Dschnepf%2520_author:5350%26publication_search_result_voe%255BfromYear%255D%3D%26publication_search_result_voe%255BtoYear%255D%3D%26publication_search_result_voe%255Bseries%255D%3D%26publication_search_result_voe%255Blanguage%255D%3D">here</a>, page 44 to 70.<br>
-For the keyword list containing 1.800 curated words associated to environmental sustainability (WAoeN), see <a style="font-size: 16px;" href="https://www.bibb.de/de/153062.php">here</a>.<br>
-
 </strong>
+→ Für das <strong>deutsche Dashboard</strong> siehe <a style="font-size: 16px;" href="http://www.timoschnepf.de/green_apprenticeships_ger/">hier</a>.<br>
+→ See the <strong>english dashboard</strong> <a style="font-size: 16px;" href="http://www.timoschnepf.de/green_apprenticeships/">here</a>.<br>
+→ For the <strong>keyword list</strong> containing 1.800 curated words associated to environmental sustainability (WAoeN), see <a style="font-size: 16px;" href="https://www.bibb.de/de/153062.php">here</a>.<br>
+→ For the <strong>publication</strong> see <a style="font-size: 16px;" href="https://www.bibb.de/dienst/publikationen/de/19032?referrer=/dienst/publikationen/de/suche?publication_search_result_voe%255BfreeTextSearch%255D%3Dschnepf%2520_author:5350%26publication_search_result_voe%255BfromYear%255D%3D%26publication_search_result_voe%255BtoYear%255D%3D%26publication_search_result_voe%255Bseries%255D%3D%26publication_search_result_voe%255Blanguage%255D%3D">here</a>, page 44 to 70.<br>
+
 
 </p>
+
+
+<br>
+
+<div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/green_apprenticeships/green_apprenticeships.png" title="Treemap green apprenticeships" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    See the <a style="font-size: 16px;" href="http://www.timoschnepf.de/green_apprenticeships/">interactive dashboard  here</a>.<br>
+</div>
