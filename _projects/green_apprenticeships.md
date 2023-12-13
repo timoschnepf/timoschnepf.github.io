@@ -25,8 +25,12 @@ Version from 13. December 2023
 <p class="my-text"> 
 <strong>
 
-This page leads to supplementary material such as dashboards and word lists to the book chapter 
-"Join us to turn the world greener! - Investigating online apprenticeship advertisements’ reference to environmental sustainability".
+This page leads to dashboards and further sources concerning the identification of green 
+apprenticeships in the german labour market. The dashboard allows i) the identification
+of "green apprenticeships" and ii) their development of green topics between 2011 and 2019.
+It thus allows to investigate the bigger picture of environmental sustainability related 
+apprenticeships and gives a deeper insight of the technologies, services and products
+associated with the Green Economy.
 
 <br><br>
 </strong>
