@@ -1,12 +1,14 @@
 ---
 layout: page
 title: jobzufriedenheit
-description: Alles wird gut, oder doch nicht?
-img: assets/img/unsplash_art6.jpg
+description: Alles wird gut, oder doch nicht? 
+img: assets/img/unsplash_spiske.jpg
+img_source: <small> <a></a>Foto von <a href="https://unsplash.com/de/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> auf <a href="https://unsplash.com/de/fotos/gelbe-orange-rote-grune-und-blaue-abstrakte-malerei-k0rVudBoB4c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></small>
 importance: 1
 category: work
 bibliography: projects.bib
 toc:
+  beginning: true
   sidebar: left
 ---
 
@@ -18,6 +20,7 @@ toc:
 
 
 ## Werden Erwerbstätige immer unzufriedener mit ihren Jobs?
+Fassung vom 13. Dezember 2023
 
 <br>
 

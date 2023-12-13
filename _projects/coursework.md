@@ -2,7 +2,8 @@
 layout: page
 title: Coursework
 description: Four selected research projects of my graduate coursework.
-img: assets/img/unsplash_art2.jpg
+img: assets/img/unsplash_ruusunen.jpg
+img_source: <small> <a></a>Image from <a href="https://unsplash.com/de/@mikafinland?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mika Ruusunen</a> at <a href="https://unsplash.com/de/fotos/poster-in-verschiedenen-farben-AZXye0EF9hE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></small>
 importance: 2
 category: work
 toc:
