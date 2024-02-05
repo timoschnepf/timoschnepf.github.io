@@ -20,25 +20,34 @@ toc:
 
 
 ## Werden Erwerbstätige immer unzufriedener mit ihren Jobs?
-Fassung vom 13. Dezember 2023
+Fassung vom 05. Februar 2024
 
 <br>
+
+<div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/zufriedenheit/wednesday.png" title=""  zoom="50%" %}
+    </div>
+</div>
+<div class="caption">
+    Quelle:  The Adventures of Tintin, Season 4, Episode 2: "Into the Crevasse".
+</div>
 
 <p class="my-text"> 
 <strong>
 
 Etwa die Hälfte aller Deutschen nimmt in der ein oder
-anderen Form am Erwerbsleben teil. Arbeit gehört zum
-Leben dazu. Da stellt sich unmittelbar die Frage, wie zufrieden die Menschen 
+anderen Form am Erwerbsleben teil. Als wichtigste Einkommensquelle gehört Arbeit 
+zum Leben dazu. Da stellt sich unmittelbar die Frage, wie zufrieden die Menschen 
 mit ihren Jobs und Tätigkeiten sind. Und wer könnte das besser beantworten als die
 Erwerbstätigen selbst?
 Dieser Beitrag diskutiert kritisch die Arbeitszufriedenheit in Deutschland. 
 Sind die Deutschen zufriedener oder unzufriedener als der Rest in Europa?
 Hat sich die Arbeitszufriedenheit in den letzten 10 Jahren verbessert? Wie hat sich die
-Zufriedenheit mit dem Einkommen, der Jobsicherheit und vielen anderen Berufsmerkmalen 
-entwickelt? Zuletzt geht der Beitrag der Frage nach, ob es zu einer "Spaltung"
-des Arbeitsmarktes im letzten Jahrzehnt kam. Nahm die Anzahl der mittelzufriedenen
-Erwerbstätigen ab und stieg gleichzeitig die Anzahl der Unzufriedenen und sehr Zufriedenen?
+Zufriedenheit mit dem Einkommen, der Jobsicherheit, der Arbeitsbelastung und weiteren Merkmalen 
+entwickelt? Kam es zu einer sozialen "Spaltung"
+des Arbeitsmarktes im letzten Jahrzehnt zwischen "Zufriedenen" und "Unzufriedenen"? Zuletzt erlaubt der
+Beitrag erstmalig einen Einblick in die Zufriedenheit von Menschen in 247 Einzelberufen.
 </strong>
 
 </p>
@@ -275,8 +284,6 @@ Im Vergleich zur ETB zeichnet der DGB-Index interessanterweise ein insgesamt pos
 19 Prozent (2018). In der aktuellsten Messung 2022 lag er gar nur noch bei 15 Prozent.
 
 
-<!----
-
 <br><br>
 
 Was bedeutet das, dass der differenzierte Index einen positiven Trend zeigt, während die direkte, einfachere, subjektive Frage
@@ -298,7 +305,7 @@ keine Veränderung bei den "Unzufriedenen" feststellt?
 </div>
 <div class="caption">
   <a style="font-size: 16px;" href="http://www.timoschnepf.de/3d_scatter/">Vollbild hier klicken</a> <br>
- Quelle:  <a href="https://www.bibb.de/de/1386.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
+ Quelle:  <a href="https://www.bibb.de/de/1386.php"> BIBB/BAuA Erwerbstätigenbefragung 2012/2018 </a>, eigene Darstellung.
 </div>
 {% details Was zeigt die Grafik? %}
 <div style="background-color: rgb(240,235,255);">
@@ -306,11 +313,11 @@ keine Veränderung bei den "Unzufriedenen" feststellt?
 
 
  <ul>
-  <li>Jede Kugel steht für eine Berufsgruppe (KldB2010 3-Steller und Anforderungsniveau)</li>
+  <li>Jede Kugel steht für eine sog. Berufsgattung (KldB2010 5-Steller und Anforderungsniveau)</li>
   <li>Die Größe der Kugeln deutet an, wie viele Leute befragt wurden. Das ist auch ein Hinweis auf die Größe der Berufsgruppe in der Bevölkerung.</li>
-  <li>Die Farbe deutet den Anteil der "sehr Zufriedenen" an. Umso gelber, umso zufriedener.</li>
-  <li>Umso weiter rechts im Raum, umso zufriedener die Befragten mit ihrem Einkommen.</li>
-  <li>Umso weiter links im Raum, umso zufriedener die Befragten mit ihren Arbeitszeiten.</li>
+  <li>Umso höher die Kugel im Raum liegt (und umso gelber), umso zufriedener sind Erwerbstätige in diesem Beruf.</li>
+  <li>Umso weiter rechts im Raum, umso zufriedener sind die Befragten mit ihrem Einkommen.</li>
+  <li>Umso weiter hinten im Raum, umso zufriedener sind die Befragten mit ihren Arbeitszeiten.</li>
 </ul> 
 </div>
 {% enddetails %}
@@ -324,6 +331,7 @@ keine Veränderung bei den "Unzufriedenen" feststellt?
   <li>Die Grafik lässt sich drehen, indem man sie mit der Maus "fest hält". </li>
   <li>Mit der "Strg"-Taste kann die Grafik im Raum verschoben werden.</li>
   <li>Man kann in die Grafik zoomen.</li>
+  <li><i>Die Grafik ist leider nicht für mobile Endgeräte optimiert</i></li>
 </ul> 
 </div>
 {% enddetails %}
@@ -335,14 +343,23 @@ Jede Kugel repräsentiert einen Beruf<d-footnote>Nach gängiger
 <a href="https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html"> BA Klassifikation der Berufe 2010 </a>.
 Für diese Auswertung wurden die Befragten aus den Jahren 2012 und 2018 zusammengefasst. Wir haben oben gesehen, dass es Unterschiede gibt,
 aber um möglichst viele Befragte pro Beruf zu erhalten, wurden sie für diese Betrachtung vereint.</d-footnote>, 
-der umso höher im Raum schwebt, umso mehr Prozent der Befragten angaben, "sehr zufrieden" mit ihrer Arbeit insgesamt zu sein.
-Umso weiter rechts die Kugeln liegen, umso höher der Anteil der sehr Zufriedenen mit ihrem Einkommen,
-umso weiter links, umso höher der Anteil derjenigen, die sehr zufrieden mit ihren Arbeitszeiten sind.
-
+der umso höher im Raum schwebt, umso mehr Erwerbstätige "sehr zufrieden" sind.
+Umso weiter hinten die Kugel im Raum liegt, desto mehr Erwerbstätige sind sehr zufrieden mit der Arbeitszeit. 
+Und umso weiter rechts die Kugel liegt, desto höher die Zufriedenheit mit dem Einkommen.
 <br><br>
 
-Heilkundlerinnen und Homöopathinnen weisen die höchsten Zufriedenheitswerte auf mit 64 Prozent. Ihre Werte sind 
-damit in etwa so hoch wie die von Ärztinnen, Psychotherapeutinnen und Pilotinnen (jeweils etwa 60 Prozent).
+Der Anteil der sehr Zufriedenen Menschen geht zwischen den Berufen weit auseinander und 
+liegt zwischen 64 Prozent für Heilkundler:innen und 11 Prozent für Helfer in der Lebensmittelherstellung. Im oberen Feld dominieren die medizinischen Spezialistentätigkeiten
+wie Psychotherapeut:innen und Human- und Zahnmediziner:in (61 Prozent). Das heißt etwa zwei Drittel
+aller Ärzt:innen sind sehr zufrieden bei ihrer Arbeit. Gemessen an der Verantwortung bei ihrer täglichen Arbeit ist das
+beruhigend. Ebenso 
+steht es um Pilot:innen (61 Prozent) und Autor:innen und Schriftsteller:innen (62 Prozent), jedoch lässt sich das 
+nicht in Bezug auf ihr Einkommen sagen, hier gehören sie
+zu den unzufriedensten Berufen (6 Prozent).
+
+<br>
+
+Am unteren Ende der Zufriedenheit...
 
 </p>
 
@@ -350,4 +367,4 @@ damit in etwa so hoch wie die von Ärztinnen, Psychotherapeutinnen und Pilotinne
 <br><br>
 
 
----->
+
