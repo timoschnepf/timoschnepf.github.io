@@ -20,7 +20,7 @@ toc:
 
 
 ## Werden Erwerbstätige immer unzufriedener mit ihren Jobs?
-Fassung vom 05. Februar 2024
+Fassung vom 03. April 2024
 
 <br>
 
@@ -36,18 +36,15 @@ Fassung vom 05. Februar 2024
 <p class="my-text"> 
 <strong>
 
-Etwa die Hälfte aller Deutschen nimmt in der ein oder
-anderen Form am Erwerbsleben teil. Als wichtigste Einkommensquelle gehört Arbeit 
-zum Leben dazu. Da stellt sich unmittelbar die Frage, wie zufrieden die Menschen 
-mit ihren Jobs und Tätigkeiten sind. Und wer könnte das besser beantworten als die
-Erwerbstätigen selbst?
-Dieser Beitrag diskutiert kritisch die Arbeitszufriedenheit in Deutschland. 
-Sind die Deutschen zufriedener oder unzufriedener als der Rest in Europa?
-Hat sich die Arbeitszufriedenheit in den letzten 10 Jahren verbessert? Wie hat sich die
-Zufriedenheit mit dem Einkommen, der Jobsicherheit, der Arbeitsbelastung und weiteren Merkmalen 
-entwickelt? Kam es zu einer sozialen "Spaltung"
-des Arbeitsmarktes im letzten Jahrzehnt zwischen "Zufriedenen" und "Unzufriedenen"? Zuletzt erlaubt der
-Beitrag erstmalig einen Einblick in die Zufriedenheit von Menschen in 247 Einzelberufen.
+Etwa die Hälfte der Deutschen nimmt in irgendeiner Form am Erwerbsleben teil. 
+Für mehr als 40 Millionen Menschen gehört Arbeit als Einkommensquelle zum Leben dazu. 
+Da stellt sich die Frage: Wie geht es den Menschen mit ihren Jobs und Tätigkeiten? 
+Wie hat sich die Zufriedenheit in den vergangenen zehn Jahren entwickelt? 
+Hat sich der Arbeitsmarkt in immer mehr Zufriedene und Unzufriedene gespalten? 
+Und in welchen Berufen sind die Menschen besonders zufrieden, in welchen besonders unzufrieden? 
+Der vorliegende Beitrag gibt Antworten anhand repräsentativer und verlässlicher Statistiken. 
+Darüber hinaus werden erstmals Statistiken zur Arbeitszufriedenheit für 247 Berufe öffentlich zugänglich gemacht. 
+
 </strong>
 
 </p>
@@ -56,7 +53,14 @@ Beitrag erstmalig einen Einblick in die Zufriedenheit von Menschen in 247 Einzel
 
 ### Deutsche im EU Vergleich unzufriedener
 
-<br>
+
+<p class="my-text">
+Die Karte unten zeigt die Zufriedenheit der Erwerbstätigen im europäischen Vergleich. 
+Du kannst mithilfe der Tabs selbst entscheiden, ob du dir den Anteil aller
+"sehr Zufriedenen" oder "sehr Unzufriedenen" anschauen möchtest. Die Prozentzahlen
+beziehen sich auf alle Menschen, die einer Erwerbstätigkeit nachgehen.
+</p>
+
 
 {% tabs map %}
 
@@ -117,13 +121,21 @@ Lag doch der Schnitt aller 28 Teilnehmerländer mit 42 Prozent um 10 Prozentpunk
 <p class="my-text">
 Die Karte zeigt große Unterschiede zwischen den Ländern. Am zufriedensten sind Erwerbstätige in den nordischen
 und baltischen Ländern mit Ausnahme der Finnen.
-<strong>Die Schweden haben mit 69 Prozent</strong> den größten Anteil an sehr zufriedenen Erwerbstätigen. 
-<strong>Türkinnen und Türken geben mit Abstand am seltensten an, sehr zufrieden zu sein (17 Prozent</strong>, nicht abgebildet),
+Die Schweden haben mit 69 Prozentden größten Anteil an sehr zufriedenen Erwerbstätigen. 
+ürkinnen und Türken geben mit Abstand am seltensten an, sehr zufrieden zu sein (17 Prozent),
 gefolgt von Bulgarien (27 Prozent) und Rumänien (28 Prozent).
 
 </p>
 
-<br>
+<p class="my-text">
+Werfen wir einen detaillierteren Blick auf die 34 Millionen <a href="https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Erwerbstaetigkeit/Tabellen/atyp-kernerwerb-erwerbsform-zr.html">sog. "Kernerwerbstätigen"</a> 
+in Deuschland. Der größte 
+Teil gab 2018 an, "sehr zufrieden" (32 Prozent) oder 
+zumindest "zufrieden" (59 Prozent) zu sein. Das bedeutet, dass alles in allem neun von zehn Erwerbstätige eher zufrieden als unzufrieden 
+mit ihrer Arbeit sind. 
+7,5 Prozent waren "weniger" und 1,5 Prozent
+"nicht zufrieden" mit ihrer Arbeitssituation.
+</p>
 
 <div>
     <div class="col-sm mt-3 mt-md-0">
@@ -134,20 +146,10 @@ gefolgt von Bulgarien (27 Prozent) und Rumänien (28 Prozent).
     Quelle:  <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
 </div>
 
-<br>
-
 <p class="my-text">
-Werfen wir einen detaillierteren Blick auf die 34 Millionen <a href="https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Erwerbstaetigkeit/Tabellen/atyp-kernerwerb-erwerbsform-zr.html">sog. "Kernerwerbstätigen"</a> 
-in Deuschland. Der größte 
-Teil gab 2018 an, "sehr zufrieden" (32 Prozent) oder 
-zumindest "zufrieden" (59 Prozent) zu sein. 7,5 Prozent waren "weniger" und 1,5 Prozent
-"nicht zufrieden" mit ihrer Arbeitssituation.
 
-<br><br>
-
-Die unterschiedlichen Formen von Zufriedenheit im Job lassen sich grob aufteilen.
-Die untere Grafik mit den ETB Daten zeigt, dass die Erwerbstätigen mit dem Einkommen, den körperlichen Arbeitsbedingungen 
-und den Weiterbildungsmöglichkeiten am wenigsten zufrieden sind (ein Fünftel).
+Das untere Balkendiagramm mit den ETB Daten für 2018 zeigt, dass die Erwerbstätigen mit dem Einkommen, den körperlichen Arbeitsbedingungen 
+und den Weiterbildungsmöglichkeiten am wenigsten zufrieden waren (ein Fünftel).
 Hingegen ist etwa jede/r Dritte Erwerbstätige mit Art und Inhalt der Tätigkeit,
 dem Betriebsklima und der/dem Vorgesetzten sehr zufrieden. Etwa 55 Prozent sehen keinerlei Gefahr, in 
 nächster Zeit vom Betrieb ungewollt gekündigt zu werden.
@@ -156,11 +158,18 @@ nächster Zeit vom Betrieb ungewollt gekündigt zu werden.
 
 <br>
 
-### Die Entwicklung im Zeitverlauf ist positiv, aber nicht für alle
+### Die Entwicklung im Zeitverlauf ist positiv
 
 
-<br>
-
+<p class="my-text">
+Die Balkendiagramme unten zeigen die Entwicklung der Gesamtzufriedenheit im Zeitverlauf.
+Du kannst mithilfe der Tabs selbst entscheiden, ob du dir den Anteil "sehr Zufriedener" der ETB oder 
+den DGB Gute Arbeit Index <d-footnote>Der Index 
+wird jeweils aus mehreren Fragen gebildet. Vorteil ist eine vielleicht 
+genauere Messung von nicht greifbaren Dingen wie "Beschäftigungssicherheit". Dies geht aber etwas
+auf Kosten der Intrepretierbarkeit der Zahlen.</d-footnote> anschauen möchtest. Beide zeigen vergleichbare
+Statistiken.
+</p>
 
 {% tabs zeitverlauf %}
 
@@ -173,16 +182,7 @@ nächster Zeit vom Betrieb ungewollt gekündigt zu werden.
     Quelle:  <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA Erwerbstätigenbefragung 2017/2018 </a>, eigene Darstellung.
 </div>
 
-<br>
-
 <p class="my-text">
-Die Balkendiagramme oben zeigen die Entwicklung der Gesamtzufriedenheit im Zeitverlauf.
-Du kannst mithilfe der Tabs selbst entscheiden, ob du dir den Anteil "sehr Zufriedener" der ETB oder 
-den DGB Gute Arbeit Index <d-footnote>Der Index 
-wird jeweils aus mehreren Fragen gebildet. Vorteil ist eine vielleicht 
-genauere Messung von nicht greifbaren Dingen wie "Beschäftigungssicherheit". Dies geht aber etwas
-auf Kosten der Intrepretierbarkeit der Zahlen.</d-footnote> anschauen möchtest.
-
 In der Zeit von 2012 bis 2018 stieg der Anteil der Erwerbstätigen, die insgesamt sehr zufrieden waren, 
 um 5 Prozentpunkte von 28 auf 32 Prozent an. Ähnlich wie beim DGB-Index zeigt sich die <b>auffälligste 
 Veränderung im Bereich der Beschäftigungssicherheit</b>. Im Jahr 2012 sahen noch 46 Prozent keinerlei 
@@ -222,13 +222,23 @@ Der Einkommensindex wuchs dadurch um 7 Punkte von 46 auf 53.
 
 </p>
 
-
 {% endtab %}
-
 
 {% endtabs %}
 
+### Die meisten Erwerbstätigen zufriedener
 
+<p class="my-text">
+
+Die Daten liefern eine Antwort auf die Frage, ob es neben einer Zunahme an 
+"sehr zufriedenen" Erwerbstätigen auch eine steigende Anzahl an "sehr Unzufriedenen" gibt. Entwickelt 
+sich der deutsche Arbeitsmarkt also so, dass es immer mehr 
+"Gewinner" und "Verlierer" gibt? Oder <strong>führt die gestiegene Anzahl an "sehr zufriedenen" 
+Erwerbstätigen zu einer positiveren Einschätzung der Arbeitssituation aller Erwerbstätigen?</strong>
+
+</p>
+
+<br>
 
 {% tabs linechart %}
 
@@ -257,17 +267,7 @@ Quelle:  <a href="https://www.bibb.de/de/65740.php"> BIBB/BAuA Erwerbstätigenbe
 
 {% endtabs %}
 
-
-
-
 <p class="my-text">
-
-Die vorliegenden Daten liefern eine Antwort auf die Frage, ob es neben einer Zunahme an 
-"sehr zufriedenen" Erwerbstätigen auch eine steigende Anzahl an "sehr Unzufriedenen" gibt. Entwickelt 
-sich der deutsche Arbeitsmarkt also so, dass es immer mehr 
-"Gewinner" und "Verlierer" gibt? Oder <strong>führt die gestiegene Anzahl an "sehr zufriedenen" 
-Erwerbstätigen zu einer positiveren Einschätzung der Arbeitssituation aller Erwerbstätigen?</strong>
-
 Gemäß den Ergebnissen des ETB stieg der Anteil der "Unzufriedenen" <d-footnote>Definiert 
 als der Anteil der Befragten die
 angaben, "weniger" und "nicht zufrieden" zu sein.</d-footnote> tatsächlich leicht an, und 
@@ -277,17 +277,14 @@ der Zufriedenheit zeigt sich jedoch kaum eine Veränderung. Die stärksten Zunah
 <strong>Das bedeutet, dass überwiegend die "Mittel-Zufriedenen" profitiert haben, während der Anteil der 
 "Unzufriedenen" bedauerlicherweise nicht gesunken, sondern tendenziell sogar leicht gestiegen ist.</strong>
 
-<br><br>
+<br>
 
-Im Vergleich zur ETB zeichnet der DGB-Index interessanterweise ein insgesamt positiveres Bild. Hier ist der Anteil an 
+Im Vergleich zur ETB zeichnet der DGB-Index interessanterweise ein insgesamt positiveres Bild.<d-footnote>Interessante Frage. Woran könnte es liegen, 
+dass der differenzierte DGB Index einen positiven Trend zeigt, während die einfachere, subjektive Frage
+keine Veränderung bei den "Unzufriedenen" feststellt?</d-footnote> Hier ist der Anteil an 
 "schlechter Arbeit" keineswegs auf dem gleichen Niveau geblieben, sondern deutlich gefallen von 23 Prozent (2012) auf 
 19 Prozent (2018). In der aktuellsten Messung 2022 lag er gar nur noch bei 15 Prozent.
 
-
-<br><br>
-
-Was bedeutet das, dass der differenzierte Index einen positiven Trend zeigt, während die direkte, einfachere, subjektive Frage
-keine Veränderung bei den "Unzufriedenen" feststellt?
 
 </p>
 
@@ -313,7 +310,10 @@ keine Veränderung bei den "Unzufriedenen" feststellt?
 
 
  <ul>
-  <li>Jede Kugel steht für eine sog. Berufsgattung (KldB2010 5-Steller und Anforderungsniveau)</li>
+  <li>Jede Kugel repräsentiert eine sog. Berufsgattung<d-footnote>Nach gängiger 
+<a href="https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html"> BA Klassifikation der Berufe 2010 </a>.
+Für diese Auswertung wurden die Befragten aus den Jahren 2012 und 2018 zusammengefasst. Wir haben oben gesehen, dass es Unterschiede gibt,
+aber um möglichst viele Befragte pro Beruf zu erhalten, wurden sie für diese Betrachtung vereint.</d-footnote>.</li>
   <li>Die Größe der Kugeln deutet an, wie viele Leute befragt wurden. Das ist auch ein Hinweis auf die Größe der Berufsgruppe in der Bevölkerung.</li>
   <li>Umso höher die Kugel im Raum liegt (und umso gelber), umso zufriedener sind Erwerbstätige in diesem Beruf.</li>
   <li>Umso weiter rechts im Raum, umso zufriedener sind die Befragten mit ihrem Einkommen.</li>
@@ -339,15 +339,6 @@ keine Veränderung bei den "Unzufriedenen" feststellt?
 <p class="my-text">
 <br>
 
-Jede Kugel repräsentiert einen Beruf<d-footnote>Nach gängiger 
-<a href="https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html"> BA Klassifikation der Berufe 2010 </a>.
-Für diese Auswertung wurden die Befragten aus den Jahren 2012 und 2018 zusammengefasst. Wir haben oben gesehen, dass es Unterschiede gibt,
-aber um möglichst viele Befragte pro Beruf zu erhalten, wurden sie für diese Betrachtung vereint.</d-footnote>, 
-der umso höher im Raum schwebt, umso mehr Erwerbstätige "sehr zufrieden" sind.
-Umso weiter hinten die Kugel im Raum liegt, desto mehr Erwerbstätige sind sehr zufrieden mit der Arbeitszeit. 
-Und umso weiter rechts die Kugel liegt, desto höher die Zufriedenheit mit dem Einkommen.
-<br><br>
-
 Der Anteil der sehr Zufriedenen Menschen geht zwischen den Berufen weit auseinander und 
 liegt zwischen 64 Prozent für Heilkundler:innen und 11 Prozent für Helfer in der Lebensmittelherstellung. Im oberen Feld dominieren die medizinischen Spezialistentätigkeiten
 wie Psychotherapeut:innen und Human- und Zahnmediziner:in (61 Prozent). Das heißt etwa zwei Drittel
@@ -357,14 +348,8 @@ steht es um Pilot:innen (61 Prozent) und Autor:innen und Schriftsteller:innen (6
 nicht in Bezug auf ihr Einkommen sagen, hier gehören sie
 zu den unzufriedensten Berufen (6 Prozent).
 
-<br>
-
-Am unteren Ende der Zufriedenheit...
-
 </p>
 
-
-<br><br>
 
 
 
