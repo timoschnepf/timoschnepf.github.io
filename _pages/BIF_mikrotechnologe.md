@@ -59,7 +59,7 @@ Berufe in der Mikrosystemtechnik konzentrieren sich auf fachlich ausgerichtete T
  <ul>
    <li>KldB 2010: <b>26322</b></li>
    <li>DAZUBI Erhebungsberuf: <b>26322010</b></li>
-   <li>ISCO-08: <b>7126</b></li>
+   <li>ISCO-08: <b>3114</b></li>
 </ul> 
 </div>
 {% enddetails %}
@@ -89,14 +89,34 @@ Beispieltext Beschreibung des Mikrotechnologen, Vermerk zu Standort Deutschland,
 <div class="l-page">
   <iframe src="{{ '/assets/plotly/bif/erwerbstaetige.html' | relative_url }}" scrolling='no' frameborder='0' height="400" width="120%"></iframe>
 </div>
-{% details Information zur Statistik %}
+<br>
+
+{% details Information zum Indikator %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+INFOTEXT INDIKATOR</p>
+
+</div>
+{% enddetails %}
+
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 
 <p class="my-text">
 Der Indikator "Ausgeübter und erlernter Beruf" basiert auf Daten der
 <b>BIBB-IAB-Qualifikations- und Berufsprojektionen</b> (QuBe). 
-Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h. für <b>Berufe der Elektrotechnik</b>. 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie im <a href="https://www.bibb.de/de/qube_datenportal.php"> QuBe Datenportal </a>.
+</p>
+
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h. für <b>Berufe der Elektrotechnik</b>. 
 </p>
 
 </div>
@@ -116,14 +136,23 @@ Lorem ipsum... Stand 2020 wie viele ET? Erwerbstätige = Nachfrage, Erwerbsperso
 <div class="l-page">
   <iframe src="{{ '/assets/plotly/bif/sankey.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
-{% details Information zur Statistik %}
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 
 <p class="my-text">
 Der Indikator "Übergang erlernter Beruf in Erwerbstätigkeit" basiert auf Daten der
 <b>BIBB-IAB-Qualifikations- und Berufsprojektionen</b> (QuBe). 
-Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h. für <b>Berufe der Elektrotechnik</b>. 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie im <a href="https://www.bibb.de/de/qube_datenportal.php"> QuBe Datenportal </a>.
+</p>
+
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h. für <b>Berufe der Elektrotechnik</b>. 
 </p>
 
 </div>
@@ -148,13 +177,22 @@ Lorem ipsum...
 </div>
 
 
-{% details Information zur Statistik %}
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>Ausbildungsabsolventen</b> basiert auf einer Vollerhebung der bestandenden 
-Abschlussprüfungen gemeldet an die stat. Landesämter. Die Daten liegen auf Ausbildungsberuf-Ebene (Erhebungsberuf) vor. 
+Abschlussprüfungen gemeldet an die stat. Landesämter. 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/12129.php"> DAZUBI Datenportal </a>.
 </p>
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Ausbildungsberuf-Ebene vor. Diese werden aus den Erhebungsberuf-Statistiken (DKZ, 8-Steller) von DAZUBI gebildet.</p>
+
 </div>
 {% enddetails %}
 
@@ -186,7 +224,7 @@ Lorem ipsum...
 	</iframe>
 </div>
 
-{% details Information zur Statistik %}
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>Ausbildungsabsolventen</b> basiert auf einer Vollerhebung der bestandenden 
@@ -196,19 +234,37 @@ Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a
 </div>
 {% enddetails %}
 
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Ausbildungsberuf-Ebene vor. Diese werden aus den Erhebungsberuf-Statistiken (DKZ, 8-Steller) von DAZUBI gebildet.</p>
+
+</div>
+{% enddetails %}
+
 {% endtab %}
 
 {% tab ausbildungszahlen Deutschlandkarte%}
 WIRD NOCH ERSTELLT
 
 
-{% details Information zur Statistik %}
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>Ausbildungsabsolventen</b> basiert auf einer Vollerhebung der bestandenden 
 Abschlussprüfungen gemeldet an die stat. Landesämter. Die Daten liegen auf Ausbildungsberuf-Ebene (Erhebungsberuf) für das Jahr 2022 vor. 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/12129.php"> DAZUBI Datenportal </a>.
 </p>
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Ausbildungsberuf-Ebene vor. Diese werden aus den Erhebungsberuf-Statistiken (DKZ, 8-Steller) von DAZUBI gebildet.</p>
+
 </div>
 {% enddetails %}
 
@@ -229,17 +285,26 @@ Lorem ipsum...
 </div>
 
 
-{% details Information zur Statistik %}
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>"Unbesetzte Ausbildungsstellen und unvermittelte Bewerber"</b> basiert auf der Ausbildungsmarktstatistik der BA 
-im Rahmen der Erhebung "30.09". Die Daten liegen auf Berufsgruppen-Ebene vor. D. h. für die
-<b>Berufsgruppe Elektrotechnik</b>. Als Datenquelle dienen BA-eigene Fachverfahren in Bezug auf 
+im Rahmen der Erhebung "30.09". Als Datenquelle dienen BA-eigene Fachverfahren in Bezug auf 
 die Vermittlungsdienste. Diese sind "für Betriebe und Jugendliche freiwillig; es bleiben in 
 den Darstellungen also jene Jugendlichen und Ausbildungsplatzanbieter unberücksichtigt, welche die Beratungs- 
 und Vermittlungsdienste der BA nicht in Anspruch nehmen" (vgl. Flemming & Granath 2016: 17f). 
 Weiterführende Informationen und umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/179142.php"> Erhebung zum 30.09</a>.
 
+</p>
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Berufsgruppen-Ebene vor. D. h. für die
+<b>Berufsgruppe Elektrotechnik</b>. 
 </p>
 </div>
 {% enddetails %}
@@ -269,7 +334,7 @@ Lorem ipsum...
 
 <br>
 
-{% details Information zur Statistik %}
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>Einkommen Erwerbstätigkeit</b> basiert auf der Entgeltstatistik der Beschäftigungsstatistik 
@@ -277,6 +342,16 @@ der Bundesagentur für Arbeit. Er zeigt die Median Bruttolöhne aller in Vollzei
 sozialversicherungspflichtig Beschäftigten in Deutschland. Weitere Informationen 
 finden Sie <a href="https://statistik.arbeitsagentur.de/DE/Statischer-Content/Grundlagen/Methodik-Qualitaet/Methodische-Hinweise/BST-MethHinweise/Entgelt-meth-Hinweise"> hier</a>.
 
+</p>
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Berufsgattung-Ebene vor. D. h. für die
+<b>Berufsgattung Mikrosystemtechnik -Fachkraft</b>. 
 </p>
 </div>
 {% enddetails %}
@@ -300,7 +375,7 @@ Lorem ipsum...
 
 <br>
 
-{% details Information zur Statistik %}
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>Arbeistbedingungen</b> basiert auf der BIBB/BAuA Erwerbstätigenbefragung 2018. 
@@ -312,6 +387,15 @@ Weitere Informationen zum Datensatz finden Sie unter <a href="https://www.bibb.d
 </div>
 {% enddetails %}
 
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Berufsgruppen-Ebene vor. D. h. für die
+<b>Berufsgruppe Elektrotechnik</b>. 
+</p>
+</div>
+{% enddetails %}
 <br>
 
 <p class="my-text">
@@ -330,7 +414,7 @@ Lorem ipsum...
 
 <br>
 
-{% details Information zur Statistik %}
+{% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>Berufliches Ansehen</b> basiert auf der "Berufe in Deutschland" Erhebung. 
@@ -341,6 +425,15 @@ Weitere Informationen zum Datensatz finden Sie unter <a href="https://www.bibb.d
 </div>
 {% enddetails %}
 
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Berufsgruppen-Ebene vor. D. h. für die
+<b>Berufsgruppe Elektrotechnik</b>. 
+</p>
+</div>
+{% enddetails %}
 
 <br>
 
