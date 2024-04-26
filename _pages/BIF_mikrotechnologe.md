@@ -20,7 +20,7 @@ toc:
 
 <div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/bif/header_mikrotechnologe.png" title=""  zoom="50%" %}
+        {% include figure.html path="assets/img/bif/header_mikrotechnologe.jpg" title=""  zoom="50%" %}
     </div>
 </div>
 
@@ -33,7 +33,7 @@ Berufe in der Mikrosystemtechnik konzentrieren sich auf fachlich ausgerichtete T
 
 </p>
 
-{% details Welche Einzelberufe gehören zur Berufsgattung %}
+{% details Welche Einzelberufe gehören zur Berufsgattung (Auswahl)%}
 <div style="background-color: rgb(240,235,255);">
 
  <ul>
@@ -71,14 +71,46 @@ Berufe in der Mikrosystemtechnik konzentrieren sich auf fachlich ausgerichtete T
 
 <br>
 
+### Das wichtigste in Kürze
+
+<br>
+
+- <b>Die EU plant mit dem European Chips Act den weltweiten Marktanteil 
+in der Halbleiterproduktion von gegenwärtig 10 Prozent auf 20 Prozent 
+im Jahr 2030 zu erhöhen. Als größtes Wachstumsrisiko wurden 
+Fachkräfteengpässe und fehlende Kompetenzen identifiziert.</b>
+- <b>2020 waren in Deutschland 592.000 Menschen in der Berufsgruppe Elektrotechnik erwerbstätig. Etwa 1.093.000 Millionen Erwerbspersonen besaßen 2020 einen beruflichen Abschluss in der Elektrotechnik.</b>
+- <b>Die meisten Erwerbstätigen, welche in dieser Berufsgruppe ausgebildet werden, arbeiten in dieser Berufsgruppe mit einem Anteil von 26 Prozent.</b>
+- <b>Zwischen 2008 und 2021 sank die Anzahl an Auszubildenden im Ausbildungsberuf „Mikrotechnologe/-technologin“ von 534 auf 387 Auszubildende. In den letzten drei Jahren lässt sich jedoch mit einer leichten Zunahme an Auszubildenden ein positiver Trend erkennen.</b>
+- <b>Die mit Abstand meisten Mikrotechnologen/-technologinnen wurden 2022 in Sachsen ausgebildet.</b>
+- <b>Die Löhne für Fachkräfte in der Mikrostystemtechnik sind überdurchschnittlich verglichen mit Löhnen in Berufen auf Fachkräfteniveau.</b>
+- <b>In Bezug auf die Arbeitsbedingungen lassen sich stark unterdurchschnittliche Werte für das Arbeiten unter Zeit- und Mengendruck feststellen. Es zeigen sich überdurchschnittliche Belastungswerte für das Arbeiten bei Lärm und Schmutzbelastungen wie Öle und Fette.</b>
+- <b>Das gesellschaftliche Ansehen der Berufsgruppe Elektrotechnik ist deutlich überdurchschnittlich sowohl im Vergleich zu anderen Berufen auf Fachkräfteniveau als auch über alle Berufe hinweg.</b>
+
+<br>
+
 ### Einleitung
 
 
 <p class="my-text">
 
-Beispieltext Beschreibung des Mikrotechnologen, Vermerk zu Standort Deutschland, usw...
 
+Der European Chips Act des Europäischen Rates sieht vor, mit massiven Investitionen den Marktanteil der EU bei 
+Halbleitern von derzeit 10 Prozent auf mindestens 20 Prozent bis 2030 zu verdoppeln (<a href="https://dip.bundestag.de/drucksache/aktueller-stand-der-halbleiter-chip-forschungs-und-weiterbildungsstrategie-der-bundesregierung/272847"> Bundesregierung 2024</a>). 
+Die Mikrotechnologie in Deutschland wird dadurch eine Zunahme der Fachkräftenachfrage erleben (vgl. 
+<a href="https://www.forbes.at/artikel/sachsen-punktet-als-global-fuehrender-standort-der-halbleiterbranche.html">Forbes 2024</a>; 
+<a href="https://www.zeit.de/2023/44/chipfabriken-deutschland-subvention-wettbewerb-fachkraefte">ZEIT 2024</a>). 
+Mikrotechnologen und verwandte Berufe spielen dabei eine 
+entscheidende Rolle, da sie mit ihrer Expertise in der Entwicklung, Herstellung und 
+Implementierung mikrosystemtechnischer Produkte und Systeme die Weichen für Zukunftstechnologien stellen. 
+
+<br><br>
+
+Die folgenden Abschnitte beleuchten verschiedene Aspekte dieser 
+Entwicklung, darunter die Arbeitsnachfrage und das Arbeitsangebot, die Entwicklung der Ausbildungszahlen, sowie berufliche Attraktivitätsdimensionen der Elektro- und Mikrotechnologie. Die folgenden statistischen Einblicke unterstreichen die Chancen, aber auch die Herausforderungen, welche Entscheidungsträgern in Politik, Wirtschaft und Fachöffentlichkeit, aber auch den Erwerbstätigen bevorstehen.
 </p>
+
+<br>
 
 ### Erwerbstätigkeit und Fachkräfteentwicklung
 
@@ -87,18 +119,10 @@ Beispieltext Beschreibung des Mikrotechnologen, Vermerk zu Standort Deutschland,
 #### Anzahl Personen mit ausgeübtem und erlerntem Beruf
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/erwerbstaetige.html' | relative_url }}" scrolling='no' frameborder='0' height="400" width="120%"></iframe>
+  <iframe src="{{ '/assets/plotly/bif/erwerbstaetige.html' | relative_url }}" scrolling='no' frameborder='0' height="600" width="100%"></iframe>
 </div>
 <br>
 
-{% details Information zum Indikator %}
-<div style="background-color: rgb(240,235,255);">
-
-<p class="my-text">
-INFOTEXT INDIKATOR</p>
-
-</div>
-{% enddetails %}
 
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
@@ -126,7 +150,8 @@ Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h
 
 <p class="my-text">
 
-Lorem ipsum... Stand 2020 wie viele ET? Erwerbstätige = Nachfrage, Erwerbspersonen = Angebot, wie entwickelt sich das in Zukunft...
+Im Jahr 2020 betrug der <b>Fachkräftebedarf</b> in der Berufsgruppe „Elektrotechnik“ <b>592.000 Personen</b>. Dieser entspricht der tatsächlichen Nachfrage, d. h. den Erwerbstätigen dieser Berufsgruppe und ist in der Grafik in Blau dargestellt. Das <b>Fachkräfteangebot</b> betrug im Jahr 2020 in der Berufsgruppe „Elektrotechnik“ <b>608.000</b> Erwerbspersonen. Dies entspricht den Erwerbspersonen, welche dem Arbeitsmarkt zur Verfügung stehen und setzt sich aus den Erwerbstätigen sowie Erwerbslosen dieser Berufsgruppe zusammen. Es ist in Grau dargestellt. Zuletzt zeigt die Grafik noch alle <b>Erwerbspersonen mit einem erlernten Beruf</b> aus der Berufsgruppe „Elektrotechnik“ in Grün. Diese Statistik beinhaltet alle Erwerbspersonen mit einer Ausbildung oder Studium in dieser Berufsgruppe. Diese betrug in Deutschland 2020 <b>1.093.000</b> Millionen Menschen. Die Differenz entsteht, da nicht alle Erwerbstätigen mit einer Qualifikation in der Berufsgruppe Elektrotechnik auch einer Tätigkeit dieser Berufsgruppe nachgehen, sondern in anderen Berufsgruppen tätig sind. Welche das sind, zeigt die folgende Grafik. 
+Die Projektion in der langen Frist zeigt für Deutschland sowohl beim Arbeitskräftebedarf als auch beim Angebot einen Rückgang. Dies hängt vor allem mit demographischen Entwicklungen zusammen. Externe Schocks, wie gegenwärtige Investitionen in diesem Sektor, sind in diesen Basisprojektionen nicht berücksichtigt.
 </p>
 
 <br>
@@ -162,7 +187,8 @@ Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h
 
 <p class="my-text">
 
-Lorem ipsum...
+Welche Berufe üben Erwerbstätige mit einem erlernten Beruf der Berufsgruppe „Elektrotechnik“ aus? Die meisten Erwerbstätigen, welche in dieser Berufsgruppe ausgebildet wurden, arbeiten auch in der gleichen Berufsgruppe mit einem Anteil von <b>26 Prozent</b>.
+Es folgen die Berufsgruppen Energietechnik (6 Prozent) und Unternehmensorganisation und -Strategie (6 Prozent). Anhand der Ähnlichkeit der Tätigkeiten sind viele Berufe im produktions- und fertigungstechnischen Bereich angesiedelt (u. a. Berufsgruppen Energietechnik, Maschinen und -Betriebstechnik oder Technische Produktionsplanung).
 
 </p>
 
@@ -171,17 +197,20 @@ Lorem ipsum...
 
 #### Entwicklung der Ausbildungszahlen
 
+<br>
+
+Die Berufsgattung „Mikrosystemtechnik“ beinhaltet einen Ausbildungsberuf, den <b>Mikrotechnologen/-technologin</b>. 
+
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/absolventen.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/bif/auszubildende_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
 
 
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
-Der Indikator <b>Ausbildungsabsolventen</b> basiert auf einer Vollerhebung der bestandenden 
-Abschlussprüfungen gemeldet an die stat. Landesämter. 
+Der Indikator <b>Auszubildende</b> basiert auf einer Vollerhebung der bestehenden Ausbildungsverträge gemeldet an die stat. Landesämter. 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/12129.php"> DAZUBI Datenportal </a>.
 </p>
 </div>
@@ -199,8 +228,8 @@ Die Daten liegen auf Ausbildungsberuf-Ebene vor. Diese werden aus den Erhebungsb
 <br>
 
 <p class="my-text">
-
-Lorem ipsum...
+Wie im Durchschnitt über alle Ausbildungsberufe hinweg, ist der Anteil der Auszubildenden zurückgegangen. 
+Zwischen 2006 und 2021 sank die Anzahl an Auszubildenden von 534 auf 387 Auszubildende. Das entspricht einem <b>Rückgang von 28 Prozent</b>. In den letzten drei Jahren lässt sich jedoch mit einer leichten Zunahme an Auszubildenden ein positiver Trend erkennen.
 
 </p>
 
@@ -209,13 +238,15 @@ Lorem ipsum...
 
 #### Regionale Verteilung Ausbildungszahlen
 
+<br>
+<i>Darstellung: </i> 
 
 {% tabs ausbildungszahlen %}
 
-{% tab ausbildungszahlen Balkendiagramm %}
+{% tab ausbildungszahlen Deutschlandkarte %}
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/bundesland.html' | relative_url }}" 
+  <iframe src="{{ '/assets/plotly/bif/auszubildende_raum_karte.html' | relative_url }}" 
 			scrolling='no' 
 			frameborder='0'
 			padding_bottom='56.25%'
@@ -224,64 +255,61 @@ Lorem ipsum...
 	</iframe>
 </div>
 
-{% details Information zum Datensatz %}
-<div style="background-color: rgb(240,235,255);">
-<p class="my-text">
-Der Indikator <b>Ausbildungsabsolventen</b> basiert auf einer Vollerhebung der bestandenden 
-Abschlussprüfungen gemeldet an die stat. Landesämter. Die Daten liegen auf Ausbildungsberuf-Ebene (Erhebungsberuf) für das Jahr 2022 vor. 
-Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/12129.php"> DAZUBI Datenportal </a>.
-</p>
-</div>
-{% enddetails %}
-
-{% details Information zum Berufsaggregat %}
-<div style="background-color: rgb(240,235,255);">
-
-<p class="my-text">
-Die Daten liegen auf Ausbildungsberuf-Ebene vor. Diese werden aus den Erhebungsberuf-Statistiken (DKZ, 8-Steller) von DAZUBI gebildet.</p>
-
-</div>
-{% enddetails %}
+<br>
 
 {% endtab %}
 
-{% tab ausbildungszahlen Deutschlandkarte%}
-WIRD NOCH ERSTELLT
+{% tab ausbildungszahlen Balkendiagramm%}
 
-
-{% details Information zum Datensatz %}
-<div style="background-color: rgb(240,235,255);">
-<p class="my-text">
-Der Indikator <b>Ausbildungsabsolventen</b> basiert auf einer Vollerhebung der bestandenden 
-Abschlussprüfungen gemeldet an die stat. Landesämter. Die Daten liegen auf Ausbildungsberuf-Ebene (Erhebungsberuf) für das Jahr 2022 vor. 
-Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/12129.php"> DAZUBI Datenportal </a>.
-</p>
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/bif/auszubildende_raum_balken.html' | relative_url }}" 
+			scrolling='no' 
+			frameborder='0'
+			padding_bottom='56.25%'
+			height="400" 
+			width="100%">
+	</iframe>
 </div>
-{% enddetails %}
 
-{% details Information zum Berufsaggregat %}
-<div style="background-color: rgb(240,235,255);">
-
-<p class="my-text">
-Die Daten liegen auf Ausbildungsberuf-Ebene vor. Diese werden aus den Erhebungsberuf-Statistiken (DKZ, 8-Steller) von DAZUBI gebildet.</p>
-
-</div>
-{% enddetails %}
+<br>
 
 {% endtab %}
 
 {% endtabs %}
 
+{% details Information zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+<p class="my-text">
+Der Indikator <b>Auszubildende</b> basiert auf einer Vollerhebung der bestehenden Ausbildungsverträge gemeldet an die stat. Landesämter. 
+Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/12129.php"> DAZUBI Datenportal </a>.
+</p>
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Ausbildungsberuf-Ebene vor. Diese werden aus den Erhebungsberuf-Statistiken (DKZ, 8-Steller) von DAZUBI gebildet.</p>
+
+</div>
+{% enddetails %}
+
+<br>
+
 <p class="my-text">
 
-Lorem ipsum...
+Die meisten Mikrotechnologen/-technologinnen wurden 2022 in <b>Sachsen ausgebildet mit 120 Auszubildenden</b>. 
+Dies entspricht auch der Region, mit den höchsten Erwerbstätigen in dieser Berufsgattung 
+(vgl. <a href="https://www.forbes.at/artikel/sachsen-punktet-als-global-fuehrender-standort-der-halbleiterbranche.html">Forbes 2024</a>). 
+Es folgen Baden-Württemberg mit 60 Auszubildenden, Brandenburg mit 57 Auszubildenden und Bayern mit ebenfalls 57 Auszubildenden. 
 
 </p>
 
 #### Unbesetzte Ausbildungsstellen und unvermittelte Bewerber
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/unbesetzt.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/bif/unbesetzt.html' | relative_url }}" scrolling='no' frameborder='0' height="600px" width="100%"></iframe>
 </div>
 
 
@@ -313,7 +341,12 @@ Die Daten liegen auf Berufsgruppen-Ebene vor. D. h. für die
 
 <p class="my-text">
 
-Lorem ipsum...
+Die Grafik zeigt das Verhältnis zwischen unbesetzten Ausbildungsstellen und unvermittelten Bewerbern in der Berufsgruppe Elektrotechnik (Grün) 
+sowie über alle dualen Berufsausbildungen hinweg (Blau). Der Anteil der gemeldeten <b>unbesetzten Stellen</b> betrug 2023 11.8 Prozent in der 
+Berufsgruppe Elektrotechnik. Damit ist ihr Anteil <b>leicht unterdurchschnittlich</b> im Vergleich zu allen dualen Ausbildungsberufen mit 13.1 
+Prozent. 
+Jedoch lag der Anteil der <b>unvermittelten Bewerber</b>, d. h. der gemeldeten Ausbildungsinteressierten, <b>leicht über dem Durchschnitt</b> mit 12.0 Prozent zu 11.5 Prozent. 
+Vertiefende Statistiken aus der Erhebung zum 30.09. (siehe „Information zum Datensatz“) zeigen, dass im Bundesland mit dem höchsten Ausbildungsgeschehen, Sachsen, der Anteil der unvermittelten Bewerber in Elektrotechnik leicht unter dem Bundesdurchschnitt bei 9.8 Prozent lag. 
 
 </p>
 
@@ -328,7 +361,7 @@ Lorem ipsum...
 
 <div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/bif/einkommen_mikrotechnologe.png" title=""  zoom="%" %}
+        {% include figure.html path="assets/img/bif/entgelt_mikrotechnik.png" title=""  zoom="%" %}
     </div>
 </div>
 
@@ -360,7 +393,7 @@ Die Daten liegen auf Berufsgattung-Ebene vor. D. h. für die
 
 <p class="my-text">
 
-Lorem ipsum...
+Das <b>Einkommen für die Berufsgattung der Mikrosystemtechnik ist überdurchschnittlich</b> im Verhältnis zu allen Berufen auf Fachkräfteniveau. Mikrosystemtechnik Fachkräfte in Vollzeit verdienen im Schnitt <b>brutto monatlich 3262 €</b>. Damit liegt das Einkommen über dem Medianlohn aller Berufe auf Fachkräfteniveau, d. h. für Berufe, wo generell eine Berufsausbildung erforderlich ist. Dieser Median liegt bei 3223 € brutto im Monat. 
 
 </p>
 
@@ -370,7 +403,7 @@ Lorem ipsum...
 
 <div class="l-page">
   <iframe src="{{ '/assets/plotly/bif/arbeitsbedingungen.html' | relative_url }}" scrolling='no' 
-  align="center" frameborder='0' height="600" width="140%"></iframe>
+  align="left" frameborder='0' height="550" width="100%"></iframe>
 </div>
 
 <br>
@@ -400,7 +433,19 @@ Die Daten liegen auf Berufsgruppen-Ebene vor. D. h. für die
 
 <p class="my-text">
 
-Lorem ipsum...
+Für die Berufsgruppe Elektrotechnik zeigen sich folgende Arbeitsbedingungen. <br><br>
+<i>Arbeitsintensität</i><br>
+Hierzu gehören Arbeitsbedingungen wie hoher Termin-/und Leistungsdruck oder Arbeiten an der Grenze der Belastungsfähigkeit (vgl. Information zum Datensatz). Der errechnete <b>Indexwert beträgt 1</b> (von 1 bis 10) und ist damit als sehr gering einzustufen. <b>Die Berufsgattung Elektroberufe weist eine sehr geringe Belastung durch die Arbeitsmenge auf</b>.<br>
+<i>Umgebungsbelastung</i><br>
+Hierzu gehören Arbeitsbedingungen wie Arbeiten bei Lärm, Hitze oder Rauch sowie der Ausgesetztheit von Ölen, Fetten und Schmutz. Der <b>Indexwert von 7</b> (von 1 bis 10) weist auf eine relativ hohe Belastung durch solche Faktoren auf. <br>
+<i>Physische Belastung</i><br>
+Hierzu gehören Arbeitsbedingungen wie Arbeiten im Stehen und unter Zwangshaltung sowie schweres Heben und Tragen. Mit einem <b>Indexwert von 5</b> (von 1 bis 10) ist als durchschnittlich einzustufen. Körperliche Belastungsfähigkeit ist somit Teil dieser Berufsgruppe.<br>
+<i>Arbeitszeitlage</i><br>
+Hierzu gehören Arbeitsbedingungen wie Arbeiten am Wochenende oder Arbeiten außerhalb von 7-19 Uhr. Mit einem <b>Indexwert von 4</b> (von 1 bis 10) weist die Berufsgruppe Elektrotechnik eher geringe Werte in diesem Aspekt auf. Arbeit findet somit überwiegend unter der Woche tagsüber statt.<br>
+<i>Soziale Unterstützung</i><br>
+Hierzu gehören Arbeitsbedingungen wie das Erleben eines Gemeinschaftsgefühls, Unterstützung durch Kollegen und Kolleginnen sowie des direkten Vorgesetzten. Der <b>Indexwert von 3</b> (von 1 bis 10) kann als eher gering betrachtet werden. Das bedeutet, dass Erwerbstätige eher geringe soziale Unterstützung in dieser Berufsgruppe wahrnehmen.<br>
+<i>Handlungsspielraum</i><br>
+Hierzu gehören Arbeitsbedingungen wie die Möglichkeit, Arbeit und Pausen selbst planen und einteilen zu können sowie Einfluss auf die Arbeitsmenge zu besitzen. Mit einem <b>Indexwert von 5</b> (von 1 bis 10) weist diese Berufsgruppe durchschnittlichen Handlungsspielraum auf.<br>
 
 </p>
 
@@ -408,7 +453,7 @@ Lorem ipsum...
 
 <div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/bif/ansehen_elektrotechnik.png" title=""  zoom="30%" %}
+        {% include figure.html path="assets/img/bif/ansehen_mikrotechnik.png" title=""  zoom="30%" %}
     </div>
 </div>
 
@@ -439,16 +484,16 @@ Die Daten liegen auf Berufsgruppen-Ebene vor. D. h. für die
 
 <p class="my-text">
 
-Lorem ipsum...
-
+Das berufliche Ansehen in der Berufsgruppe Elektrotechnik liegt mit einem Wert von 6,98 über dem Durchschnitt für alle Berufe auf Fachkräfteniveau (5.53) als auch über dem Durchschnitt aller befragten Berufe insgesamt (5.75, nicht abgebildet). Das bedeutet <b>das Ansehen von Elektroberufen wird von der Bevölkerung als überdurchschnittlich hoch wahrgenommen</b>.
 </p>
 
 
 
-### Zusammenfassung und Diskussion
+### Zusammenfassung
 
 <p class="my-text">
 
-Lorem ipsum...
+In den kommenden Jahren ist mit einer zunehmenden Fachkräftenachfrage im Bereich der Mikrosystemtechnik zu rechnen. Bereits heute wird die Mehrheit der Mikrotechnologen in Regionen ausgebildet, welche auch in Zukunft eine hohe Nachfrage nach qualifizierten Fachkräften haben wird. Jedoch sind die absoluten Zahlen der Auszubildenden noch ausbaufähig. Die berufliche Passung zwischen Ausbildungsinteressierten und Ausbildungsbetrieben ist als durchschnittlich für duale Ausbildungen zu bezeichnen. Auch hier böte sich ungeschöpftes Fachkräftepotential.
+Aus Sicht der Erwerbstätigen sind Berufe in der Elektrotechnik und Berufe der Mikrosystemtechnik im Besonderen als attraktiv zu bewerten. Sie bieten überdurchschnittliche Löhne im Vergleich zu anderen Fachkräfteberufen und weisen ein deutlich höheres gesellschaftliches Ansehen auf als andere Berufe. Diese beiden Dimensionen sind für die Berufswahl entscheidende Faktoren. In Bezug auf die Arbeitsbedingungen weisen Berufe der Elektrotechnik ebenfalls kompetitive Werte auf. Schichtarbeit gehört eher weniger zum Berufsbild und das Arbeiten unter hohem Leistungs- und Zeitdruck wird von den Befragten nicht berichtet. Elektroberufe weisen erhöhte Werte in Bezug auf umgebungsbezogene Belastungen auf (Lärm und/oder Schmutz). Ausbaufähig lässt sich die Dimension der sozialen Unterstützung beschreiben. Befragte aus Elektrotechnikberufen berichten selten über die Unterstützung von Kollegen, Kolleginnen und dem direkten Vorgesetzten. Ob dies damit zusammenhängt, dass diese Berufe überwiegend alleine verrichtet werden, oder es mit der Betriebskultur zusammenhängt, lässt sich anhand der Statistiken nicht sagen.
 
 </p>
