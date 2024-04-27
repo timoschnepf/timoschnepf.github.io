@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Beruf im Fokus
-permalink: /bif/mikrotechnologe/
+permalink: /bif/sanitaer/
 toc:
   beginning: true
   sidebar: left
@@ -14,20 +14,27 @@ toc:
 </style>
 
 
-## Mikrosystemtechnik
+## Sanitär, Heizung, Klimatechnik 
 
 <br>
 
 <div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/bif/header_mikrotechnologe.jpg" title=""  zoom="50%" %}
+        {% include figure.html path="assets/img/bif/header_shk.jpg" title=""  zoom="50%" %}
     </div>
 </div>
 
 <p class="my-text"> 
 <strong>
 <br>
-Berufe in der Mikrosystemtechnik konzentrieren sich auf fachlich ausgerichtete Tätigkeiten in der Entwicklung, Herstellung und Anwendung von mikrosystemtechnischen Produkten und Systemen. Diese hochspezialisierten Berufe umfassen die Arbeit mit mikroelektronischen Bauelementen, Sensoren, Aktuatoren und Mikrocomputer-Systemen, die in verschiedensten Anwendungsgebieten wie der Medizintechnik, der Automobilindustrie oder der Umwelttechnologie zum Einsatz kommen. 
+Berufe in der Sanitär-, Heizungs- und Klimatechnik umfassen eine Vielzahl von fachlich ausgerichteten Tätigkeiten, 
+die sich mit der Planung, Installation, Wartung und Reparatur von Wasser- und Heizungssystemen sowie klima- und 
+lüftungstechnischen Anlagen beschäftigen. Fachkräfte sind verantwortlich für die Installation von Badezimmereinrichtungen, 
+Heizungssystemen und Lüftungsanlagen, sowie für die Instandhaltung und Optimierung dieser Systeme, um eine effiziente und 
+umweltfreundliche Nutzung zu gewährleisten. Ihr Know-how ermöglicht es ihnen, auf die individuellen Bedürfnisse der Kunden 
+einzugehen und maßgeschneiderte Lösungen zu entwickeln. Die Berufe in dieser Gattung sind essenziell für den Bau und den 
+Betrieb moderner Gebäudetechnik, wobei Nachhaltigkeit und Energieeffizienz zunehmend an Bedeutung gewinnen.
+
 
 </strong>
 
@@ -37,9 +44,11 @@ Berufe in der Mikrosystemtechnik konzentrieren sich auf fachlich ausgerichtete T
 <div style="background-color: rgb(240,235,255);">
 
  <ul>
-   <li><a href="https://web.arbeitsagentur.de/berufenet/beruf/2757">Mikrotechnologe/-technologin (zum BerufeNet der BA)</a></li>
-  <li>Halbleiterfertiger/in</li>
-  <li>Facharbeiter/in - Anlagentechnik (Halbleitertechnik)</li>
+   <li><a href="https://web.arbeitsagentur.de/berufenet/beruf/15164">Anlagenmechaniker/in - Sanitär-, Heizungs- und Klimatechnik (zum BerufeNet der BA)</a></li>
+  <li>Gas- und Wasserinstallateur/in</li>
+  <li>Heizungsanlagenbauer/in</li>
+  <li>Installateur/in - Energie- und Gebäudetechnik</li>
+  <li>Zentralheizungs- und Lüftungsbauer/in</li>
 </ul> 
 </div>
 {% enddetails %}
@@ -48,7 +57,7 @@ Berufe in der Mikrosystemtechnik konzentrieren sich auf fachlich ausgerichtete T
 <div style="background-color: rgb(240,235,255);">
 
  <ul>
-   <li><a href="https://www.bibb.de/dienst/berufesuche/de/index_berufesuche.php/profile/apprenticeship/1111101">Mikrotechnologe/-technologin (zur BIBB Berufesuche)</a></li>
+   <li>Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik <a href="https://www.bibb.de/dienst/berufesuche/de/index_berufesuche.php/profile/apprenticeship/210715"> (zur BIBB Berufesuche)</a></li>
 </ul> 
 </div>
 {% enddetails %}
@@ -57,16 +66,16 @@ Berufe in der Mikrosystemtechnik konzentrieren sich auf fachlich ausgerichtete T
 <div style="background-color: rgb(240,235,255);">
 
  <ul>
-   <li>KldB 2010: <b>26322</b></li>
-   <li>DAZUBI Erhebungsberuf: <b>26322010</b></li>
-   <li>ISCO-08: <b>3114</b></li>
+   <li>KldB 2010: <b>34212</b></li>
+   <li>DAZUBI Erhebungsberuf: <b>34212310;34212010;34212340;34212350</b></li>
+   <li>ISCO-08: <b>7126</b></li>
 </ul> 
 </div>
 {% enddetails %}
 
 <br>
 <p align="center">
-<iframe width="500" height="300" src="https://www.youtube.com/embed/seT64neoIec" title="Faszinierende Welt der Mikrochips 👨‍💻 | Auf Arbeit mit … Azubi Markus Göhler" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="500" height="300" src="https://www.youtube.com/embed/BMwSbL9SDP0" title="Sanitär, Heizung und Klimatechnik: Das verdient ein Anlagenmechaniker-Meister | Lohnt sich das? | BR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </p>
 
 <br>
@@ -75,18 +84,7 @@ Berufe in der Mikrosystemtechnik konzentrieren sich auf fachlich ausgerichtete T
 
 <br>
 
-- <b>Die EU plant mit dem European Chips Act den weltweiten Marktanteil 
-in der Halbleiterproduktion von gegenwärtig 10 Prozent auf 20 Prozent 
-im Jahr 2030 zu erhöhen. Als größtes Wachstumsrisiko wurden 
-Fachkräfteengpässe und fehlende Kompetenzen identifiziert.</b>
-- <b>2020 waren in Deutschland 592.000 Menschen in der Berufsgruppe Elektrotechnik erwerbstätig. Etwa 1.093.000 Millionen Erwerbspersonen besaßen 2020 einen beruflichen Abschluss in der Elektrotechnik.</b>
-- <b>Die meisten Erwerbstätigen, welche in dieser Berufsgruppe ausgebildet werden, arbeiten in dieser Berufsgruppe mit einem Anteil von 26 Prozent.</b>
-- <b>Zwischen 2008 und 2021 sank die Anzahl an Auszubildenden im Ausbildungsberuf „Mikrotechnologe/-technologin“ von 534 auf 387 Auszubildende. In den letzten drei Jahren lässt sich jedoch mit einer leichten Zunahme an Auszubildenden ein positiver Trend erkennen.</b>
-- <b>Die mit Abstand meisten Mikrotechnologen/-technologinnen wurden 2022 in Sachsen ausgebildet.</b>
-- <b>Die Löhne für Fachkräfte in der Mikrostystemtechnik sind überdurchschnittlich verglichen mit Löhnen in Berufen auf Fachkräfteniveau.</b>
-- <b>Auch das gesellschaftliche Ansehen der Berufsgruppe Elektrotechnik ist deutlich überdurchschnittlich sowohl im Vergleich zu anderen Berufen auf Fachkräfteniveau als auch über alle Berufe hinweg.</b>
-- <b>In Bezug auf die Arbeitsbedingungen zeigt sich, dass Berufe der Elektrotechnik wenig unter Zeit- und Mengendruck arbeiten. Es zeigen sich jedoch überdurchschnittliche Belastungswerte für das Arbeiten bei Lärm und Schmutzbelastungen wie Öle und Fette.</b>
-
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 <br>
 
 ### Einleitung
@@ -95,19 +93,11 @@ Fachkräfteengpässe und fehlende Kompetenzen identifiziert.</b>
 <p class="my-text">
 
 
-Der European Chips Act des Europäischen Rates sieht vor, mit massiven Investitionen den Marktanteil der EU bei 
-Halbleitern von derzeit 10 Prozent auf mindestens 20 Prozent bis 2030 zu verdoppeln (<a href="https://dip.bundestag.de/drucksache/aktueller-stand-der-halbleiter-chip-forschungs-und-weiterbildungsstrategie-der-bundesregierung/272847"> Bundesregierung 2024</a>). 
-Die Mikrotechnologie in Deutschland wird dadurch eine Zunahme der Fachkräftenachfrage erleben (vgl. 
-<a href="https://www.forbes.at/artikel/sachsen-punktet-als-global-fuehrender-standort-der-halbleiterbranche.html">Forbes 2024</a>; 
-<a href="https://www.zeit.de/2023/44/chipfabriken-deutschland-subvention-wettbewerb-fachkraefte">ZEIT 2024</a>). 
-Mikrotechnologen und verwandte Berufe spielen dabei eine 
-entscheidende Rolle, da sie mit ihrer Expertise in der Entwicklung, Herstellung und 
-Implementierung mikrosystemtechnischer Produkte und Systeme die Weichen für Zukunftstechnologien stellen. 
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 <br><br>
 
-Die folgenden Abschnitte beleuchten verschiedene Aspekte dieser 
-Entwicklung, darunter die Arbeitsnachfrage und das Arbeitsangebot, die Entwicklung der Ausbildungszahlen, sowie berufliche Attraktivitätsdimensionen der Elektro- und Mikrotechnologie. Die folgenden statistischen Einblicke unterstreichen die Chancen, aber auch die Herausforderungen, welche Entscheidungsträgern in Politik, Wirtschaft und Fachöffentlichkeit, aber auch den Erwerbstätigen bevorstehen.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 </p>
 
 <br>
@@ -119,7 +109,7 @@ Entwicklung, darunter die Arbeitsnachfrage und das Arbeitsangebot, die Entwicklu
 #### Anzahl Personen mit ausgeübtem und erlerntem Beruf
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/erwerbstaetige.html' | relative_url }}" scrolling='no' frameborder='0' height="600" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/bif/shk/erwerbstaetige.html' | relative_url }}" scrolling='no' frameborder='0' height="600" width="100%"></iframe>
 </div>
 <br>
 
@@ -159,7 +149,7 @@ Die Projektion in der langen Frist zeigt für Deutschland sowohl beim Arbeitskr�
 
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/sankey.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/bif/shk/sankey.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
@@ -203,7 +193,7 @@ Die Berufsgattung „Mikrosystemtechnik“ beinhaltet einen Ausbildungsberuf, de
 
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/auszubildende_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/bif/shk/auszubildende_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="500px" width="90%"></iframe>
 </div>
 
 
@@ -246,7 +236,7 @@ Zwischen 2006 und 2021 sank die Anzahl an Auszubildenden von 534 auf 387 Auszubi
 {% tab ausbildungszahlen Deutschlandkarte %}
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/auszubildende_raum_karte.html' | relative_url }}" 
+  <iframe src="{{ '/assets/plotly/bif/shk/auszubildende_raum_karte.html' | relative_url }}" 
 			scrolling='no' 
 			frameborder='0'
 			padding_bottom='56.25%'
@@ -262,7 +252,7 @@ Zwischen 2006 und 2021 sank die Anzahl an Auszubildenden von 534 auf 387 Auszubi
 {% tab ausbildungszahlen Balkendiagramm%}
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/auszubildende_raum_balken.html' | relative_url }}" 
+  <iframe src="{{ '/assets/plotly/bif/shk/auszubildende_raum_balken.html' | relative_url }}" 
 			scrolling='no' 
 			frameborder='0'
 			padding_bottom='56.25%'
@@ -309,7 +299,7 @@ Es folgen Baden-Württemberg mit 60 Auszubildenden, Brandenburg mit 57 Auszubild
 #### Unbesetzte Ausbildungsstellen und unvermittelte Bewerber
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/unbesetzt.html' | relative_url }}" scrolling='no' frameborder='0' height="600px" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/bif/shk/unbesetzt.html' | relative_url }}" scrolling='no' frameborder='0' height="600px" width="100%"></iframe>
 </div>
 
 
@@ -353,15 +343,62 @@ Vertiefende Statistiken aus der Erhebung zum 30.09. (siehe „Information zum Da
 
 <br>
 
+### Kompetenzen
+
+
+<br>
+
+#### Green Skills
+
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/bif/shk/green.html' | relative_url }}" scrolling='no' frameborder='0' height="500px" width="100%"></iframe>
+</div>
+<br>
+
+
+{% details Information zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Der Indikator "Ausgeübter und erlernter Beruf" basiert auf Daten der
+<b>BIBB-IAB-Qualifikations- und Berufsprojektionen</b> (QuBe). 
+Weiterführende Informationen sowie umfassendere Statistiken finden Sie im <a href="https://www.bibb.de/de/qube_datenportal.php"> QuBe Datenportal </a>.
+</p>
+
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h. für <b>Berufe der Elektrotechnik</b>. 
+</p>
+
+</div>
+{% enddetails %}
+
+<br>
+
+<p class="my-text">
+
+Lorem ipsum...
+
+</p>
+
+<br>
+
 ### Attraktivität des Berufs
 
 <br>
 
-#### Einkommen Erwerbstätigkeit
+#### Einkommen 
+
+##### Erwerbstätigkeit
 
 <div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/bif/entgelt_mikrotechnik.png" title=""  zoom="%" %}
+        {% include figure.html path="assets/img/bif/entgelt_shk.png" title=""  zoom="%" %}
     </div>
 </div>
 
@@ -398,12 +435,51 @@ Das <b>Einkommen für die Berufsgattung der Mikrosystemtechnik ist überdurchsch
 </p>
 
 
+##### Ausbildung
+
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/bif/shk/verguetung.html' | relative_url }}" scrolling='no' 
+  align="left" frameborder='0' height="450px" width="120%"></iframe>
+</div>
+
+<br>
+
+{% details Information zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+<p class="my-text">
+Der Indikator <b>Ausbildungsverguetung</b> basiert auf der BIBB/BAuA Erwerbstätigenbefragung 2018. 
+Er zeigt die Medianwerte für sechs Merkmale beruflicher Belastungsfaktoren. Der Indikator basiert 
+auf der "Job Exposure Matrix" und liegt auf beruflichen Ebene der Berufsuntergruppen (4-Steller) vor. 
+Weitere Informationen zum Indikator finden Sie unter <a href="https://www.baua.de/DE/Forschung/Forschungsdaten/Job-Exposure-Matrix.html"> JEM Projekt</a>. 
+Weitere Informationen zum Datensatz finden Sie unter <a href="https://www.bibb.de/de/2815.php"> BIBB/BAuA Erwerbtstätigenbefragung</a>.
+</p>
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf Ausbildungsberuf-Ebene vor. D. h. für den
+<b>Ausbildungsberuf Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik</b>. 
+</p>
+</div>
+{% enddetails %}
+<br>
+
+<p class="my-text">
+
+Lorem ipsum...
+
+</p>
+
+
 #### Arbeitsbedingungen
 
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/arbeitsbedingungen.html' | relative_url }}" scrolling='no' 
-  align="left" frameborder='0' height="550" width="100%"></iframe>
+  <iframe src="{{ '/assets/plotly/bif/shk/arbeitsbedingungen.html' | relative_url }}" scrolling='no' 
+  align="left" frameborder='0' height="550" width="110%"></iframe>
 </div>
 
 <br>
@@ -453,7 +529,7 @@ Hierzu gehören Arbeitsbedingungen wie die Möglichkeit, Arbeit und Pausen selbs
 
 <div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/bif/ansehen_mikrotechnik.png" title=""  zoom="30%" %}
+        {% include figure.html path="assets/img/bif/ansehen_shk.png" title=""  zoom="30%" %}
     </div>
 </div>
 
@@ -493,7 +569,5 @@ Das berufliche Ansehen in der Berufsgruppe Elektrotechnik liegt mit einem Wert v
 
 <p class="my-text">
 
-In den kommenden Jahren ist mit einer zunehmenden Fachkräftenachfrage im Bereich der Mikrosystemtechnik zu rechnen. Bereits heute wird die Mehrheit der Mikrotechnologen in Regionen ausgebildet, welche auch in Zukunft eine hohe Nachfrage nach qualifizierten Fachkräften haben wird. Jedoch sind die absoluten Zahlen der Auszubildenden noch ausbaufähig. Die berufliche Passung zwischen Ausbildungsinteressierten und Ausbildungsbetrieben ist als durchschnittlich für duale Ausbildungen zu bezeichnen. Auch hier böte sich ungeschöpftes Fachkräftepotential.
-Aus Sicht der Erwerbstätigen sind Berufe in der Elektrotechnik und Berufe der Mikrosystemtechnik im Besonderen als attraktiv zu bewerten. Sie bieten überdurchschnittliche Löhne im Vergleich zu anderen Fachkräfteberufen und weisen ein deutlich höheres gesellschaftliches Ansehen auf als andere Berufe. Diese beiden Dimensionen sind für die Berufswahl entscheidende Faktoren. In Bezug auf die Arbeitsbedingungen weisen Berufe der Elektrotechnik ebenfalls kompetitive Werte auf. Schichtarbeit gehört eher weniger zum Berufsbild und das Arbeiten unter hohem Leistungs- und Zeitdruck wird von den Befragten nicht berichtet. Elektroberufe weisen erhöhte Werte in Bezug auf umgebungsbezogene Belastungen auf (Lärm und/oder Schmutz). Ausbaufähig lässt sich die Dimension der sozialen Unterstützung beschreiben. Befragte aus Elektrotechnikberufen berichten selten über die Unterstützung von Kollegen, Kolleginnen und dem direkten Vorgesetzten. Ob dies damit zusammenhängt, dass diese Berufe überwiegend alleine verrichtet werden, oder es mit der Betriebskultur zusammenhängt, lässt sich anhand der Statistiken nicht sagen.
-
+Lorem ipsum...
 </p>
