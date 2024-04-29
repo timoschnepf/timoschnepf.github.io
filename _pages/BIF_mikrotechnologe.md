@@ -155,6 +155,7 @@ Die Projektion in der langen Frist zeigt für Deutschland sowohl beim Arbeitskr�
 </p>
 
 <br>
+
 #### Übergang erlernter Beruf in Erwerbstätigkeit
 
 
@@ -177,7 +178,7 @@ Weiterführende Informationen sowie umfassendere Statistiken finden Sie im <a hr
 <div style="background-color: rgb(240,235,255);">
 
 <p class="my-text">
-Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h. für <b>Berufe der Elektrotechnik</b>. 
+Die Daten liegen auf der Ebene der Berufshauptgruppen vor (KldB 2010 2-Steller), d. h. für <b>Mechatronik, Energie- und Elektroberufe</b>. 
 </p>
 
 </div>
@@ -187,8 +188,12 @@ Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller), d. h
 
 <p class="my-text">
 
-Welche Berufe üben Erwerbstätige mit einem erlernten Beruf der Berufsgruppe „Elektrotechnik“ aus? Die meisten Erwerbstätigen, welche in dieser Berufsgruppe ausgebildet wurden, arbeiten auch in der gleichen Berufsgruppe mit einem Anteil von <b>26 Prozent</b>.
-Es folgen die Berufsgruppen Energietechnik (6 Prozent) und Unternehmensorganisation und -Strategie (6 Prozent). Anhand der Ähnlichkeit der Tätigkeiten sind viele Berufe im produktions- und fertigungstechnischen Bereich angesiedelt (u. a. Berufsgruppen Energietechnik, Maschinen und -Betriebstechnik oder Technische Produktionsplanung).
+Welche Berufe üben Erwerbstätige mit einem erlernten Beruf der Berufshauptgruppe „Mechatronik, Energie- und Elektroberufe“ aus? 
+Die meisten Erwerbstätigen, welche in dieser Berufshauptgruppe ausgebildet wurden, arbeiten auch in der gleichen Berufshauptgruppe 
+mit einem Anteil von <b>32 Prozent</b>.
+Es folgen die Berufshauptgruppen Maschinen- und Fahrzeugtechnikberufe (8 Prozent) und Berufe in der Unternehmensführung 
+(8 Prozent). Anhand der Ähnlichkeit der Tätigkeiten sind viele Berufe im produktions- und fertigungstechnischen 
+Bereich angesiedelt.
 
 </p>
 
@@ -350,6 +355,51 @@ Vertiefende Statistiken aus der Erhebung zum 30.09. (siehe „Information zum Da
 
 </p>
 
+
+<br>
+
+### Kompetenzen
+
+
+<br>
+
+#### Alternativberufe
+
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/bif/stellenanzeigen_alternativberuf.html' | relative_url }}" scrolling='no' frameborder='0' height="500px" width="100%"></iframe>
+</div>
+<br>
+
+
+{% details Information zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Der Indikator "Alternativberufe" basiert auf <b>Stellenanzeigen Daten der Bundesagentur für Arbeit</b> der 
+Jahre 2018 bis 2022. Ausgewertet wurden die Nennungen der Alternativberufe in allen BA Stellenanzeigen für die 
+entsprechende Berufsgattung.
+</p>
+
+</div>
+{% enddetails %}
+
+{% details Information zum Berufsaggregat %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Die Daten liegen auf der Ebene der Berufsgattung vor (KldB 2010 5-Steller), d. h. für <b>Mikrosystemtechnik - Fachkraft</b>. 
+</p>
+
+</div>
+{% enddetails %}
+
+<br>
+
+<p class="my-text">
+
+Lorem ipsum...
+
+</p>
 
 <br>
 

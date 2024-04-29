@@ -106,6 +106,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 <br>
 
+<!--
 #### Anzahl Personen mit ausgeübtem und erlerntem Beruf
 
 <div class="l-page">
@@ -184,6 +185,8 @@ Es folgen die Berufsgruppen Energietechnik (6 Prozent) und Unternehmensorganisat
 
 
 <br>
+
+-->
 
 #### Entwicklung der Ausbildungszahlen
 
@@ -296,52 +299,7 @@ Es folgen Baden-Württemberg mit 60 Auszubildenden, Brandenburg mit 57 Auszubild
 
 </p>
 
-#### Unbesetzte Ausbildungsstellen und unvermittelte Bewerber
 
-<div class="l-page">
-  <iframe src="{{ '/assets/plotly/bif/shk/unbesetzt.html' | relative_url }}" scrolling='no' frameborder='0' height="600px" width="100%"></iframe>
-</div>
-
-
-{% details Information zum Datensatz %}
-<div style="background-color: rgb(240,235,255);">
-<p class="my-text">
-Der Indikator <b>"Unbesetzte Ausbildungsstellen und unvermittelte Bewerber"</b> basiert auf der Ausbildungsmarktstatistik der BA 
-im Rahmen der Erhebung "30.09". Als Datenquelle dienen BA-eigene Fachverfahren in Bezug auf 
-die Vermittlungsdienste. Diese sind "für Betriebe und Jugendliche freiwillig; es bleiben in 
-den Darstellungen also jene Jugendlichen und Ausbildungsplatzanbieter unberücksichtigt, welche die Beratungs- 
-und Vermittlungsdienste der BA nicht in Anspruch nehmen" (vgl. Flemming & Granath 2016: 17f). 
-Weiterführende Informationen und umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/179142.php"> Erhebung zum 30.09</a>.
-
-</p>
-</div>
-{% enddetails %}
-
-{% details Information zum Berufsaggregat %}
-<div style="background-color: rgb(240,235,255);">
-
-<p class="my-text">
-Die Daten liegen auf Berufsgruppen-Ebene vor. D. h. für die
-<b>Berufsgruppe Elektrotechnik</b>. 
-</p>
-</div>
-{% enddetails %}
-
-<br>
-
-<p class="my-text">
-
-Die Grafik zeigt das Verhältnis zwischen unbesetzten Ausbildungsstellen und unvermittelten Bewerbern in der Berufsgruppe Elektrotechnik (Grün) 
-sowie über alle dualen Berufsausbildungen hinweg (Blau). Der Anteil der gemeldeten <b>unbesetzten Stellen</b> betrug 2023 11.8 Prozent in der 
-Berufsgruppe Elektrotechnik. Damit ist ihr Anteil <b>leicht unterdurchschnittlich</b> im Vergleich zu allen dualen Ausbildungsberufen mit 13.1 
-Prozent. 
-Jedoch lag der Anteil der <b>unvermittelten Bewerber</b>, d. h. der gemeldeten Ausbildungsinteressierten, <b>leicht über dem Durchschnitt</b> mit 12.0 Prozent zu 11.5 Prozent. 
-Vertiefende Statistiken aus der Erhebung zum 30.09. (siehe „Information zum Datensatz“) zeigen, dass im Bundesland mit dem höchsten Ausbildungsgeschehen, Sachsen, der Anteil der unvermittelten Bewerber in Elektrotechnik leicht unter dem Bundesdurchschnitt bei 9.8 Prozent lag. 
-
-</p>
-
-
-<br>
 
 ### Kompetenzen
 
@@ -439,7 +397,7 @@ Das <b>Einkommen für die Berufsgattung der Mikrosystemtechnik ist überdurchsch
 
 <div class="l-page">
   <iframe src="{{ '/assets/plotly/bif/shk/verguetung.html' | relative_url }}" scrolling='no' 
-  align="left" frameborder='0' height="450px" width="120%"></iframe>
+  align="left" frameborder='0' height="500px" width="100%"></iframe>
 </div>
 
 <br>
