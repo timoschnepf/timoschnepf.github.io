@@ -123,6 +123,15 @@ Entwicklung, darunter die Arbeitsnachfrage und das Arbeitsangebot, die Entwicklu
 </div>
 <br>
 
+{% details Weitere Daten zum Beruf auf QuBe %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Im <a href="https://www.bibb.de/de/qube_datenportal_ergebnisse.php?lang%3DDE%26view%3DZR%26bc%3D%26dv%3Dvalue-orig%26icode%3DBE-000%26betyp%3DBHFBF%26co%3D%2Ctrue%2C%2C%2Ctrue%2Ctrue%2C%2C%2C%2C%2C%26gr%3D%26FILE%3Dbasis%26AB%3D01%2C02%26PST%3D01%26BE%3D26-263%26REGIO%3D00%26JAHR%3D15%2C20%2C25%2C30%2C35%2C40"> QuBe Datenportal </a>des BIBB finden Sie vertiefende Analysemöglichkeiten für diese Berufsgruppe. 
+</p>
+
+</div>
+{% enddetails %}
 
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
@@ -131,6 +140,17 @@ Entwicklung, darunter die Arbeitsnachfrage und das Arbeitsangebot, die Entwicklu
 Der Indikator "Ausgeübter und erlernter Beruf" basiert auf Daten der
 <b>BIBB-IAB-Qualifikations- und Berufsprojektionen</b> (QuBe). 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie im <a href="https://www.bibb.de/de/qube_datenportal.php"> QuBe Datenportal </a>.
+</p>
+
+</div>
+{% enddetails %}
+
+
+{% details Zitationshinweis zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Bitte zitieren als <i>"Maier , Tobias, Kalinowski, Michael und Zika, Gerd (2024). Qube Datenportal des Bundesinstituts für Berufsbildung."</i>
 </p>
 
 </div>
@@ -162,6 +182,18 @@ Die Projektion in der langen Frist zeigt für Deutschland sowohl beim Arbeitskr�
 <div class="l-page">
   <iframe src="{{ '/assets/plotly/bif/sankey.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
+
+{% details Weitere Daten zum Beruf auf QuBe %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Im <a href="https://www.bibb.de/de/qube_datenportal_ergebnisse.php?lang%3DDE%26view%3DZR%26bc%3D%26dv%3Dvalue-orig%26icode%3DBE-000%26betyp%3DBHFBF%26co%3D%2Ctrue%2C%2C%2Ctrue%2Ctrue%2C%2C%2C%2C%2C%26gr%3D%26FILE%3Dbasis%26AB%3D01%2C02%26PST%3D01%26BE%3D26-263%26REGIO%3D00%26JAHR%3D15%2C20%2C25%2C30%2C35%2C40"> QuBe Datenportal </a>des BIBB finden Sie vertiefende Analysemöglichkeiten für diesen Beruf. 
+</p>
+
+</div>
+{% enddetails %}
+
+
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 
@@ -169,6 +201,16 @@ Die Projektion in der langen Frist zeigt für Deutschland sowohl beim Arbeitskr�
 Der Indikator "Übergang erlernter Beruf in Erwerbstätigkeit" basiert auf Daten der
 <b>BIBB-IAB-Qualifikations- und Berufsprojektionen</b> (QuBe). 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie im <a href="https://www.bibb.de/de/qube_datenportal.php"> QuBe Datenportal </a>.
+</p>
+
+</div>
+{% enddetails %}
+
+{% details Zitationshinweis zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Bitte zitieren als <i>"Maier , Tobias, Kalinowski, Michael und Zika, Gerd (2024). Qube Datenportal des Bundesinstituts für Berufsbildung."</i>
 </p>
 
 </div>
@@ -211,6 +253,16 @@ Die Berufsgattung „Mikrosystemtechnik“ beinhaltet einen Ausbildungsberuf, de
   <iframe src="{{ '/assets/plotly/bif/auszubildende_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
 
+{% details Weitere Daten zum Ausbildungsberuf auf DAZUBI %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Im <a href="https://www.bibb.de/dienst/dazubi/dazubi/datasheet/download/30-26322010.pdf"> DAZUBI Datenportal </a>des BIBB finden Sie vertiefende Analysemöglichkeiten für diesen Ausbildungsberuf. 
+</p>
+
+</div>
+{% enddetails %}
+
 
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
@@ -218,6 +270,18 @@ Die Berufsgattung „Mikrosystemtechnik“ beinhaltet einen Ausbildungsberuf, de
 Der Indikator <b>Auszubildende</b> basiert auf einer Vollerhebung der bestehenden Ausbildungsverträge gemeldet an die stat. Landesämter. 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/12129.php"> DAZUBI Datenportal </a>.
 </p>
+</div>
+{% enddetails %}
+
+{% details Zitationshinweis zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Bitte zitieren als <i>"Datenbank Auszubildende" des Bundesinstituts für Berufsbildung auf Basis der Daten der Berufsbildungsstatistik 
+der statistischen Ämter des Bundes und der Länder (Erhebung zum 31.12.). Absolutwerte aus Datenschutzgründen jeweils auf ein 
+Vielfaches von 3 gerundet; der Insgesamtwert kann deshalb von der Summe der Einzelwerte abweichen."</i>
+</p>
+
 </div>
 {% enddetails %}
 
@@ -282,12 +346,34 @@ Zwischen 2006 und 2021 sank die Anzahl an Auszubildenden von 534 auf 387 Auszubi
 
 {% endtabs %}
 
+{% details Weitere Daten zum Ausbildungsberuf auf DAZUBI %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Im <a href="https://www.bibb.de/dienst/dazubi/dazubi/datasheet/download/30-26322010.pdf"> DAZUBI Datenportal </a>des BIBB finden Sie vertiefende Analysemöglichkeiten für diesen Ausbildungsberuf. 
+</p>
+
+</div>
+{% enddetails %}
+
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>Auszubildende</b> basiert auf einer Vollerhebung der bestehenden Ausbildungsverträge gemeldet an die stat. Landesämter. 
 Weiterführende Informationen sowie umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/12129.php"> DAZUBI Datenportal </a>.
 </p>
+</div>
+{% enddetails %}
+
+{% details Zitationshinweis zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Bitte zitieren als <i>"Datenbank Auszubildende" des Bundesinstituts für Berufsbildung auf Basis der Daten der Berufsbildungsstatistik 
+der statistischen Ämter des Bundes und der Länder (Erhebung zum 31.12.). Absolutwerte aus Datenschutzgründen jeweils auf ein 
+Vielfaches von 3 gerundet; der Insgesamtwert kann deshalb von der Summe der Einzelwerte abweichen."</i>
+</p>
+
 </div>
 {% enddetails %}
 
@@ -317,6 +403,15 @@ Es folgen Baden-Württemberg mit 60 Auszubildenden, Brandenburg mit 57 Auszubild
   <iframe src="{{ '/assets/plotly/bif/unbesetzt.html' | relative_url }}" scrolling='no' frameborder='0' height="600px" width="100%"></iframe>
 </div>
 
+{% details Weitere Daten zur Berufsgruppe im Datenportal 30.09. %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Im <a href="https://www.bibb.de/de/179176.php"> Datenportal 30.09. </a>des BIBB finden Sie vertiefende Analysemöglichkeiten für dieser Berufsgruppe. 
+</p>
+
+</div>
+{% enddetails %}
 
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
@@ -329,6 +424,17 @@ und Vermittlungsdienste der BA nicht in Anspruch nehmen" (vgl. Flemming & Granat
 Weiterführende Informationen und umfassendere Statistiken finden Sie unter <a href="https://www.bibb.de/de/179142.php"> Erhebung zum 30.09</a>.
 
 </p>
+</div>
+{% enddetails %}
+
+{% details Zitationshinweis zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Bitte zitieren als <i>"BIBB-Erhebung über neu abgeschlossene Ausbildungsverträge zum 30. September; Bundesagentur 
+für Arbeit, Ausbildungsmarktstatistik zum 30. September."</i>
+</p>
+
 </div>
 {% enddetails %}
 
@@ -370,6 +476,16 @@ Vertiefende Statistiken aus der Erhebung zum 30.09. (siehe „Information zum Da
 </div>
 <br>
 
+
+{% details Zitationshinweis zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Bitte zitieren als <i>"BIBB Qualifikationsentwicklungsforschung 2024."</i>
+</p>
+
+</div>
+{% enddetails %}
 
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
@@ -461,12 +577,25 @@ Das <b>Einkommen für die Berufsgattung der Mikrosystemtechnik ist überdurchsch
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
-Der Indikator <b>Arbeistbedingungen</b> basiert auf der BIBB/BAuA Erwerbstätigenbefragung 2018. 
-Er zeigt die Medianwerte für sechs Merkmale beruflicher Belastungsfaktoren. Der Indikator basiert 
+Weitere Informationen zur BIBB/BAuA Erwerbstätigenbefragung 2018 erhalten Sie unter <a href="https://metadaten.bibb.de/de/dataset/detail/123"> BIBB FDZ</a> sowie 
+auf der <a href="https://www.bibb.de/de/2815.php"> Projektwebseite</a>. <br>
+
+Der Indikator <b>Arbeistbedingungen</b> zeigt die Medianwerte für sechs Merkmale beruflicher Belastungsfaktoren. Der Indikator basiert 
 auf der "Job Exposure Matrix" und liegt auf beruflichen Ebene der Berufsuntergruppen (4-Steller) vor. 
 Weitere Informationen zum Indikator finden Sie unter <a href="https://www.baua.de/DE/Forschung/Forschungsdaten/Job-Exposure-Matrix.html"> JEM Projekt</a>. 
-Weitere Informationen zum Datensatz finden Sie unter <a href="https://www.bibb.de/de/2815.php"> BIBB/BAuA Erwerbtstätigenbefragung</a>.
 </p>
+</div>
+{% enddetails %}
+
+{% details Zitationshinweis zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Bitte zitieren als <i>"Hall, Anja; Hünefeld, Lena; Rohrbach-Schmidt, Daniela (2020): BIBB/BAuA-Erwerbstätigen-befragung 2018 
+– Arbeit und Beruf im Wandel. Erwerb und Verwertung beruflicher Qualifikationen. SUF_1.0; Forschungsdatenzentrum im BIBB 
+(Hrsg.); GESIS Köln (Datenzugang); Bonn: Bundesinstitut für Berufsbildung. doi:10.7803/501.18.1.1.10."</i>
+</p>
+
 </div>
 {% enddetails %}
 
@@ -509,14 +638,32 @@ Hierzu gehören Arbeitsbedingungen wie die Möglichkeit, Arbeit und Pausen selbs
 
 <br>
 
+
 {% details Information zum Datensatz %}
 <div style="background-color: rgb(240,235,255);">
 <p class="my-text">
 Der Indikator <b>Berufliches Ansehen</b> basiert auf der "Berufe in Deutschland" Erhebung. 
-Sie ist repräsentativ für die Wohnbevölkerung Deutschlands. 
-Der Indikator liegt auf Berufsgruppen-Ebene vor (3-Steller). 
-Weitere Informationen zum Indikator finden Sie unter <a href="https://lit.bibb.de/vufind/Record/DS-780206"> dieser Veröffentlichung</a>. 
-Weitere Informationen zum Datensatz finden Sie unter <a href="https://www.bibb.de/de/108200.php"> Projekt „Berufe in Deutschland“</a>.</p>
+Sie ist repräsentativ für die Wohnbevölkerung Deutschlands. <br><br>
+Weitere Informationen zum Indikator finden Sie unter <a href="https://metadaten.bibb.de/de/dataset/detail/165"> BIBB FDZ</a>. <br>
+Weitere Literatur zum Indikator finden Sie unter <a href="https://lit.bibb.de/vufind/Record/DS-780206"> dieser Veröffentlichung</a>. <br>
+Weitere Informationen zum Datensatz finden Sie unter <a href="https://metadaten.bibb.de/de/dataset/detail/150"> BIBB FDZ</a>.</p>
+</div>
+{% enddetails %}
+
+{% details Zitationshinweis zum Datensatz %}
+<div style="background-color: rgb(240,235,255);">
+
+<p class="my-text">
+Bitte zitieren als <br><i>"Ebner, Christian, Rohrbach-Schmidt, Daniela (2022): Berufliche Ansehensskala 
+(BAS) für die Berufsgruppenebene (3-Steller) der Klassifikation der Berufe 2010 (BAS-3). PUF_1.0; 
+Forschungsdatenzentrum im BIBB (Hrsg.; Datenzugang); Bonn: Bundesinstitut für Berufsbildung. doi:10.7803/581.18.1.0.10"</i> 
+<br>beziehungsweise<br>
+<i>"Ebner, Christian, Rohrbach-Schmidt, Daniela (2022): 
+Berufliche Ansehensskala (BAS) für die Berufshauptgruppenebene (2-Steller) kombiniert mit der 5. 
+Stelle der Klassifikation der Berufe 2010 (BAS-2|5). PUF_1.0; Forschungsdatenzentrum im BIBB (Hrsg.; Datenzugang); 
+Bonn: Bundesinstitut für Berufsbildung. doi:10.7803/582.18.1.0.10"</i>
+</p>
+
 </div>
 {% enddetails %}
 
