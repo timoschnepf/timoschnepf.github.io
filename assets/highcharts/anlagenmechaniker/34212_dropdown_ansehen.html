@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+<body>
+
+<!-- Dropdown for selecting different job categories -->
+<select id="berufSelect" onchange="updateChart()">
+    <option value="beruf1">Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik</option>
+    <option value="beruf2">Gas- und Wasserinstallateure</option>
+</select>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+
+// Function to update the chart based on dropdown selection
+function updateChart() {
+    const selectedBeruf = document.getElementById('berufSelect').value;
+
+    let chartOptions;
+    let berufLabel;
+
+    if (selectedBeruf === 'beruf1') {
+        berufLabel = 'Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik';
+        chartOptions = {
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik', 'Alle Fachkräfteberufe']
+            },
+            series: [{
+                name: berufLabel,
+                data: [6.07, 5.53]  // Data for Klempnerei for 2012 and 2018
+            }]
+        };
+    } else if (selectedBeruf === 'beruf2') {
+        berufLabel = 'Gas- und Wasserinstallateure';
+        chartOptions = {
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['Gas- und Wasserinstallateure', 'Alle Fachkräfteberufe']
+            },
+            series: [{
+                name: berufLabel,
+                data: [6.49, 5.53]  // Fictional data for Elektroniker for 2012 and 2018
+            }]
+        };
+    }
+
+    // Initialize or update the chart
+    Highcharts.chart('container', {
+        chart: {
+            type: 'bar'
+        },
+        title: chartOptions.title,
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: true,
+            buttons: {
+                contextButton: {
+                    menuItems: [
+                        'viewFullscreen',
+                        'separator',
+                        'viewData',
+                        'downloadCSV',
+                        'downloadXLS',
+                        'separator',
+                        'downloadPNG',
+                        'downloadPDF',
+                        'downloadSVG',
+                    ]
+                }
+            }
+        },
+       xAxis: {
+            categories: chartOptions.xAxis.categories
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Mittelwert',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            formatter: function() {
+                return `<span style="font-size:10px;">Einzelberuf</span><br>
+                        <b>${berufLabel}</b><br/><br>
+                        Das durchschnittliche Ansehen für<br>
+			"${this.x}" hatte <br>
+                        2018 einen <b>Wert von ${this.y}</b>.`;
+            }
+        },
+        legend: {
+            enabled: false  // Disable the legend
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        series: chartOptions.series
+    });
+}
+
+// Initial chart display
+updateChart();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+<body>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+    title: {
+        text: ' '
+    },
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',   // Toggle fullscreen mode
+                    'separator',        // Separator
+                    'viewData',         // View underlying data table
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+    xAxis: {
+        categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']  // Beispieljahre
+    },
+yAxis: {
+    title: {
+        text: ''
+    },
+    labels: {
+        formatter: function() {
+            return Highcharts.numberFormat(this.value, 0, ',', '.');  // Append % sign after the formatted value
+        }
+    }
+},
+tooltip: {
+    shared: true,
+    useHTML: true,
+    formatter: function() {
+        return `
+        <span style="font-size:10px;">Ausbildung</span><br>
+        <b>Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik</b><br/><br>
+        Jahr: ${this.x}<br/>
+        eANR: <b>${this.points[0].y !== null ? this.points[0].y: 'N/A'}</b><br/>
+        eANR Durchschnitt aller Ausbildungsberufe: <b>${this.points[1].y !== null ? this.points[1].y: 'N/A'}</b><br/>`;
+    }
+},
+    series: [{
+        name: 'Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik',
+        data: [99.13,100.45,101.76,100.91,101.98,101.91,102.19,102.61,101.9,102.35,101.24]  // Beispielwerte
+    },{
+    name: 'Alle dualen Ausbildungen',
+    data: [94.21,96.46,96.87,97.32,100.53,100.47,106.42,107.38,108.02,110.72,115.19],
+    dashStyle: 'Dash'  // Fluctuating around 12
+}, ]
+});
+</script>
+
+</body>
+</html>

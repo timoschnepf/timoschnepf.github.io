@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+<body>
+
+<div id="assoziation-chart" style="width:100%; height:400px;"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        Highcharts.chart('assoziation-chart', {
+               chart: {
+                type: 'line'
+            },
+            title: {
+                text: null  
+            },
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',   // Toggle fullscreen mode
+                    'separator',        // Separator
+                    'viewData',         // View underlying data table
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+            xAxis: {
+                categories: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
+            },
+yAxis: {
+    title: {
+        text: ''
+    },
+    labels: {
+        formatter: function() {
+            return Highcharts.numberFormat(this.value, 0, ',', '.') + ' %';  // Append % sign after the formatted value
+        }
+    }
+},
+            tooltip: {
+                useHTML: true,
+                backgroundColor: '#ffffff',  // Hintergrundfarbe des Tooltips auf Weiß setzen
+                borderColor: '#ccc',  // Optional: Randfarbe für den Tooltip
+                formatter: function() {
+                    // Daten für jedes Jahr
+                    var berufData = {
+                        '2011': {
+                            'Anteil': 30.67,
+                            'AnzahlAnzeigen': 403,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solar', 330), ('Solaranlage', 39), ('regenerativ Energie', 14), ('erneuerbar Energie', 14),...",
+                        },
+                        '2012': {
+                            'Anteil': 32.08,
+                            'AnzahlAnzeigen': 768,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solar', 618), ('Solaranlage', 82), ('erneuerbar Energie', 38), ('Solartechnik', 26), ...",
+                        },
+                        '2013': {
+                            'Anteil': 33.78,
+                            'AnzahlAnzeigen': 764,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solar', 616), ('Solaranlage', 87), ('erneuerbar Energie', 41), ('Solartechnik', 29), ...",
+                        },
+                        '2014': {
+                            'Anteil': 33.25,
+                            'AnzahlAnzeigen': 851,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solar', 627), ('Solaranlage', 126), ('erneuerbar Energie', 57), ('Solartechnik', 32), ...",
+                        },
+			'2015': {
+                            'Anteil': 31,
+                            'AnzahlAnzeigen': 843,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solar', 530), ('Solaranlage', 131), ('erneuerbar Energie', 66), ('Umwelttechnik', 64), ...",
+                        },'2016': {
+                            'Anteil': 28.03,
+                            'AnzahlAnzeigen': 835,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solar', 476), ('Solaranlage', 158), ('erneuerbar Energie', 102), ('Umwelttechnik', 79), ...",
+                        },'2017': {
+                            'Anteil': 25.69,
+                            'AnzahlAnzeigen': 838,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solar', 410), ('Solaranlage', 201), ('erneuerbar Energie', 98), ('Umwelttechnik', 74), ...",
+                        },'2018': {
+                            'Anteil': 23.88,
+                            'AnzahlAnzeigen': 823,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solar', 356), ('Solaranlage', 221), ('erneuerbar Energie', 97), ('Umwelttechnik', 71), ...",
+                        },'2019': {
+                            'Anteil': 32.92,
+                            'AnzahlAnzeigen': 1198,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solaranlage', 545), ('Solar', 418), ('energieeffizient', 164), ('erneuerbar Energie', 113), ...",
+                        },'2020': {
+                            'Anteil': 33.21,
+                            'AnzahlAnzeigen': 1127,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solaranlage', 518), ('Solar', 341), ('energieeffizient', 173), ('erneuerbar Energie', 116), ...",
+                        },'2021': {
+                            'Anteil': 33.21,
+                            'AnzahlAnzeigen': 1133,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solaranlage', 503), ('Solar', 333), ('energieeffizient', 172), ('erneuerbar Energie', 123), ...",
+                        },'2022': {
+                            'Anteil': 34.14,
+                            'AnzahlAnzeigen': 1181,
+                            'Berufsgattung': 'Sanitär, Heizung, Klimatechnik - Fachkraft',
+                            'Schluesselwoerter': "('Solaranlage', 534), ('Solar', 305), ('energieeffizient', 203), ('erneuerbar Energie', 145), ...",
+                        }
+                    };
+                    
+                    var year = this.x;  // Holt das Jahr basierend auf der X-Achse
+                    var data = berufData[year];  // Holt die entsprechenden Daten für das Tooltip
+                    
+                    // Tooltip-Inhalt aufbauen
+                    return '<div style="background-color:#ffffff;padding:10px;border-radius:5px;">' +
+'<span style="font-size:10px;">Berufgattung</span><br>' +                            
+'<b>' + data.Berufsgattung + '</b><br><br>' +
+                            '<b>' + year + '</b> enthielten <b>' + data.Anteil + '%</b> von <b>' + data.AnzahlAnzeigen + '</b> online Stellenanzeigen einen "grünen" Begriff.<br><br>' +
+                            'In <b>' + year + '</b> waren dies:<br>' +
+                            data.Schluesselwoerter +
+                            '</div>';
+                }
+            },
+        legend: {
+            enabled: false  // Disable the legend
+        },
+
+            series: [{
+                name: 'Prozent',
+                data: [30.67, 32.08, 33.78, 33.25, 31, 28.03, 25.69, 23.88, 32.92, 33.21, 33.21, 34.14] 
+            }],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 600
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
