@@ -10,19 +10,25 @@ permalink: /beruferadar-preview/anlagenmechaniker/
   }
 </style>
 
-<br>
-
-<div class="logo-container reduced-size">
-  <a>
-    {% include figure.html path="assets/img/logo/bmbf_gefoerdert_transparent.png" title="" %}
-  </a>
-  <a href="https://www.bibb.de">
-    {% include figure.html path="assets/img/logo/BIBB-Logo_DE_CMYK.jpg" title="" %}
-  </a>
+<!-- Container for the logos -->
+<div class="container">
+  <div class="row">
+    <!-- First logo in a 50% width column -->
+    <div class="col-md-6 col-12 text-center">
+      <a href="#">
+        {% include figure.html path="assets/img/logo/bmbf_gefoerdert_transparent.png" title="" %}
+      </a>
+    </div>
+    
+    <!-- Second logo in a 50% width column -->
+    <div class="col-md-6 col-12 text-center">
+      <a href="https://www.bibb.de">
+        {% include figure.html path="assets/img/logo/BIBB-Logo_DE_CMYK.jpg" title="" %}
+      </a>
+    </div>
+  </div>
 </div>
 
-
-<br><br>
 
 # Sanitär- , Heizungs- , und Klimatechnik
 
