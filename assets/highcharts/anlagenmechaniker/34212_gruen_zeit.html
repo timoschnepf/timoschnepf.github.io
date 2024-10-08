@@ -14,9 +14,10 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         Highcharts.chart('assoziation-chart', {
-               chart: {
-                type: 'line'
-            },
+    chart: {
+        type: 'line',
+        backgroundColor: '#f7f7f7'
+    },
             title: {
                 text: null  
             },
@@ -42,7 +43,8 @@ exporting: {
         }
     },
             xAxis: {
-                categories: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
+                categories: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+                tickInterval: 2
             },
 yAxis: {
     title: {

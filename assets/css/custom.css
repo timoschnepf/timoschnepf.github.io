@@ -81,6 +81,48 @@
   display: block;
 }
 
+/* Punkte für Gruppen Tabs */
+
+
+.circle-dot1 {
+  display: inline-block;
+  width: 14px; /* Keep the width the same */
+  height: 14px; /* Increase the height to make it taller */
+  background-color: #1e87f0; /* Choose the dot color here */
+  border-radius: 50%; /* Keeps it rounded */
+  margin-left: 5px;
+  margin-right: 10px
+}
+
+.circle-dot2 {
+  display: inline-block;
+  width: 14px; /* Keep the width the same */
+  height: 14px; /* Increase the height to make it taller */
+  background-color: #e63946; /* Choose the dot color here */
+  border-radius: 50%; /* Keeps it rounded */
+  margin-left: 5px;
+  margin-right: 10px
+}
+
+.circle-dot3 {
+  display: inline-block;
+  width: 14px; /* Keep the width the same */
+  height: 14px; /* Increase the height to make it taller */
+  background-color: #2a9d8f; /* Choose the dot color here */
+  border-radius: 50%; /* Keeps it rounded */
+  margin-left: 5px;
+  margin-right: 10px
+}
+
+.circle-dot4 {
+  display: inline-block;
+  width: 14px; /* Keep the width the same */
+  height: 14px; /* Increase the height to make it taller */
+  background-color: #f4a261; /* Choose the dot color here */
+  border-radius: 50%; /* Keeps it rounded */
+  margin-left: 5px;
+  margin-right: 10px
+}
 
 /* Infobox Styles */
 

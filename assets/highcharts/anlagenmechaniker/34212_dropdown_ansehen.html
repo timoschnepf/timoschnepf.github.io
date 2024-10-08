@@ -10,7 +10,7 @@
 
 <!-- Dropdown for selecting different job categories -->
 <select id="berufSelect" onchange="updateChart()">
-    <option value="beruf1">Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik</option>
+    <option value="beruf1">Anlagenmechaniker für Sanitär-, <br>Heizungs- und Klimatechnik</option>
     <option value="beruf2">Gas- und Wasserinstallateure</option>
 </select>
 
@@ -26,13 +26,13 @@ function updateChart() {
     let berufLabel;
 
     if (selectedBeruf === 'beruf1') {
-        berufLabel = 'Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik';
+        berufLabel = 'Anlagenmechaniker für Sanitär-, <br>Heizungs- und Klimatechnik';
         chartOptions = {
             title: {
                 text: ''
             },
             xAxis: {
-                categories: ['Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik', 'Alle Fachkräfteberufe']
+                categories: ['Anlagenmechaniker für Sanitär-, <br>Heizungs- und Klimatechnik', 'Alle Fachkräfteberufe']
             },
             series: [{
                 name: berufLabel,
@@ -57,9 +57,10 @@ function updateChart() {
 
     // Initialize or update the chart
     Highcharts.chart('container', {
-        chart: {
-            type: 'bar'
-        },
+    chart: {
+        type: 'bar',
+        backgroundColor: '#f7f7f7'
+    },
         title: chartOptions.title,
         credits: {
             enabled: false
@@ -83,8 +84,15 @@ function updateChart() {
             }
         },
        xAxis: {
-            categories: chartOptions.xAxis.categories
-        },
+            categories: chartOptions.xAxis.categories,
+            labels: {
+            style: {
+				width: '100px', // Adjust width to control line breaks
+                whiteSpace: 'normal', // Allow line breaks
+                wordWrap: 'break-word'
+				},
+				},
+       },
         yAxis: {
             min: 0,
             title: {
