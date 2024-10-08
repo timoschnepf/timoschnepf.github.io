@@ -1,50 +1,84 @@
 .tab {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -20px;
-    padding: 0;
-    list-style: none;
-    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  padding: 0;
+  list-style: none;
+  position: relative;
 }
 
 .tab > * {
-    flex: none;
-    padding-left: 20px;
-    position: relative;
+  flex: none;
+  padding-left: 20px;
+  position: relative;
 }
 
 .tab > * > a {
-    display: block;
-    text-align: center;
-    padding: 9px 20px;
-    color: #999;
-    border-bottom: 2px solid transparent;
-    border-bottom-color: transparent;
-    font-size: 12px;
-    text-transform: uppercase;
-    transition: color .1s ease-in-out;
-    line-height: 20px;
+  display: block;
+  text-align: center;
+  padding: 9px 20px;
+  color: #999;
+  border-bottom: 2px solid transparent;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: color .1s ease-in-out;
+  line-height: 20px;
 }
 
 .tab > .active > a {
-    color:#222;
-    border-color: #1e87f0;
+  color: #222;
+  border-color: #1e87f0;
 }
 
+/* Base dot style */
+.tab > * > a::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+}
+
+/* First tab dot color */
+.tab > li:nth-child(1) > a::before {
+  background-color: #1e87f0; /* Blue */
+}
+
+/* Second tab dot color */
+.tab > li:nth-child(2) > a::before {
+  background-color: #e63946; /* Red */
+}
+
+/* Third tab dot color */
+.tab > li:nth-child(3) > a::before {
+  background-color: #2a9d8f; /* Green */
+}
+
+/* Fourth tab dot color (add as needed) */
+.tab > li:nth-child(4) > a::before {
+  background-color: #f4a261; /* Orange */
+}
+
+
 .tab > li > a {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .tab-content {
-    padding: 0;
+  padding: 0;
 }
 
 .tab-content > li {
-    display: none;
+  display: none;
 }
+
 .tab-content > li.active {
-    display: initial;
+  display: block;
 }
 
 

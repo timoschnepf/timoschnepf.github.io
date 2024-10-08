@@ -81,6 +81,10 @@ Die Fachkräfte der Berufsgattung "Sanitär, Heizung, Klimatechnik - Fachkraft" 
 
 <br>
 
+{% tabs group %}
+
+{% tab group Ausbildung %}
+
 #### Ausbildung
 
 <div class="section-background">
@@ -256,6 +260,11 @@ Bitte zitieren als "BIBB-Erhebung über neu abgeschlossene Ausbildungsverträge 
 
 <br>
 
+
+{% endtab %}
+
+{% tab group Erwerbsstruktur %}
+
 #### Erwerbsstruktur
 
 <div class="section-background">
@@ -371,6 +380,19 @@ Die Daten basieren auf dem Mikrozensus und sind an die Volkswirtschaftliche Gesa
 
 </div>
 
+
+
+{% endtab %}
+
+{% tab group Attraktivität %}
+
+{% endtab %}
+
+{% tab group Kompetenzen %}
+
+{% endtab %}
+
+{% endtabs %}
 
 
 
