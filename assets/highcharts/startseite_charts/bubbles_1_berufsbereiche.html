@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+
+<body>
+
+<div id="container" style="width:100%; height:100%;"></div>
+<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble',
+        height: '60%',
+        // backgroundColor: '#f9f9f9'
+    },
+    title: {
+        text: "",
+        style: {
+            color: '#333333',
+            fontSize: '18px',
+            fontWeight: 'bold'
+        }
+    },
+        credits: {
+		enabled: false
+	},
+	exporting: {
+	enabled: true
+	},
+    tooltip: {
+        useHTML: true,
+        backgroundColor: 'rgba(255,255,255,0.9)',
+        borderColor: '#666666',
+        style: {
+            color: '#333333',
+            fontSize: '13px',
+        },
+        pointFormat: '<span style="color:{point.color}"></span><br><b>{point.value} Millionen </b> Erwerbstätige'
+    },
+legend: {
+    enabled: false // Hide the legend
+},
+plotOptions: {
+    packedbubble: {
+        minSize: '30%',
+        maxSize: '120%',
+        zMin: 1,
+        zMax: 7,
+        shadow: false, // Disable shadow effect
+        layoutAlgorithm: {
+            splitSeries: false,
+            gravitationalConstant: 0.05
+        },
+        dataLabels: {
+            enabled: true,
+            format: '{point.name}',
+	    allowOverlap: false , // Show all labels, even if they overlap
+            style: {
+                color: '#000000',
+                textOutline: 'none',
+                fontWeight: 'bold',
+                fontSize: '9px',
+            }
+        },
+        states: {
+            hover: {
+                enabled: false // Disable hover highlighting
+            }
+        }
+    }
+},
+    series: [{
+        name: 'Rohstoffgewinnung, Produktion und Fertigung',
+        color: '#FFB3BA',
+        data: [{
+		name: 'Rohstoffgewinnung,<br>Produktion und<br>Fertigung',
+            value: 7.95
+        }]
+    }, {
+        name: 'Gesundheit, Soziales, Lehre und Erziehung',
+        color: '#FFDFBA',
+        data: [{
+	      name: 'Gesundheit, Soziales,<br>Lehre und Erziehung',
+            value: 7.70
+        }]
+     }, {
+        name: 'Verkehr, Schutz und Sicherheit',
+        color: '#FFFFBA',
+        data: [{
+	      name: 'Verkehr, Schutz<br> und Sicherheit',
+            value: 5.20
+        }]
+     }, {
+        name: 'Unternehmensorganisation, <br>Buchhaltung, Recht und Verwaltung',
+        color: '#BAFFC9',
+        data: [{
+	      name: 'Unternehmensorganisation, <br>Buchhaltung, Recht<br>und Verwaltung',
+            value: 8.10
+        }]
+     }, {
+        name: 'Verkehr, Schutz und Sicherheit',
+        color: '#BAE1FF',
+        data: [{
+	      name: 'Verkehr, Schutz<br> und Sicherheit',
+            value: 5.20
+        }]
+     }, {
+        name: 'Kaufmännische Dienstleistungen und Tourismus',
+        color: '#E1BAFF',
+        data: [{
+	      name: 'Kaufmännische Dienstleistungen<br>und Tourismus',
+            value: 5.00
+        }]
+     }, {
+        name: 'Bau, Architektur und Gebäudetechnik',
+        color: '#FFC3A0',
+        data: [{
+	      name: 'Bau, Architektur<br>und Gebäudetechnik',
+            value: 2.52
+        }]
+     }, {
+        name: 'Naturwissenschaft und Informatik',
+        color: '#FFBEBA',
+        data: [{
+	      name: 'Naturwissenschaft<br>und Informatik',
+            value: 1.46
+        }]
+     }, {
+        name: 'Kunst, Kultur und Geisteswissenschaften',
+        color: '#D4A5A5',
+        data: [{
+	      name: 'Kunst, Kultur<br>und Geisteswissenschaften',
+            value: 1.26
+        }]
+     }, {
+        name: 'Land-, Forst- und Tierwirtschaft',
+        color: '#006400',
+        data: [{
+	      name: 'Land-, Forst-<br>und Tierwirtschaft',
+            value: 0.93
+        }]
+    }]
+});
+</script>
+
+</body>
+</html>
