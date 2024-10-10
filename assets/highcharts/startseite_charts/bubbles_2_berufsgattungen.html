@@ -16,7 +16,7 @@ Highcharts.chart('container', {
     chart: {
         type: 'packedbubble',
         height: '60%',
-        // backgroundColor: '#f9f9f9'
+        backgroundColor: '#EFEFF0'
     },
     title: {
         text: "",
@@ -52,6 +52,10 @@ plotOptions: {
         layoutAlgorithm: {
             splitSeries: false,
             gravitationalConstant: 0.05
+        },
+        marker: {
+            lineWidth: 2, // Adjust the thickness here
+            lineColor: '#000000' // Black stroke color
         },
         dataLabels: {
             enabled: true,
