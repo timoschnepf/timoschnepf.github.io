@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Link to Google Fonts for Fira Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <script src="https://code.highcharts.com/highcharts.js"></script>
-	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
-
+    
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
 
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Anzahl Auszubildende</p>
+
+<!-- Chart container -->
 <div id="container" style="width:100%; height:400px;"></div>
 
 <script type="text/javascript">
 Highcharts.chart('container', {
+    chart: {
+        type: 'line',
+        backgroundColor: '#f7f7f7'
+    },
     title: {
         text: ''
     },
     credits: {
         enabled: false
     },
-exporting: {
+    exporting: {
         enabled: true,
         buttons: {
             contextButton: {
                 menuItems: [
-                    'viewFullscreen',   // Toggle fullscreen mode
-                    'separator',        // Separator
-                    'viewData',         // View underlying data table
-                    'downloadCSV',      // Download CSV file
-                    'downloadXLS',      // Download Excel file
-                    'separator',        // Separator
-                    'downloadPNG',      // Download PNG image
-                    'downloadPDF',      // Download PDF file
-                    'downloadSVG',      // Download SVG vector image
+                    'viewFullscreen',
+                    'separator',
+                    'viewData',
+                    'downloadCSV',
+                    'downloadXLS',
+                    'separator',
+                    'downloadPNG',
+                    'downloadPDF',
+                    'downloadSVG'
                 ]
             }
         }
     },
     xAxis: {
-        categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']  // Updated years
+        categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
     },
     yAxis: {
         title: {
@@ -46,27 +65,36 @@ exporting: {
         },
         labels: {
             formatter: function() {
-                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Format numbers with thousands separator
+                return Highcharts.numberFormat(this.value, 0, ',', '.');
             }
         }
     },
     tooltip: {
         formatter: function() {
-          return `<span style="font-size:10px;">Ausbildungsberuf</span><br>
+            return `<span style="font-size:10px;">Ausbildungsberuf</span><br>
 <b>Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik (IH/Hw)</b><br/><br>
 Jahr:<b> ${this.x}</b><br/>
-            Anzahl Auszubildenden:<b> ${Highcharts.numberFormat(this.y, 0, ',', '.')}</b>`;
-     }
+Anzahl Auszubildenden:<b> ${Highcharts.numberFormat(this.y, 0, ',', '.')}</b>`;
+        }
     },
     legend: {
         enabled: false
-   },
+    },
     series: [{
         name: 'Auszubildende',
-        data: [31965, 31629, 31617, 31986, 32400, 33474, 34422, 35679, 37317, 38997, 39390]  // Updated data values
+        data: [31965, 31629, 31617, 31986, 32400, 33474, 34422, 35679, 37317, 38997, 39390]
     }]
 });
 </script>
+
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator „Anzahl Auszubildende" zeigt alle zum 31.12. eines Jahres gemeldeten dualen Ausbildungsstellen der gewählten Ausbildung.
+<br><br>
+Die Daten basieren auf einer Vollerhebung der bestehenden Ausbildungsverträge 
+der dualen Ausbildungsberufe nach Berufsbildungsgesetz (BBiG) bzw. Handwerksordnung (HwO). 
+Sie werden vom Datensystem Auszubildende (DAZUBI) aufbereitet und zur Verfügung gestellt.
+</p>
 
 </body>
 </html>
