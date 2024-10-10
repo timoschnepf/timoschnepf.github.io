@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Link to Google Fonts for Fira Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <script src="https://code.highcharts.com/highcharts.js"></script>
-	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
-
+    
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Arbeitsbedingungen</p>
+
+
 
 <div id="container" style="width:100%; height:400px;"></div>
 
 <script type="text/javascript">
 Highcharts.chart('container', {
     chart: {
-        type: 'bar'
+        type: 'bar',
+        backgroundColor: '#f7f7f7'
     },
     title: {
         text: ''
@@ -82,5 +99,14 @@ Der Index für den Indikator<br>
 });
 </script>
 
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator zeigt die Indexwerte für sechs berufliche Belastungsfaktoren für die Jahre 2012 und 2018.
+<br><br>
+Der Indikator basiert auf der <a href="https://www.baua.de/DE/Forschung/Forschungsdaten/Job-Exposure-Matrix.html">"Job Exposure Matrix"</a>, welche mehrere 
+ähnliche Fragen aus der BIBB/BAuA Erwerbstätigenbefragung zusammenfasst (Indexbildung). 
+Pro Beruf und Jahr wurden mindestens 50 Erwerbstätige befragt.</p>
+
 </body>
 </html>
+

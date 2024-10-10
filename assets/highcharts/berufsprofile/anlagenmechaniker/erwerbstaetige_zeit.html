@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Link to Google Fonts for Fira Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <script src="https://code.highcharts.com/highcharts.js"></script>
-	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
-
+    
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Erwerbstätigkeit Projektionen</p>
+
 
 <div id="container" style="width:100%; height:100%;"></div>
 
 <script type="text/javascript">
 Highcharts.chart('container', {
     chart: {
-        type: 'line'
+        type: 'line',
+        backgroundColor: '#f7f7f7'
     },
     title: {
         text: ''
@@ -84,6 +100,13 @@ exporting: {
 </script>
 
 
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator "Erwerbstätigkeit Projektion" zeigt die gegenwärtige und zukünftige Anzahl an Erwerbstätigen, Erwerbslosen sowie Personen mit einem beruflichen Abschluss in der Berufsgruppe im Zeitverlauf. Die zukünftigen Entwicklungen basieren auf Projektionsmodellen.
+<br><br>
+Zu den Erwerbstätigen zählen alle Personen, die als Arbeitnehmer/-innen, Angestellte, Beamte/Beamtinnen, geringfügig Beschäftigte, Soldaten/Soldatinnen oder als Selbständige beziehungsweise als mithelfende Familienangehörige eine Tätigkeit ausüben. Sie stellen den Bedarf an Arbeitskräften dar (Arbeitskräftenachfrage).
+</p>
 
 </body>
 </html>
+
