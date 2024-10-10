@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+<body>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar',
+	backgroundColor: '#f7f7f7'
+    },
+    title: {
+        text: ''
+    },
+
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',   // Toggle fullscreen mode
+                    'separator',        // Separator
+                    'viewData',         // View underlying data table
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+xAxis: {
+    categories: [
+        'Nichtmed. Gesundheit, Körperpfl., Medizint.',
+        'Sonstige',
+        'Medizinische Gesundheitsberufe',
+        'Verkaufsberufe',
+        'Berufe Unternehmensführung,-organisation',
+        'Erziehung,soz.,hauswirt.Berufe,Theologie',
+        'Berufe Unternehmensführung,-organisation',
+        'Textil- und Lederberufe',
+        'Geistes-Gesellschafts-Wirtschaftswissen.',
+        'Lehrende und ausbildende Berufe'
+    ]
+},
+yAxis: {
+    title: {
+        text: 'Prozent'
+    }
+},
+tooltip: {
+    formatter: function() {
+        return `Unter allen Erwerbstätigen der<br>
+Berufshauptgruppe <b>Nichtmed. Gesundheit, Körperpfl., Medizint.</b><br> 
+besitzen zu <b>${this.y} Prozent</b>
+ein/e Studium/Ausbildung in der <br>
+Berufshauptgruppe <b>${this.x}</b>.`;
+    }
+},
+legend: {
+    enabled: false
+},
+series: [{
+    name: 'Prozentualer Anteil',
+    data: [52, 19, 6, 3, 2, 2, 2, 1, 1, 1]  // Updated with new data
+}]
+
+});
+</script>
+
+</body>
+</html>

@@ -13,10 +13,6 @@
 
 <script type="text/javascript">
 Highcharts.chart('container', {
-chart: {
-        type: 'line',
-        backgroundColor: '#f7f7f7'
-    },
     title: {
         text: ''
     },
@@ -42,37 +38,32 @@ exporting: {
         }
     },
     xAxis: {
-         categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
+        categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']  // Updated years
     },
     yAxis: {
         title: {
-            text: ''
+            text: 'Auszubildende'
         },
-labels: {
+        labels: {
             formatter: function() {
-                return Highcharts.numberFormat(this.value, 0, ',', '.') + " €";  // Format numbers with thousands separator
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Format numbers with thousands separator
             }
         }
     },
-tooltip: {
-    shared: true,
-    useHTML: true,
-    formatter: function() {
-        return `
-        <span style="font-size:10px;">Berufsgattung</span><br>
-        <b>Sanitär, Heizung, Klimatechnik - Fachkraft</b><br/><br>
-        Jahr: ${this.x}<br/>
-        Bruttoentgelt: <b>${Highcharts.numberFormat(this.points[0].y, 0, ',', '.')} €</b><br/>
-        Bruttoentgelt Durchschnitt alle Berufe: <b>${Highcharts.numberFormat(this.points[1].y, 0, ',', '.')} €</b><br/>`;
-    }
-},
+    tooltip: {
+        formatter: function() {
+          return `<span style="font-size:10px;">Ausbildungsberuf</span><br>
+<b>Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik (IH/Hw)</b><br/><br>
+Jahr:<b> ${this.x}</b><br/>
+            Anzahl Auszubildenden:<b> ${Highcharts.numberFormat(this.y, 0, ',', '.')}</b>`;
+     }
+    },
+    legend: {
+        enabled: false
+   },
     series: [{
-        name: 'Sanitär, Heizung, Klimatechnik - Fachkraft',
-        data: [2492,2552,2614,2675,2740,2826,2940,3056,3122,3244]  // Beispielwerte, mit einem NaN als null
-    }, {
-        name: 'Alle Berufe',
-        data: [2876,2954,3024,3083,3133,3209,3304,3401,3427,3516],
-    dashStyle: 'Dash'  // Fluctuating around 12
+        name: 'Auszubildende',
+        data: [31965, 31629, 31617, 31986, 32400, 33474, 34422, 35679, 37317, 38997, 39390]  // Updated data values
     }]
 });
 </script>

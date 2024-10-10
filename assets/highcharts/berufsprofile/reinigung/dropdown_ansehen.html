@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+<body>
+
+<!-- Chart container -->
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+
+// Chart options for 'Gas- und Wasserinstallateure'
+const chartOptions = {
+    title: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Reinigungskräfte', 'Alle Helferberufe']
+    },
+    series: [{
+        name: 'Reinigungskräfte',
+        data: [4.32, 4.4]  // Fictional data for 'Gas- und Wasserinstallateure' for two categories
+    }]
+};
+
+// Initialize the chart
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar',
+	backgroundColor: '#F7F7F7'
+    },
+    title: chartOptions.title,
+    credits: {
+        enabled: false
+    },
+    exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',
+                    'separator',
+                    'viewData',
+                    'downloadCSV',
+                    'downloadXLS',
+                    'separator',
+                    'downloadPNG',
+                    'downloadPDF',
+                    'downloadSVG',
+                ]
+            }
+        }
+    },
+    xAxis: {
+        categories: chartOptions.xAxis.categories
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Mittelwert',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        formatter: function() {
+            return `<span style="font-size:10px;">Einzelberuf</span><br>
+                    <b>Reinigungskräfte</b><br/><br>
+                    Das durchschnittliche Ansehen für<br>
+                    "${this.x}" hatte <br>
+                    2018 einen <b>Wert von ${this.y}</b>.`;
+        }
+    },
+    legend: {
+        enabled: false  // Disable the legend
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: chartOptions.series
+});
+
+</script>
+
+</body>
+</html>

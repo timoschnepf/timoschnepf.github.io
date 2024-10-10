@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -16,12 +15,11 @@
 Highcharts.chart('container', {
     chart: {
         type: 'bar',
-        backgroundColor: '#f7f7f7'
+	backgroundColor: '#f7f7f7'
     },
     title: {
         text: ''
     },
-
     credits: {
         enabled: false
     },
@@ -43,42 +41,45 @@ exporting: {
             }
         }
     },
-xAxis: {
-    categories: [
-        'Gebäude- u. versorgungstechnische Berufe',
-        'Sonstige',
-        'Mechatronik-, Energie- u. Elektroberufe',
-        'Maschinen- und Fahrzeugtechnikberufe',
-        'Metallerzeugung,-bearbeitung, Metallbau',
-        'Hoch- und Tiefbauberufe',
-        '(Innen-)Ausbauberufe',
-        'Kunststoff- u. Holzherst.,-verarbeitung',
-        'Lebensmittelherstellung u. -verarbeitung',
-        'Land-, Tier-, Forstwirtschaftsberufe'
-    ]
-},
-yAxis: {
-    title: {
-        text: 'Prozent'
-    }
-},
-tooltip: {
+    xAxis: {
+        categories: ['Körperliche Belastung', 'Umbegungsbelastung', 'Arbeitsintensität', 'Handlungsspielraum', 'Soziale Unterstützung', 'Arbeitszeiten'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Index',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+ tooltip: {
     formatter: function() {
-        return `Unter allen Erwerbstätigen der<br>
-Berufshauptgruppe <b>Gebäude- u. versorgungstechnische Berufe</b><br> 
-besitzen zu <b>${this.y} Prozent</b>
-ein/e Studium/Ausbildung in der <br>
-Berufshauptgruppe <b>${this.x}</b>.`;
+        return `<span style="font-size:10px;">Berufgruppe</span><br>
+<b>Lehrkräfte in der Sekundarstufe</b><br/><br>
+Der Index für den Indikator<br>
+"${this.x}" betrug  ${this.series.name}<br>
+<b>${this.y} von 10 Punkten</b>.`;
     }
-},
-legend: {
-    enabled: false
-},
-series: [{
-    name: 'Prozentualer Anteil',
-    data: [29, 21, 8, 7, 6, 4, 4, 3, 2, 1]  // Updated with new data
-}]
-
+},   
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: '2012',
+        data: [7,8,1,1,6,9]  // Beispielwerte
+    }, {
+        name: '2018',
+        data: [7,8,6,1,4,8]  // Beispielwerte
+    }]
 });
 </script>
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+<body>
+
+<!-- Dropdown for selecting different professions -->
+<select id="professionSelect" onchange="updateChart()">
+    <option value="beruf1">Landwirt/-in</option>
+    <option value="beruf2">Fachkraft Agrarservice</option>
+</select>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+let chart;  // Variable to hold the chart instance
+
+// Function to update the chart based on dropdown selection
+function updateChart() {
+    const selectedProfession = document.getElementById('professionSelect').value;
+
+    let chartData;
+    let averageData = {
+        name: 'Durchschnitt aller Ausbildungsberufe',
+        data: [6.4, 7.1, 7.6, 8, 8.8, 10, 9.4, 11.7, 12.2, 13, 13.4]  // Example values for the average
+    };
+
+    // Update data based on selected profession
+    if (selectedProfession === 'beruf1') {
+        chartData = {
+            name: 'Landwirt/-in',
+            data: [2.64, 3.03, 2.75, 2.45, 2.79, 2.87, 3.3, 4.6, 3.39, 3.31, 2.14]  // Example values
+        };
+    } else if (selectedProfession === 'beruf2') {
+        chartData = {
+            name: 'Fachkraft Agrarservice',
+            data: [1.92, 2.83, 3.24, 2.5, 4.08, 4.05, 5.5, 6.49, 6.06, 7.65, 4.5]  // Example values
+        };
+    
+    }
+
+    // Update chart series data dynamically
+    chart.series[0].update({
+        name: chartData.name,
+        data: chartData.data
+    });
+
+    chart.series[1].update({
+        name: averageData.name,
+        data: averageData.data
+    });
+}
+
+// Initialize the chart on page load
+chart = Highcharts.chart('container', {
+    chart: {
+        backgroundColor: '#f7f7f7'
+    },
+    title: {
+        text: ' '
+    },
+    credits: {
+        enabled: false
+    },
+    exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',
+                    'separator',
+                    'viewData',
+                    'downloadCSV',
+                    'downloadXLS',
+                    'separator',
+                    'downloadPNG',
+                    'downloadPDF',
+                    'downloadSVG',
+                ]
+            }
+        }
+    },
+    xAxis: {
+        categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']  // Example years
+    },
+    yAxis: {
+        title: {
+            text: ''
+        },
+        labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Formatting
+            }
+        }
+    },
+   tooltip: {
+    shared: true,
+    useHTML: true,
+    formatter: function() {
+        return `
+        <span style="font-size:10px;">Ausbildung</span><br>
+        <b>${this.points[0].series.name}</b><br/><br>
+        Jahr: ${this.x}<br/>
+        Unbesetzte Stellen: <b>${this.points[0].y !== null ? this.points[0].y + ' %' : 'N/A'}</b><br/>
+        Durchschnitt aller Ausbildungen: <b>${this.points[1].y !== null ? this.points[1].y + ' %' : 'N/A'}</b><br/>`;
+    }
+},
+series: [{
+        name: 'Landwirt/-in',  // Default profession on page load
+        data: [2.64, 3.03, 2.75, 2.45, 2.79, 2.87, 3.3, 4.6, 3.39, 3.31, 2.14]
+    }, {
+        name: 'Durchschnitt aller Ausbildungsberufe',  // Default average on page load
+        data: [6.4, 7.1, 7.6, 8, 8.8, 10, 9.4, 11.7, 12.2, 13, 13.4],
+        dashStyle: 'Dash'  // Dashed line for average
+    }]
+});
+
+// Call updateChart to initialize the chart based on the default dropdown selection
+updateChart();
+</script>
+
+</body>
+</html>

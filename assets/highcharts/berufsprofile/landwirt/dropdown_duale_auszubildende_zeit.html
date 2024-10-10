@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+<body>
+
+<!-- Two options in the select dropdown -->
+<select id="berufSelect" onchange="updateChart()">
+    <option value="beruf1">Landwirt/-in (Lw)</option>
+    <option value="beruf2">Fachkraft Agrarservice (Lw)</option>
+</select>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+
+// Funktion zur Aktualisierung des Diagramms basierend auf der Dropdown-Auswahl
+function updateChart() {
+    const selectedBeruf = document.getElementById('berufSelect').value;
+
+    let chartOptions;
+    let berufLabel;
+
+    if (selectedBeruf === 'beruf1') {
+        berufLabel = 'Landwirt/-in (Lw)';
+        chartOptions = {
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
+            },
+            series: [{
+                name: 'Anzahl Auszubildenden',
+                data: [8496,8730,9126,9453,9489,9309,8937,8664,8460,8538,8730]  // Data for Einzelhändler
+            }]
+        };
+    } else if (selectedBeruf === 'beruf2') {
+        berufLabel = 'Fachkraft Agrarservice (Lw)';
+        chartOptions = {
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
+            },
+            series: [{
+                name: 'Anzahl Auszubildenden',
+                data: [588,603,645,705,699,672,672,708,699,720,777]  // Data for Elektroniker/-in
+            }]
+        };
+    }
+
+    // Initialize or update the chart
+    Highcharts.chart('container', {
+        chart: {
+            type: 'line',
+	    backgroundColor: '#F7F7F7'
+        },
+        title: chartOptions.title,
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',   // Toggle fullscreen mode
+                    'separator',        // Separator
+                    'viewData',         // View underlying data table
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+        xAxis: {
+            categories: chartOptions.xAxis.categories
+        },
+        yAxis: {
+            title: {
+                text: 'Anzahl Auszubildenden'
+            },
+	    labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Format numbers with thousands separator
+            }
+        }
+        },
+        legend: {
+            enabled: false  // Disable the legend
+        },
+        tooltip: {
+            useHTML: true,
+            formatter: function() {
+                return `<span style="font-size:10px;">Ausbildungsberuf</span><br>
+                        <b>${berufLabel}</b><br/><br>
+                        Jahr:<b> ${this.x}</b><br/>
+                        Anzahl Auszubildenden:<b> ${Highcharts.numberFormat(this.y, 0, ',', '.')}</b>`;
+            }
+        },
+        series: chartOptions.series
+    });
+}
+
+// Initial chart display
+updateChart();
+
+</script>
+
+</body>
+</html>

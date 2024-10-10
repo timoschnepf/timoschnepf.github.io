@@ -14,17 +14,16 @@
 <script type="text/javascript">
 Highcharts.chart('container', {
     chart: {
-        type: 'line',
-        backgroundColor: '#f7f7f7'
+    backgroundColor: '#f7f7f7'
     },
     title: {
-        text: ' '
+        text: ''
     },
     credits: {
         enabled: false
     },
 exporting: {
-        enabled: false,
+        enabled: true,
         buttons: {
             contextButton: {
                 menuItems: [
@@ -42,39 +41,38 @@ exporting: {
         }
     },
     xAxis: {
-        categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']  // Beispieljahre
+         categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
     },
-yAxis: {
-    title: {
-        text: ''
-    },
-    labels: {
-        formatter: function() {
-            return Highcharts.numberFormat(this.value, 0, ',', '.') + ' %';  // Append % sign after the formatted value
+    yAxis: {
+        title: {
+            text: ''
+        },
+labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.') + " €";  // Format numbers with thousands separator
+            }
         }
-    }
-},
+    },
 tooltip: {
     shared: true,
     useHTML: true,
     formatter: function() {
         return `
-        <span style="font-size:10px;">Ausbildung</span><br>
-        <b>Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik</b><br/><br>
+        <span style="font-size:10px;">Berufsgattung</span><br>
+        <b>Lehrkräfte in d. Sekundarstufe - Experte</b><br/><br>
         Jahr: ${this.x}<br/>
-        Unvermittelte Bewerber: <b>${this.points[0].y !== null ? this.points[0].y + ' %' : 'N/A'}</b><br/>
-        Durchschnitt aller BA Meldungen: <b>${this.points[1].y !== null ? this.points[1].y + ' %' : 'N/A'}</b><br/>`;
+        Bruttoentgelt: <b>${Highcharts.numberFormat(this.points[0].y, 0, ',', '.')} €</b><br/>
+        Bruttoentgelt Durchschnitt alle Berufe: <b>${Highcharts.numberFormat(this.points[1].y, 0, ',', '.')} €</b><br/>`;
     }
 },
-
     series: [{
-        name: 'Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik',
-        data: [6.71,6.06,6.16,6.51,6.47,6.98,6.28,7.4,6.7,6.88,7.67]  // Beispielwerte
-    },{
-    name: 'Alle duale Ausbildungen',
-    data: [13.7,13.5,13.4,13.4,13.3,12.9,12.3,14.3,12.5,11.3,11.5],
+        name: 'Lehrkräfte in d. Sekundarstufe - Experte',
+        data: [4385,4546,4714,4801,4883,5046,5190,5488,5577,5642]  // Beispielwerte, mit einem NaN als null
+    }, {
+        name: 'Alle Berufe',
+        data: [2876,2954,3024,3083,3133,3209,3304,3401,3427,3516],
     dashStyle: 'Dash'  // Fluctuating around 12
-}, ]
+    }]
 });
 </script>
 

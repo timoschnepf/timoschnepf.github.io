@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+<body>
+
+<div id="assoziation-chart" style="width:100%; height:400px;"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        Highcharts.chart('assoziation-chart', {
+               chart: {
+                type: 'line',
+   	        backgroundColor: '#f7f7f7'
+            },
+            title: {
+                text: null  
+            },
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',   // Toggle fullscreen mode
+                    'separator',        // Separator
+                    'viewData',         // View underlying data table
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+            xAxis: {
+                categories: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
+            },
+yAxis: {
+    title: {
+        text: ''
+    },
+    labels: {
+        formatter: function() {
+            return Highcharts.numberFormat(this.value, 0, ',', '.') + ' %';  // Append % sign after the formatted value
+        }
+    }
+},
+            tooltip: {
+                useHTML: true,
+                backgroundColor: '#ffffff',  // Hintergrundfarbe des Tooltips auf Weiß setzen
+                borderColor: '#ccc',  // Optional: Randfarbe für den Tooltip
+                formatter: function() {
+                    // Daten für jedes Jahr
+                    var berufData = {
+                        '2011': {
+                            'Anteil': 12.53,
+                            'AnzahlAnzeigen': 51,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 30), ('Tierschutz', 24), ('Biogasanlage', 11), ('Biogas', 3),...",
+                        },
+                        '2012': {
+                            'Anteil': 14.63,
+                            'AnzahlAnzeigen': 98,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 60), ('Tierschutz', 42), ('Biogasanlage', 21), ('Biogas', 7), ...",
+                        },
+                        '2013': {
+                            'Anteil': 13.92,
+                            'AnzahlAnzeigen': 64,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 37), ('Tierschutz', 28), ('Biogasanlage', 14), ('Biogas', 4), ...",
+                        },
+                        '2014': {
+                            'Anteil': 15.14,
+                            'AnzahlAnzeigen': 88,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 48), ('Tierschutz', 35), ('Biogasanlage', 22), ('Biogas', 8), ...",
+                        },
+			'2015': {
+                            'Anteil': 11.09,
+                            'AnzahlAnzeigen': 61,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 28), ('Tierschutz', 14), ('Biogasanlage', 11), ('Biogas', 5), ...",
+                        },'2016': {
+                            'Anteil': 13.8,
+                            'AnzahlAnzeigen': 70,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 29), ('Biogasanlage', 18), ('Tierschutz', 16), ('Biogas', 5), ...",
+                        },'2017': {
+                            'Anteil': 15.81,
+                            'AnzahlAnzeigen': 83,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 36), ('Biogasanlage', 25), ('Tierschutz', 22), ('Biogas', 4), ...",
+                        },'2018': {
+                            'Anteil': 15.56,
+                            'AnzahlAnzeigen': 89,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 37), ('Tierschutz', 27), ('Biogasanlage', 25), ('Biogas', 7), ...",
+                        },'2019': {
+                            'Anteil': 17.46,
+                            'AnzahlAnzeigen': 109,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 41), ('Biogasanlage', 31), ('Tierschutz', 24), ('Biogas', 11), ...",
+                        },'2020': {
+                            'Anteil': 16.32,
+                            'AnzahlAnzeigen': 103,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 33), ('Biogasanlage', 28), ('Tierschutz', 24), ('Biogas', 18), ...",
+                        },'2021': {
+                            'Anteil': 18.56,
+                            'AnzahlAnzeigen': 101,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 34), ('Biogasanlage', 24), ('Tierschutz', 19), ('Biogas', 17), ...",
+                        },'2022': {
+                            'Anteil': 16.3,
+                            'AnzahlAnzeigen': 96,
+                            'Berufsgattung': 'Landwirtschaft (o.S.) - Fachkraft',
+                            'Schluesselwoerter': "('Umwelt', 32), ('Biogas', 24), ('Tierschutz', 21), ('Biogasanlage', 19), ...",
+                        }
+                    };
+                    
+                    var year = this.x;  // Holt das Jahr basierend auf der X-Achse
+                    var data = berufData[year];  // Holt die entsprechenden Daten für das Tooltip
+                    
+                    // Tooltip-Inhalt aufbauen
+                    return '<div style="background-color:#ffffff;padding:10px;border-radius:5px;">' +
+'<span style="font-size:10px;">Berufgattung</span><br>' +                            
+'<b>' + data.Berufsgattung + '</b><br><br>' +
+                            '<b>' + year + '</b> enthielten <b>' + data.Anteil + '%</b> von <b>' + data.AnzahlAnzeigen + '</b> online Stellenanzeigen einen "grünen" Begriff.<br><br>' +
+                            'In <b>' + year + '</b> waren dies:<br>' +
+                            data.Schluesselwoerter +
+                            '</div>';
+                }
+            },
+        legend: {
+            enabled: false  // Disable the legend
+        },
+
+            series: [{
+                name: 'Prozent',
+                data: [30.67, 32.08, 33.78, 33.25, 31, 28.03, 25.69, 23.88, 32.92, 33.21, 33.21, 34.14] 
+            }],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 600
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

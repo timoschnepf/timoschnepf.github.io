@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>dropdown_anr_zeit</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+<body>
+
+<!-- Dropdown for selecting different professions -->
+<select id="professionSelect" onchange="updateChart()">
+    <option value="beruf1">Landwirt/-in</option>
+    <option value="beruf2">Fachkraft Agrarservice</option>
+</select>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+let chart;  // Variable to hold the chart instance
+
+// Function to update the chart based on dropdown selection
+function updateChart() {
+    const selectedProfession = document.getElementById('professionSelect').value;
+
+    let chartData;
+    let averageData = {
+        name: 'Durchschnitt aller Ausbildungsberufe',
+        data: [92.01, 92.9, 93.47, 93.84, 94.82, 96.57, 96.6, 96.6, 99.1, 101.6, 101.8]  // Example values for the average
+    };
+
+    // Update data based on selected profession
+    if (selectedProfession === 'beruf1') {
+        chartData = {
+            name: 'Landwirt/-in',
+            data: [98.98, 99.24, 98.93, 98.14, 98.44, 98.7, 99.46, 100.03, 98.94, 98.55, 98.26]  // Example values
+        };
+    } else if (selectedProfession === 'beruf2') {
+        chartData = {
+            name: 'Fachkraft Agrarservice',
+            data: [90.62, 89.56, 92.24, 89.46, 93.63, 92.79, 95.37, 96.31, 95.38, 96.57, 91.99]  // Example values
+        };
+    
+    }
+
+    // Update chart series data dynamically
+    chart.series[0].update({
+        name: chartData.name,
+        data: chartData.data
+    });
+
+    chart.series[1].update({
+        name: averageData.name,
+        data: averageData.data
+    });
+}
+
+// Initialize the chart on page load
+chart = Highcharts.chart('container', {
+    chart: {
+        backgroundColor: '#f7f7f7'
+    },
+    title: {
+        text: ' '
+    },
+    credits: {
+        enabled: false
+    },
+    exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',
+                    'separator',
+                    'viewData',
+                    'downloadCSV',
+                    'downloadXLS',
+                    'separator',
+                    'downloadPNG',
+                    'downloadPDF',
+                    'downloadSVG',
+                ]
+            }
+        }
+    },
+    xAxis: {
+        categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']  // Example years
+    },
+    yAxis: {
+        title: {
+            text: ''
+        },
+        labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Formatting
+            }
+        }
+    },
+    tooltip: {
+        shared: true,
+        useHTML: true,
+        formatter: function() {
+            return `
+            <span style="font-size:10px;">Ausbildung</span><br>
+            <b>${this.points[0].series.name}</b><br/><br>
+            Jahr: ${this.x}<br/>
+            eANR: <b>${this.points[0].y !== null ? this.points[0].y: 'N/A'}</b><br/>
+            eANR Durchschnitt aller Ausbildungsberufe: <b>${this.points[1].y !== null ? this.points[1].y: 'N/A'}</b><br/>`;
+        }
+    },
+    series: [{
+        name: 'Landwirt/-in',  // Default profession on page load
+        data: [98.98, 99.24, 98.93, 98.14, 98.44, 98.7, 99.46, 100.03, 98.94, 98.55, 98.26]
+    }, {
+        name: 'Durchschnitt aller Ausbildungsberufe',  // Default average on page load
+        data:  [92.01, 92.9, 93.47, 93.84, 94.82, 96.57, 96.6, 96.6, 99.1, 101.6, 101.8],
+        dashStyle: 'Dash'  // Dashed line for average
+
+    }]
+});
+
+// Call updateChart to initialize the chart based on the default dropdown selection
+updateChart();
+</script>
+
+</body>
+</html>

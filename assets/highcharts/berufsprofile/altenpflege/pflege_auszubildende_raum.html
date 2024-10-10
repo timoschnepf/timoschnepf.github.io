@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+<body>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+// Data and categories sorted in descending order
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar',
+	 backgroundColor: '#f7f7f7'
+    },
+    title: {
+        text: ''
+    },
+    credits: {
+        enabled: false
+    },
+    exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',   // Toggle fullscreen mode
+                    'separator',        // Separator
+                    'viewData',         // View underlying data table
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+    xAxis: {
+        categories: [
+            'Nordrhein Westfalen', 'Baden Württemberg', 'Bayern', 'Niedersachsen', 
+            'Hessen', 'Sachsen', 'Berlin', 'Rheinland Pfalz', 'Sachsen Anhalt', 
+            'Schleswig Holstein', 'Thueringen', 'Hamburg', 'Brandenburg', 
+            'Saarland', 'Mecklenburg Vorpommern', 'Bremen'
+        ]
+    },
+    yAxis: {
+        title: {
+            text: 'Auszubildende'
+        },
+        labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Format numbers with thousands separator
+            }
+        }
+    },
+    tooltip: {
+        formatter: function() {
+          return `<span style="font-size:10px;">Ausbildungsberuf</span><br>
+<b>Pflegefachmann/-frau (82102)</b><br/><br>
+Bundesland:<b> ${this.x}</b><br/>
+            Anzahl Auszubildenden:<b> ${Highcharts.numberFormat(this.y, 0, ',', '.')}</b>`;
+     }
+    },
+    legend: {
+        enabled: false
+    },
+    series: [{
+        name: 'Auszubildende',
+        data: [39201, 18114, 17361, 13935, 8538, 8211, 6039, 5814, 4617, 3861, 
+               3807, 3192, 3657, 2163, 3330, 1254]  // Sorted data points
+    }]
+
+});
+</script>
+
+</body>
+</html>

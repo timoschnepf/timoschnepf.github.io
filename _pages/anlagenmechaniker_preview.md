@@ -106,7 +106,7 @@ Die Fachkräfte der Berufsgattung "Sanitär, Heizung, Klimatechnik - Fachkraft" 
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34212_dropdown_duale_auszubildende_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/dropdown_duale_auszubildende_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -163,7 +163,7 @@ Bitte zitieren als "Datenbank Auszubildende" des Bundesinstituts für Berufsbild
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34212_dropdown_unbesetzt_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/dropdown_unbesetzt_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -220,7 +220,7 @@ Bitte zitieren als "BIBB-Erhebung über neu abgeschlossene Ausbildungsverträge 
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34212_dropdown_unvermittelt_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/dropdown_unvermittelt_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -279,7 +279,7 @@ Bitte zitieren als "BIBB-Erhebung über neu abgeschlossene Ausbildungsverträge 
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34212_dropdown_anr_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/dropdown_anr_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -348,7 +348,7 @@ Bitte zitieren als "BIBB-Erhebung über neu abgeschlossene Ausbildungsverträge 
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34212_erwerbstaetige_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/erwerbstaetige_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -405,7 +405,7 @@ Die Daten basieren auf dem Mikrozensus und sind an die Volkswirtschaftliche Gesa
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34_flexmatrix_aB_2d.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/flexmatrix_aB_2d.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -469,7 +469,7 @@ Die Daten basieren auf dem Mikrozensus und sind an die Volkswirtschaftliche Gesa
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34212_lohn_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/lohn_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -531,7 +531,7 @@ Weitere Informationen finden Sie unter der
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/342_arbeitsbedingungen_3d_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/arbeitsbedingungen_3d_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -610,7 +610,7 @@ Hall, Anja; Siefer, Anke; Tiemann, Michael (2020): BIBB/BAuA-Erwerbstätigenbefr
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34212_dropdown_ansehen.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/dropdown_ansehen.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 
@@ -691,7 +691,7 @@ beziehungsweise
     <!-- Left Column: Chart (80%) -->
     <div class="col-md-8">
       <div class="l-page">
-        <iframe src="{{ '/assets/highcharts/anlagenmechaniker/34212_gruen_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+        <iframe src="{{ '/assets/highcharts/berufsprofile/anlagenmechaniker/gruen_zeit.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
       </div>
     </div>
 

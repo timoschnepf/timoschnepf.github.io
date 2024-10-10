@@ -14,11 +14,10 @@
 <script type="text/javascript">
 Highcharts.chart('container', {
     chart: {
-        type: 'line',
-        backgroundColor: '#f7f7f7'
+        type: 'bar'
     },
     title: {
-        text: ' '
+        text: ''
     },
     credits: {
         enabled: false
@@ -42,38 +41,44 @@ exporting: {
         }
     },
     xAxis: {
-        categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']  // Beispieljahre
-    },
-yAxis: {
-    title: {
-        text: ''
-    },
-    labels: {
-        formatter: function() {
-            return Highcharts.numberFormat(this.value, 0, ',', '.');  // Append % sign after the formatted value
+        categories: ['Körperliche Belastung', 'Umbegungsbelastung', 'Arbeitsintensität', 'Handlungsspielraum', 'Soziale Unterstützung', 'Arbeitszeiten'],
+        title: {
+            text: null
         }
-    }
-},
-tooltip: {
-    shared: true,
-    useHTML: true,
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Index',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+ tooltip: {
     formatter: function() {
-        return `
-        <span style="font-size:10px;">Ausbildung</span><br>
-        <b>Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik</b><br/><br>
-        Jahr: ${this.x}<br/>
-        eANR: <b>${this.points[0].y !== null ? this.points[0].y: 'N/A'}</b><br/>
-        eANR Durchschnitt aller Ausbildungsberufe: <b>${this.points[1].y !== null ? this.points[1].y: 'N/A'}</b><br/>`;
+        return `<span style="font-size:10px;">Berufgruppe</span><br>
+<b>Klempnerei, Sanitär-, Heizungs-, und Klimatechnik</b><br/><br>
+Der Index für den Indikator<br>
+"${this.x}" betrug  ${this.series.name}<br>
+<b>${this.y} von 10 Punkten</b>.`;
     }
-},
+},   
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
     series: [{
-        name: 'Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik',
-        data: [99.13,100.45,101.76,100.91,101.98,101.91,102.19,102.61,101.9,102.35,101.24]  // Beispielwerte
-    },{
-    name: 'Alle dualen Ausbildungen',
-    data: [94.21,96.46,96.87,97.32,100.53,100.47,106.42,107.38,108.02,110.72,115.19],
-    dashStyle: 'Dash'  // Fluctuating around 12
-}, ]
+        name: '2012',
+        data: [10,9,5,6,7,4]  // Beispielwerte
+    }, {
+        name: '2018',
+        data: [10,9,2,7,5,2]  // Beispielwerte
+    }]
 });
 </script>
 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+<body>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script type="text/javascript">
+    const dataLongFormat = [
+        { 'Jahr': 2012, 'Kategorie': 'Körperliche Belastung', 'Index': 8 },
+        { 'Jahr': 2018, 'Kategorie': 'Körperliche Belastung', 'Index': 9 },
+        { 'Jahr': 2012, 'Kategorie': 'Umbegungsbelastung', 'Index': 9 },
+        { 'Jahr': 2018, 'Kategorie': 'Umbegungsbelastung', 'Index': 9 },
+        { 'Jahr': 2012, 'Kategorie': 'Arbeitsintensität', 'Index': 1 },
+        { 'Jahr': 2018, 'Kategorie': 'Arbeitsintensität', 'Index': 1 },
+        { 'Jahr': 2012, 'Kategorie': 'Handlungsspielraum', 'Index': 9 },
+        { 'Jahr': 2018, 'Kategorie': 'Handlungsspielraum', 'Index': 7 },
+        { 'Jahr': 2012, 'Kategorie': 'Soziale Unterstützung', 'Index': 9 },
+        { 'Jahr': 2018, 'Kategorie': 'Soziale Unterstützung', 'Index': 10 },
+        { 'Jahr': 2012, 'Kategorie': 'Arbeitszeiten', 'Index': 8 },
+        { 'Jahr': 2018, 'Kategorie': 'Arbeitszeiten', 'Index': 9 },
+    ];
+
+    // Extracting categories and series dynamically from the data
+    const categories = ['Körperliche Belastung', 'Umbegungsbelastung', 'Arbeitsintensität', 'Handlungsspielraum', 'Soziale Unterstützung', 'Arbeitszeiten'];
+    const series = [
+        { name: '2012', data: [8, 9, 1, 9, 9, 8] },
+        { name: '2018', data: [9, 9, 1, 7, 10, 9] }
+    ];
+
+    // Highcharts configuration
+    Highcharts.chart('container', {
+        chart: {
+            type: 'bar',
+	    backgroundColor: '#f7f7f7'
+        },
+        title: {
+            text: ''
+        },
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: true,
+            buttons: {
+                contextButton: {
+                    menuItems: [
+                        'viewFullscreen',
+                        'separator',
+                        'viewData',
+                        'downloadCSV',
+                        'downloadXLS',
+                        'separator',
+                        'downloadPNG',
+                        'downloadPDF',
+                        'downloadSVG',
+                    ]
+                }
+            }
+        },
+        xAxis: {
+            categories: categories,
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Index',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+                return `<span style="font-size:10px;">Berufshauptgruppe</span><br>
+                <b>Land-, Tier-, Forstwirtschaftsberufe</b><br/><br>
+                Der Index für den Indikator<br>
+                "${this.x}" betrug ${this.series.name}<br>
+                <b>${this.y} von 10 Punkten</b>.`;
+            }
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        series: series
+    });
+</script>
+
+</body>
+</html>

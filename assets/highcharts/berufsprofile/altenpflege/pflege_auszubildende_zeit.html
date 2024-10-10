@@ -13,9 +13,8 @@
 
 <script type="text/javascript">
 Highcharts.chart('container', {
-    chart: {
-        type: 'bar',
-        backgroundColor: '#f7f7f7'
+     chart: {
+	backgroundColor: '#f7f7f7'
     },
     title: {
         text: ''
@@ -42,43 +41,32 @@ exporting: {
         }
     },
     xAxis: {
-        categories: ['Körperliche Belastung', 'Umbegungsbelastung', 'Arbeitsintensität', 'Handlungsspielraum', 'Soziale Unterstützung', 'Arbeitszeiten'],
-        title: {
-            text: null
-        }
+        categories: ['2020', '2021', '2022']  // Updated years
     },
     yAxis: {
-        min: 0,
         title: {
-            text: 'Index',
-            align: 'high'
+            text: 'Auszubildende'
         },
         labels: {
-            overflow: 'justify'
-        }
-    },
- tooltip: {
-    formatter: function() {
-        return `<span style="font-size:10px;">Berufgruppe</span><br>
-<b>Klempnerei, Sanitär-, Heizungs-, und Klimatechnik</b><br/><br>
-Der Index für den Indikator<br>
-"${this.x}" betrug  ${this.series.name}<br>
-<b>${this.y} von 10 Punkten</b>.`;
-    }
-},   
-    plotOptions: {
-        bar: {
-            dataLabels: {
-                enabled: true
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Format numbers with thousands separator
             }
         }
     },
+    tooltip: {
+        formatter: function() {
+          return `<span style="font-size:10px;">Ausbildungsberuf</span><br>
+<b>Pflegefachmann/-frau (82102)</b><br/><br>
+Jahr:<b> ${this.x}</b><br/>
+            Anzahl Auszubildenden:<b> ${Highcharts.numberFormat(this.y, 0, ',', '.')}</b>`;
+     }
+    },
+    legend: {
+        enabled: false
+   },
     series: [{
-        name: '2012',
-        data: [10,9,5,6,7,4]  // Beispielwerte
-    }, {
-        name: '2018',
-        data: [10,9,2,7,5,2]  // Beispielwerte
+        name: 'Auszubildende',
+        data: [53610,102873,143091]  // Updated data values
     }]
 });
 </script>

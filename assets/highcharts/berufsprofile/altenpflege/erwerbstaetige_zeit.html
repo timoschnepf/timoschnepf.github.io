@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+<body>
+
+<div id="container" style="width:100%; height:100%;"></div>
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'line',
+	backgroundColor: '#f7f7f7'
+    },
+    title: {
+        text: ''
+    },
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',   // Toggle fullscreen mode
+                    'separator',        // Separator
+                    'viewData',         // View underlying data table
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+    xAxis: {
+        categories: ['2020', '2021', '2022', '2023', 
+                     '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', 
+                     '2035', '2036', '2037', '2038', '2039', '2040'],
+	tickInterval: 5
+    },
+    yAxis: {
+        title: {
+            text: 'Anzahl'
+        },
+        labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Format numbers with thousands separator
+            }
+        }
+    },
+    tooltip: {
+        shared: true,
+        useHTML: true,
+        formatter: function() {
+            return `<span style="font-size:10px;">Berufshauptgruppe</span><br>
+<b>Altenpflege</b><br/><br>
+		Jahr: ${this.x}<br/>
+                    Erwerbstätige: <b>${Highcharts.numberFormat(this.points[0].y, 0, ',', '.')}</b><br/>
+                    Erwerbspersonen:  <b>${Highcharts.numberFormat(this.points[1].y, 0, ',', '.')}</b><br/>
+                    Erwerbspersonen mit erlerntem Beruf: <b>${Highcharts.numberFormat(this.points[2].y, 0, ',', '.')}</b>`;
+        }
+    },
+    series: [{
+        name: "Erwerbstätige",
+        data: [708000, 737000, 776000, 776000, 787000, 791000, 798000, 802000, 807000, 815000, 814000, 817000, 819000, 820000, 825000, 826000, 831000, 841000, 853000, 868000, 883000]
+    },
+    {
+        name: "Erwerbspersonen",
+        data: [733000, 760000, 771000, 794000, 796000, 809000, 815000, 821000, 823000, 826000, 830000, 829000, 831000, 833000, 834000, 838000, 839000, 843000, 848000, 854000, 862000]
+    },
+    {
+        name: "Erwerbspersonen mit erlernten Beruf",
+        data: [404000, 409000, 417000, 422000, 428000, 433000, 439000, 444000, 447000, 450000, 453000, 456000, 458000, 461000, 464000, 468000, 471000, 475000, 479000, 483000, 487000]
+    }]
+});
+</script>
+
+
+
+</body>
+</html>
