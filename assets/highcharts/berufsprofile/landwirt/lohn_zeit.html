@@ -6,8 +6,19 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
+  <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Lohnentwicklung</p>
 
 <div id="container" style="width:100%; height:400px;"></div>
 
@@ -66,7 +77,7 @@ tooltip: {
     }
 },
     series: [{
-        name: 'Landwirtschaft (o.S.) - Helfer',
+        name: 'Landwirtschaft (o. S.) - Fachkraft',
         data: [1759,1819,1885,1925,1955,2043,2126,2209,2255,2333]  // Beispielwerte, mit einem NaN als null
     }, {
         name: 'Alle Berufe',
@@ -75,6 +86,13 @@ tooltip: {
     }]
 });
 </script>
+
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator "Lohnentwicklung" zeigt die Medianbruttolöhne aller vollzeit sozialversicherungspflichtig Beschäftigten in Deutschland im Zeitverlauf.
+<br><br>
+Der Indikator "Einkommen" basiert auf der Entgeltstatistik der Beschäftigungsstatistik der Bundesagentur für Arbeit. Er zeigt die Median Bruttolöhne aller in Vollzeit sozialversicherungspflichtig Beschäftigten in Deutschland.
+</p>
 
 </body>
 </html>

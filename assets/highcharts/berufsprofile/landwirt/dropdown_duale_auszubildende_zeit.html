@@ -5,8 +5,19 @@
     <script src="https://code.highcharts.com/modules/full-screen.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
+<style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Anzahl Auszubildende</p>
 
 <!-- Two options in the select dropdown -->
 <select id="berufSelect" onchange="updateChart()">
@@ -116,6 +127,12 @@ exporting: {
 updateChart();
 
 </script>
-
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator „Anzahl Auszubildende" zeigt alle zum 31.12. eines Jahres gemeldeten dualen Ausbildungsstellen der gewählten Ausbildung.
+<br><br>
+Die Daten basieren auf einer Vollerhebung der bestehenden Ausbildungsverträge 
+der dualen Ausbildungsberufe nach Berufsbildungsgesetz (BBiG) bzw. Handwerksordnung (HwO). 
+Sie werden vom Datensystem Auszubildende (DAZUBI) aufbereitet und zur Verfügung gestellt.
 </body>
 </html>

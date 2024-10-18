@@ -5,8 +5,20 @@
     <script src="https://code.highcharts.com/modules/full-screen.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
+<style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Berufliches Ansehen</p>
+
 
 <!-- Chart container -->
 <div id="container" style="width:100%; height:400px;"></div>
@@ -91,6 +103,13 @@ Highcharts.chart('container', {
 });
 
 </script>
+
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator zeigt die Wahrnehmung des beruflichen Ansehens des Berufs nach dem Mittelwert.
+<br><br>
+Das Berufliche Ansehen wurde anhand der Frage ermittelt, wie hoch Befragte ihrer  "Meinung nach heute das Ansehen von Beruf "X" in Deutschland"  einschätzen. Antwortmöglichkeit waren eine 11-Stufige Skala von  "Sehr geringes Ansehen" bis "Sehr hohes Ansehen". 
+</p>
 
 </body>
 </html>

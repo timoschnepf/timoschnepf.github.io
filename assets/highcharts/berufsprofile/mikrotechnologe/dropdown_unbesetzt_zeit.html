@@ -6,8 +6,19 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
+ <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Unbesetzte Ausbildungsstellen</p>
 
 <div id="container" style="width:100%; height:400px;"></div>
 
@@ -76,6 +87,16 @@ tooltip: {
 }, ]
 });
 </script>
+
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator „Unbesetzte Ausbildungsstellen" zeigt den Anteil der unbesetzten Ausbildungsstellen sowie den Durchschnitt über alle dualen Ausbildungsberufe im Zeitverlauf.
+<br><br>
+Der Anteil der unbesetzten Ausbildungsstellen wird 
+berechnet durch den Anteil der unbesetzten Ausbildungsplätze am 
+gemeldeten Gesamtangebot an betrieblichen als auch außerbetrieblichen (dualen) 
+Ausbildungsstellen (ohne Berufe für Menschen mit Behinderung). 
+</p>
 
 </body>
 </html>

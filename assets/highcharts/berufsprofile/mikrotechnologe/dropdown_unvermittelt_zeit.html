@@ -6,8 +6,19 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
+<style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Unvermittelte Ausbildungsbewerber</p>
 
 <div id="container" style="width:100%; height:400px;"></div>
 
@@ -76,6 +87,13 @@ tooltip: {
 }, ]
 });
 </script>
+
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator „Unvermittelte Ausbildungsbewerbungen" zeigt den Anteil der unvermittelten Bewerber der BA sowie den Durchschnitt über alle dualen Ausbildungsberufe im Zeitverlauf.
+<br><br>
+Der Anteil der unvermittelten Bewerber wird berechnet durch den Anteil der unvermittelten Ausbildungsbewerbungen an allen gemeldeten  Ausbildungsbewerbungen (Nachfrage erweiterte Definition) bei der Bundesagentur für Arbeit.
+</p>
 
 </body>
 </html>

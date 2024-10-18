@@ -7,8 +7,19 @@
 	<script src="https://code.highcharts.com/modules/full-screen.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
+<style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Title above the chart -->
+<p style="font-size: 14px; text-align: left; margin-bottom: 10px;">Angebot-Nachfrage-Relation</p>
 
 <!-- Dropdown for selecting different professions -->
 <select id="professionSelect" onchange="updateChart()">
@@ -125,6 +136,13 @@ chart = Highcharts.chart('container', {
 // Call updateChart to initialize the chart based on the default dropdown selection
 updateChart();
 </script>
-
+<!-- Text below the chart -->
+<p style="text-align: left; font-size: 12px; margin-top: 20px;">
+Der Indikator „Angebot-Nachfrage-Relation" zeigt das Verhältnis von Ausbildungsplatznachfrage und -angebot. Werte über 100 bedeuten Angebotsüberhang, Werte unter 100 bedeuten Nachfrageüberhang.
+<br><br>
+Wenn Nachfrageüberhang (Index kleiner 100) besteht, gibt es mehr ausbildungsinteressierte Personen 
+als das es Ausbildungsstellen gibt. Wenn Angebotüberhang (Index größer 100) besteht, gibt es mehr 
+Ausbildungsstellen als das es ausbildungsinteressierte Personen gibt.
+</p>
 </body>
 </html>
