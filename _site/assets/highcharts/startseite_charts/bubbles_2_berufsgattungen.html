@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link to Google Fonts for Fira Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://code.highcharts.com/12.1.0/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        h2, p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Title above the chart -->
+<p style="font-size: 19px; text-align: left; margin-bottom: 10px;">... und in Aus- und Weiterbildung</p>
+
+<div id="container" style="width:100%; height:100%;"></div>
+<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble',
+        height: '40%',
+        backgroundColor: '' // Grey: #EFEFF0
+    },
+    title: {
+        text: "",
+        style: {
+            color: '#333333',
+            fontSize: '18px',
+            fontWeight: 'bold'
+        }
+    },
+        credits: {
+		enabled: false
+	},
+	exporting: {
+	enabled: false
+	},
+    tooltip: {
+        useHTML: true,
+        backgroundColor: 'rgba(255,255,255,0.9)',
+        borderColor: '#666666',
+        style: {
+            color: '#333333',
+            fontSize: '13px',
+        },
+        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b>{point.name}</b>: <br><br><b>{point.value}</b> Erwerbstätige'
+    },
+plotOptions: {
+    packedbubble: {
+        minSize: '30%',
+        maxSize: '120%',
+        zMin: 0,
+        zMax: 1200000,
+        shadow: false, // Disable shadow effect
+        layoutAlgorithm: {
+            splitSeries: false,
+            gravitationalConstant: 0.05
+        },
+        marker: {
+            lineWidth: 2, // Adjust the thickness here
+            lineColor: '#000000' // Black stroke color
+        },
+        dataLabels: {
+            enabled: true,
+            format: '{point.name}',
+	    allowOverlap: false, // Show all labels, even if they overlap
+            style: {
+                color: '#000000',
+                textOutline: 'none',
+                fontWeight: 'bold',
+                fontSize: '11px',
+            }
+        },
+        states: {
+            hover: {
+                enabled: false // Disable hover highlighting
+            }
+        },
+           point: {
+                events: {
+                    click: function () {
+                        if (this.url) {
+                            window.location.href = this.url;// Or: window.open(this.url, _blank); 
+                        }
+                    }
+                }
+            },
+    }
+},
+    series: [{
+        name: 'Duale Ausbildung',
+        color: '#77A93A',
+        data: [{
+            name: 'Mikrosystemtechnik<br>Fachkraft',
+            value: 5000,
+        },
+        {
+            name: 'Sanitär-, Heizung-, <br>Klimatechnik<br>Fachkraft',
+            value: 191000,
+        },
+        {
+            name: 'Kraftfahrzeugtechnik <br>Fachkraft',
+            value: 320000,
+        },
+        {
+            name: 'Öffentliche Verwaltung <br>Fachkraft',
+            value: 494000,
+        },
+        {
+            name: 'Landwirtschaft (o.S.)<br>Fachkraft',
+            value: 224000,
+        },
+        {
+            name: 'Verkauf (o. S.)<br>Fachkraft',
+            value: 1184000,
+        },
+        {
+            name: 'Informatik (o. S.)<br>Fachkraft',
+            value: 72000,
+        }]
+    }, {
+        name: 'Schulische Ausbildung',
+        color: '#003571',
+        data: [{
+            name: 'Altenpflege (o. S.)<br>Fachkraft',
+            value: 441000,
+        },
+        {
+            name: 'Physiotherapie<br>Fachkraft',
+            value: 179000,
+        }]
+     }, {
+        name: 'Helferberuf',
+        color: '#299E9E',
+        data: [{
+            name: 'Reinigung<br>Helfer',
+            value: 1032000,
+        }]
+     }, {
+        name: 'Akademischer Beruf',
+        color: '#633A97',
+        data: [{
+            name: 'Lehrkräfte <br>in der Sekundarstufe',
+            value: 454000,
+        }]
+    }]
+});
+</script>
+
+<p style="font-size: small; text-align:right;">Quelle: Mikrozensus 2015, eigene Darstellung</p>
+
+</body>
+</html>

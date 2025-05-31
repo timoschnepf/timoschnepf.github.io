@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- CSS-Datei einbinden -->
+    <link rel="stylesheet" href="../assets/style.css">
+    
+    <!-- Highcharts- und andere Scripts einbinden -->
+    <script src="https://code.highcharts.com/12.1.0/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="rounded-box">
+
+<div class="badge-container" style="display: inline-block; position: relative;">
+    <br>
+    <h1 class="struktur" style="display: inline; margin: 0;">Alternativberuf</h1>
+    <span class="badge" onmouseover="showPopup('popupBadge')" onmouseout="hidePopup('popupBadge')">8</span>
+    <div id="popupBadge" class="popup-box-badge">
+        <p><b>Detailtiefe der Daten</b><br><br>
+           Die Daten liegen auf Einzelberufsebene (KldB 2010 8-Steller) vor.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Platzhalter für Highcharts -->
+    <div class="iframe-section">
+        <div id="container"></div>
+    </div>
+
+    <!-- Text section mit Beschreibung und Icons -->
+    <div class="text-section">
+	<div class="description-box">
+            <p>Der Indikator zeigt, welche Einzelberufe Betriebe in Online-Stellenanzeigen für die Berufsgattung am häufigsten gesucht haben.</p>
+        </div>
+        
+
+        <!-- Icons in blauen Kreisen, rechts unten ausgerichtet -->
+        <div class="icons">
+            <span class="icon-circle" onmouseenter="showPopup('popupHint')" onmouseleave="hidePopup('popupHint')">
+                <i class="fas fa-lightbulb icon"></i>
+            </span>
+            <span class="icon-circle" onmouseenter="showPopup('popupQuote')" onmouseleave="hidePopup('popupQuote')">
+                <i class="fas fa-quote-left icon"></i>
+            </span>
+        </div>
+
+        <!-- Popup-Boxen -->
+        <div id="popupHint" class="popup-box" onmouseenter="showPopup('popupHint')" onmouseleave="hidePopup('popupHint')">
+                                <p><b>Weitere Informationen zu Daten und Indikator</b><br><br>
+Der Indikator basiert auf einer Analyse der BA Online-Stellenanzeigen der Jahre 2018 bis 2022. 
+Häufig geben Betriebe nicht nur einen einzigen gesuchten Beruf an, sondern noch ähnliche, 
+alternative Berufe. Die häufigsten Nennungen sind hier dargestellt. 
+Alternativberufe deuten auf ein ähnliches Kompetenzprofil hin.
+        </p>
+        </div>
+        <div id="popupQuote" class="popup-box" onmouseenter="showPopup('popupQuote')" onmouseleave="hidePopup('popupQuote')">
+            <p><b>Zitationshinweis</b><br><br>Noch ist dazu keine Publikation erschienen.
+	</p>
+        </div>
+    </div>
+</div>
+<body>
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar',
+        backgroundColor: '#f7f7f7'
+    },
+    title: {
+        text: ''
+    },
+
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+xAxis: {
+    categories: [
+        'Anlagenmechaniker/in - Sanitär-, Heizungs- und Klimatechnik',
+        'Gas- und Wasserinstallateur/in',
+        'Zentralheizungs- und Lüftungsbauer/in',
+        'Helfer/in - Klempnerei, Installation',
+        'Kundendienstmonteur/in, -techniker/in',
+    ]
+},
+yAxis: {
+    title: {
+        text: 'Prozent'
+    }
+},
+tooltip: {
+    formatter: function() {
+        return `Unter allen Stellenanzeigen der<br>
+Berufsgattung <b>Sanitär, Heizung, Klimatechnik - Fachkraft</b><br> 
+suchten Betriebe zu <b>${this.y} Prozent</b>
+den Einzelberuf <br>
+<b>${this.key}</b>.`;
+    }
+},
+legend: {
+    enabled: false
+},
+series: [{
+    name: 'Prozentualer Anteil',
+    data: [48.29,18.06,7.7,3.94,2.37]  // Updated with new data
+}]
+
+});
+</script>
+<script>
+let hideTimeout;
+
+function showPopup(id) {
+    clearTimeout(hideTimeout); // Cancel any existing hide timeout
+    console.log("showPopup called for:", id); // Debugging line
+
+    // Determine which popup to show based on its class
+    const popup = document.getElementById(id);
+
+    if (popup) {
+        // Check if it's an icon popup or badge popup based on the class
+        if (popup.classList.contains('popup-box')) {
+            console.log("Icon popup triggered for:", id); // Debugging line
+            // Close other icon popups
+            const allIconPopups = document.querySelectorAll('.popup-box');
+            allIconPopups.forEach(iconPopup => {
+                if (iconPopup.id !== id) {
+                    iconPopup.classList.remove('visible');
+                }
+            });
+        } else if (popup.classList.contains('popup-box-badge')) {
+            console.log("Badge popup triggered for:", id); // Debugging line
+            // Close other badge popups
+            const allBadgePopups = document.querySelectorAll('.popup-box-badge');
+            allBadgePopups.forEach(badgePopup => {
+                if (badgePopup.id !== id) {
+                    badgePopup.classList.remove('visible');
+                }
+            });
+        }
+
+        // Show the requested popup
+        popup.classList.add('visible');
+    }
+}
+
+function hidePopup(id) {
+    console.log("hidePopup called for:", id); // Debugging line
+    hideTimeout = setTimeout(() => {
+        const popup = document.getElementById(id);
+        if (popup) {
+            popup.classList.remove('visible');
+            console.log("Popup hidden:", id); // Debugging line
+        }
+    }, 1000); // 1-second delay before hiding
+}
+
+</script>
+
+</div>
+</body>
+</html>
+

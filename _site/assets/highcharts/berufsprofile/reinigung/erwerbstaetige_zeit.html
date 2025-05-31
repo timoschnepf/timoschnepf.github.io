@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Berufe-Diagramme</title>
+    
+    <!-- CSS-Datei einbinden -->
+    <link rel="stylesheet" href="../assets/style.css">
+    
+    <!-- Highcharts- und andere Scripts einbinden -->
+    <script src="https://code.highcharts.com/12.1.0/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="rounded-box">
+	
+<div class="badge-container" style="display: inline-block; position: relative;">
+    <br>
+    <h1 class="struktur" style="display: inline; margin: 0;">Erwerbstätigkeit Projektion</h1>
+    <span class="badge" onmouseover="showPopup('popupBadge')" onmouseout="hidePopup('popupBadge')">3</span>
+    <div id="popupBadge" class="popup-box-badge">
+        <p><b>Detailtiefe der Daten</b><br><br>
+            Die Daten liegen auf der Ebene der Berufsgruppen vor (KldB 2010 3-Steller). 
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Platzhalter für Highcharts -->
+    <div class="iframe-section">
+        <div id="container"></div>
+    </div>
+
+    <!-- Text section mit Beschreibung und Icons -->
+    <div class="text-section">
+	<div class="description-box">
+            <p>Der Indikator "Erwerbstätigkeit Projektion" zeigt die gegenwärtige und zukünftige Anzahl an Erwerbstätigen, Erwerbslosen sowie Personen mit einem beruflichen Abschluss in der Berufsgruppe im Zeitverlauf. Die zukünftigen Entwicklungen basieren auf Projektionsmodellen.</p>
+        </div>
+        
+
+        <!-- Icons in blauen Kreisen, rechts unten ausgerichtet -->
+        <div class="icons">
+            <span class="icon-circle" onmouseenter="showPopup('popupHint')" onmouseleave="hidePopup('popupHint')">
+                <i class="fas fa-lightbulb icon"></i>
+            </span>
+            <span class="icon-circle" onmouseenter="showPopup('popupQuote')" onmouseleave="hidePopup('popupQuote')">
+                <i class="fas fa-quote-left icon"></i>
+            </span>
+        </div>
+
+        <!-- Popup-Boxen -->
+        <div id="popupHint" class="popup-box" onmouseenter="showPopup('popupHint')" onmouseleave="hidePopup('popupHint')">
+                        <p><b>Weitere Informationen zu Daten und Indikator</b><br><br>
+Zu den Erwerbstätigen zählen alle Personen, die als Arbeitnehmer/-innen, Angestellte, Beamte/Beamtinnen, geringfügig Beschäftigte, Soldaten/Soldatinnen oder als Selbständige beziehungsweise als mithelfende Familienangehörige eine Tätigkeit ausüben. Sie stellen den Bedarf an Arbeitskräften dar (Arbeitskräftenachfrage).
+
+Die Erwerbspersonen umfasst die Erwerbstätigen und die Erwerbslosen.
+
+Die Erwerbspersonen nach erlerntem Beruf umfasst alle Personen, die einen bestimmten Beruf erlernt haben (Arbeistkräfteangebot). Es wird dabei nicht berücksichtigt, in welchem Beruf sie derzeit erwerbstätig sind oder zuletzt erwerbstätig waren.
+<br><br>
+Die Daten basieren auf dem Mikrozensus und sind an die Volkswirtschaftliche Gesamtrechnung (VGR) angepasst. Sie zeigen die sog. Basisprojektion. In der Basisprojektion werden nur empirisch beobachtbare Entwicklungen und Zusammenhänge in die Zukunft fortgeschrieben. Es wird der Frage nachgegangen, was passieren würde, wenn bisherige Trends fortbestehen und sich nichts ändert.
+	<br><br>
+	Weiterführende Statistiken und Informationen finden Sie im <a href="https://www.bibb.de/de/qube_datenportal.php" target="_blank">Datenportal QuBe</a>.
+        </p>
+        </div>
+        <div id="popupQuote" class="popup-box" onmouseenter="showPopup('popupQuote')" onmouseleave="hidePopup('popupQuote')">
+            <p><b>Zitationshinweis</b><br><br>Maier, Tobias, Kalinowski, Michael und Zika, Gerd (2024). Qube Datenportal des Bundesinstituts für Berufsbildung.</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'spline',
+	backgroundColor: '#f7f7f7'
+    },
+    title: {
+        text: ''
+    },
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+    xAxis: {
+        categories: ['2020', '2021', '2022', '2023', 
+                     '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', 
+                     '2035', '2036', '2037', '2038', '2039', '2040'],
+	tickInterval: 5
+    },
+    yAxis: {
+        title: {
+            text: null
+        },
+        labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Format numbers with thousands separator
+            }
+        }
+    },
+    tooltip: {
+        shared: true,
+        useHTML: true,
+        formatter: function() {
+            return `<span style="font-size:10px;">Berufsgruppe</span><br>
+<b>Reinigung</b><br/><br>
+		Jahr: <b>${this.key}</b><br/>
+                    Erwerbstätige: <b>${Highcharts.numberFormat(this.points[0].y, 0, ',', '.')}</b><br/>
+                    Erwerbspersonen:  <b>${Highcharts.numberFormat(this.points[1].y, 0, ',', '.')}</b><br/>
+                    Erwerbspersonen mit erlerntem Beruf: <b>${Highcharts.numberFormat(this.points[2].y, 0, ',', '.')}</b>`;
+        }
+    },
+    series: [{
+        name: "Erwerbstätige",
+        data: [1573000, 1501000, 1525000, 1535000, 1540000, 1537000, 1536000, 1529000, 1524000, 1518000, 1510000, 1509000, 1504000, 1497000, 1491000, 1486000, 1482000, 1482000, 1481000, 1480000, 1479000]
+    },
+    {
+        name: "Erwerbspersonen",
+        data: [1654000, 1572000, 1598000, 1585000, 1583000, 1584000, 1581000, 1571000, 1556000, 1542000, 1528000, 1517000, 1505000, 1493000, 1483000, 1473000, 1466000, 1460000, 1455000, 1449000, 1445000]
+    },
+    {
+        name: "Erwerbspersonen mit erlernten Beruf",
+        data: [58000, 56000, 58000, 59000, 60000, 60000, 61000, 62000, 62000, 63000, 63000, 63000, 64000, 64000, 64000, 65000, 65000, 66000, 67000, 68000, 70000]
+    }]
+});
+</script>
+
+<script>
+let hideTimeout;
+
+function showPopup(id) {
+    clearTimeout(hideTimeout); // Cancel any existing hide timeout
+    console.log("showPopup called for:", id); // Debugging line
+
+    // Determine which popup to show based on its class
+    const popup = document.getElementById(id);
+
+    if (popup) {
+        // Check if it's an icon popup or badge popup based on the class
+        if (popup.classList.contains('popup-box')) {
+            console.log("Icon popup triggered for:", id); // Debugging line
+            // Close other icon popups
+            const allIconPopups = document.querySelectorAll('.popup-box');
+            allIconPopups.forEach(iconPopup => {
+                if (iconPopup.id !== id) {
+                    iconPopup.classList.remove('visible');
+                }
+            });
+        } else if (popup.classList.contains('popup-box-badge')) {
+            console.log("Badge popup triggered for:", id); // Debugging line
+            // Close other badge popups
+            const allBadgePopups = document.querySelectorAll('.popup-box-badge');
+            allBadgePopups.forEach(badgePopup => {
+                if (badgePopup.id !== id) {
+                    badgePopup.classList.remove('visible');
+                }
+            });
+        }
+
+        // Show the requested popup
+        popup.classList.add('visible');
+    }
+}
+
+function hidePopup(id) {
+    console.log("hidePopup called for:", id); // Debugging line
+    hideTimeout = setTimeout(() => {
+        const popup = document.getElementById(id);
+        if (popup) {
+            popup.classList.remove('visible');
+            console.log("Popup hidden:", id); // Debugging line
+        }
+    }, 1000); // 1-second delay before hiding
+}
+
+</script>
+
+</div>
+</body>
+</html>

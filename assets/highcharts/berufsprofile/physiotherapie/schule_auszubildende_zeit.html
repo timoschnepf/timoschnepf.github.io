@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Berufe-Diagramme</title>
+    
+    <!-- CSS-Datei einbinden -->
+    <link rel="stylesheet" href="../assets/style.css">
+    
+    <!-- Highcharts- und andere Scripts einbinden -->
+    <script src="https://code.highcharts.com/12.1.0/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body>
+<div class="rounded-box">
+
+<!-- Titel für das Diagramm -->
+<div class="badge-container" style="display: inline-block; position: relative;">
+    <br>
+    <h1 class"ausbildung" style="display: inline; margin: 0;">Anzahl Auszubildende</h1>
+    <span class="badge" onmouseover="showPopup('popupBadge')" onmouseout="hidePopup('popupBadge')">A</span>
+    <div id="popupBadge" class="popup-box-badge">
+        <p><b>Detailtiefe der Daten</b><br><br>
+            Die Daten liegen auf Ausbildungsberuf-Ebene für schulische Ausbildungen vor. 
+        </p>
+    </div>
+</div>
+<!-- Dropdown für die Auswahl verschiedener Berufe -->
+<div class="dropdown-container" style="margin-top: 10px;">
+    <select id="berufSelect" onchange="updateChart()">
+        <option value="beruf1">Motopäde/Motopädin</option>
+        <option value="beruf2">Physiotherapeut/in</option>
+    </select>
+</div>
+<div class="container">
+    <!-- Highcharts -->
+    <div class="iframe-section">
+        <div id="container"></div>
+    </div>
+
+   <!-- Text section mit Beschreibung und Icons -->
+    <div class="text-section">
+	<div class="description-box">
+            <p>Der Indikator „Anzahl Auszubildende" zeigt alle zu Beginn des Schuljahres gemeldeten beruflichen Schüler der gewählten Ausbildung.</p>
+        </div>
+   
+
+        <!-- Icons in blauen Kreisen, rechts unten ausgerichtet -->
+        <div class="icons">
+            <span class="icon-circle" onmouseenter="showPopup('popupHint')" onmouseleave="hidePopup('popupHint')">
+                <i class="fas fa-lightbulb icon"></i>
+            </span>
+            <span class="icon-circle" onmouseenter="showPopup('popupQuote')" onmouseleave="hidePopup('popupQuote')">
+                <i class="fas fa-quote-left icon"></i>
+            </span>
+        </div>
+
+        <!-- Popup-Boxen -->
+        <div id="popupHint" class="popup-box" onmouseenter="showPopup('popupHint')" onmouseleave="hidePopup('popupHint')">
+            <p><b>Weitere Informationen zu Daten und Indikator</b><br><br>
+            Der Indikator „Auszubildende im Zeitverlauf" zeigt alle gemeldeten Schülerinnen und Schüler des entsprechenden Ausbildungsberufs. 
+
+Die Daten basieren auf einer Vollerhebung der Schülerzahlen an öffentlichen und privaten beruflichen Schulen.<br><br> Sie werden zu einem Stichtag zu Beginn des Schuljahres erhoben. Die Daten werden vom Statistischen Bundesamt einmal im Jahr veröffentlicht. Für weitere Informationen zum Statistischen Bericht Beruflicher Schulen siehe <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Schulen/Publikationen/Downloads-Schulen/statistischer-bericht-berufliche-schulen-2110200227005.html" target="_blank">hier<a>. Über das <a href="https://www-genesis.destatis.de/genesis/online" target="_blank">Datenportal Genesis</a> des Statistischen Bundesamtes erhalten Sie vertiefende Analysemöglichkeiten (Suchbegriff: 'Schüler in beruflichen Schulen').
+
+Es gilt zu beachten, dass zeitliche Brüche entstehen können, wenn sich Meldezuständigkeiten oder Ausbildungsberufe verändern.
+        </p></div>
+        <div id="popupQuote" class="popup-box" onmouseenter="showPopup('popupQuote')" onmouseleave="hidePopup('popupQuote')">
+            <p><b>Zitationshinweis</b><br><br> Statistisches Bundesamt. 2023. Statistischer Bericht. Berufliche Schulen und Schulen des Gesundheitswesens - Berufsbezeichnungen. Schuljahr 2022/2023.</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+// Funktion zur Aktualisierung des Diagramms basierend auf der Dropdown-Auswahl
+function updateChart() {
+    const selectedBeruf = document.getElementById('berufSelect').value;
+
+    let chartOptions;
+    let berufLabel;
+
+    if (selectedBeruf === 'beruf1') {
+        berufLabel = 'Motopäde/Motopädin';
+        chartOptions = {
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020']
+            },
+            series: [{
+                name: 'Anzahl Auszubildenden',
+                data: [236,204,175,178,177,159,161,165,183]  // Data for Einzelhändler
+            }]
+        };
+    } else if (selectedBeruf === 'beruf2') {
+        berufLabel = 'Physiotherapeut/in';
+        chartOptions = {
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
+            },
+            series: [{
+                name: 'Anzahl Auszubildenden',
+                data: [21657,21589,21498,21516,21812,21220,21221,21953,22560,24390,25111]  // Data for Elektroniker/-in
+            }]
+        };
+    }
+
+    // Initialize or update the chart
+    Highcharts.chart('container', {
+        chart: {
+            type: 'spline',
+	    backgroundColor: '#F7F7F7'
+        },
+        title: chartOptions.title,
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+        xAxis: {
+            categories: chartOptions.xAxis.categories
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+	    labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.');  // Format numbers with thousands separator
+            }
+        }
+        },
+        legend: {
+            enabled: false  // Disable the legend
+        },
+        tooltip: {
+            useHTML: true,
+            formatter: function() {
+                return `<span style="font-size:10px;">Ausbildungsberuf</span><br>
+                        <b>${berufLabel}</b><br/><br>
+                        Jahr:<b> ${this.key}</b><br/>
+                        Anzahl Auszubildenden:<b> ${Highcharts.numberFormat(this.y, 0, ',', '.')}</b>`;
+            }
+        },
+        series: chartOptions.series
+    });
+}
+
+// Initial chart display
+updateChart();
+let hideTimeout;
+
+function showPopup(id) {
+    clearTimeout(hideTimeout); // Cancel any existing hide timeout
+    console.log("showPopup called for:", id); // Debugging line
+
+    // Determine which popup to show based on its class
+    const popup = document.getElementById(id);
+
+    if (popup) {
+        // Check if it's an icon popup or badge popup based on the class
+        if (popup.classList.contains('popup-box')) {
+            console.log("Icon popup triggered for:", id); // Debugging line
+            // Close other icon popups
+            const allIconPopups = document.querySelectorAll('.popup-box');
+            allIconPopups.forEach(iconPopup => {
+                if (iconPopup.id !== id) {
+                    iconPopup.classList.remove('visible');
+                }
+            });
+        } else if (popup.classList.contains('popup-box-badge')) {
+            console.log("Badge popup triggered for:", id); // Debugging line
+            // Close other badge popups
+            const allBadgePopups = document.querySelectorAll('.popup-box-badge');
+            allBadgePopups.forEach(badgePopup => {
+                if (badgePopup.id !== id) {
+                    badgePopup.classList.remove('visible');
+                }
+            });
+        }
+
+        // Show the requested popup
+        popup.classList.add('visible');
+    }
+}
+
+function hidePopup(id) {
+    console.log("hidePopup called for:", id); // Debugging line
+    hideTimeout = setTimeout(() => {
+        const popup = document.getElementById(id);
+        if (popup) {
+            popup.classList.remove('visible');
+            console.log("Popup hidden:", id); // Debugging line
+        }
+    }, 1000); // 1-second delay before hiding
+}
+
+
+</script>
+
+</div>
+</body>
+</html>
+

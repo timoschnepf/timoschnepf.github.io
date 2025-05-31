@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Berufe-Diagramme</title>
+    
+    <!-- CSS-Datei einbinden -->
+    <link rel="stylesheet" href="../assets/style.css">
+    
+    <!-- Highcharts- und andere Scripts einbinden -->
+    <script src="https://code.highcharts.com/12.1.0/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+	
+<div class="rounded-box">
+
+<!-- Titel für das Diagramm -->
+<div class="badge-container" style="display: inline-block; position: relative;">
+    <br>
+    <h1 class="atraktivitaet" style="display: inline; margin: 0;">Lohnentwicklung</h1>
+    <span class="badge" onmouseover="showPopup('popupBadge')" onmouseout="hidePopup('popupBadge')">5</span>
+    <div id="popupBadge" class="popup-box-badge">
+        <p><b>Detailtiefe der Daten</b><br><br>
+            Die Daten liegen auf der Ebene der Berufsgattungen vor (KldB 2010 5-Steller). 
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Platzhalter für Highcharts -->
+    <div class="iframe-section">
+        <div id="container"></div>
+    </div>
+
+    <!-- Text section mit Beschreibung und Icons -->
+    <div class="text-section">
+	<div class="description-box">
+            <p>Der Indikator "Lohnentwicklung" zeigt die Medianbruttolöhne aller vollzeit sozialversicherungspflichtig Beschäftigten in 
+Deutschland im Zeitverlauf.</p>
+        </div>
+
+
+        <!-- Icons in blauen Kreisen, rechts unten ausgerichtet -->
+        <div class="icons">
+            <span class="icon-circle" onmouseenter="showPopup('popupHint')" onmouseleave="hidePopup('popupHint')">
+                <i class="fas fa-lightbulb icon"></i>
+            </span>
+            <span class="icon-circle" onmouseenter="showPopup('popupQuote')" onmouseleave="hidePopup('popupQuote')">
+                <i class="fas fa-quote-left icon"></i>
+            </span>
+        </div>
+
+        <!-- Popup-Boxen -->
+        <div id="popupHint" class="popup-box" onmouseenter="showPopup('popupHint')" onmouseleave="hidePopup('popupHint')">
+                                <p><b>Weitere Informationen zu Daten und Indikator</b><br><br>
+Der Indikator "Einkommen" basiert auf der Entgeltstatistik der Beschäftigungsstatistik der Bundesagentur für Arbeit. 
+Er zeigt die Median Bruttolöhne aller in Vollzeit sozialversicherungspflichtig Beschäftigten in Deutschland. 
+Nicht berücksichtigt sind Auszubildende, Selbständige und Beschäftigte im öffentlichen Dienst. 
+<br><br>
+Weitere Informationen finden Sie unter der <a href="https://statistik.arbeitsagentur.de/DE/Statischer-Content/Grundlagen/Methodik-Qualitaet/Methodische-Hinweise/BST-MethHinweise/Entgelt-meth-Hinweise" target="_blank"> Webseite der Bundesagentur für Arbeit</a>.</p>
+        </div>
+        <div id="popupQuote" class="popup-box" onmouseenter="showPopup('popupQuote')" onmouseleave="hidePopup('popupQuote')">
+            <p><b>Zitationshinweis</b><br><br>Statistik der Bundesagentur für Arbeit. Sozialversicherungspflichtig Vollzeitbeschäftigte der Kerngruppe mit Angaben zum Bruttomonatsentgelt nach Berufsgruppen/-gattungen der KldB 2010. 2023. Sonderauswertung.</p>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+const contracts = [231705, 233799, 235391, 237979, 239447, 240565, 239196, 241638, 237554, 237128];
+const dualContracts = [19591742, 19796201, 20048977, 20372912, 20707738, 21069446, 21440101, 21554942, 21452043, 21743380];
+Highcharts.chart('container', {
+	    chart: {
+        type: 'spline',
+        backgroundColor: '#f7f7f7'
+    },
+    title: {
+        text: ''
+    },
+    credits: {
+        enabled: false
+    },
+exporting: {
+        enabled: true,
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'downloadCSV',      // Download CSV file
+                    'downloadXLS',      // Download Excel file
+                    'separator',        // Separator
+                    'downloadPNG',      // Download PNG image
+                    'downloadPDF',      // Download PDF file
+                    'downloadSVG',      // Download SVG vector image
+                ]
+            }
+        }
+    },
+    xAxis: {
+         categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
+    },
+    yAxis: {
+	tickPositions: [1000,2000,3000,4000,5000,6000,7000],
+        title: {
+            text: ''
+        },
+labels: {
+            formatter: function() {
+                return Highcharts.numberFormat(this.value, 0, ',', '.') + " €";  // Format numbers with thousands separator
+            }
+        }
+    },
+tooltip: {
+    shared: true,
+    useHTML: true,
+    formatter: function() {
+	const contractsForYear = Highcharts.numberFormat(contracts[this.points[0].point.index], 0, ',', '.');
+	const dualContractsForYear = Highcharts.numberFormat(dualContracts[this.points[1].point.index], 0, ',', '.');
+        return `
+        <span style="font-size:10px;">Berufsgattung</span><br>
+        <b>Kraftfahrzeugtechnik - Fachkraft</b><br/><br>
+        Bruttoentgelt: <b>${Highcharts.numberFormat(this.points[0].y, 0, ',', '.')} €</b><br/>
+	<span style="font-size:10px;">(Median von <b>${contractsForYear}</b> Beschäftigten)</span><br><br>
+        Bruttoentgelt aller Berufe: <b>${Highcharts.numberFormat(this.points[1].y, 0, ',', '.')} €</b><br/>
+	<span style="font-size:10px;">(Median von <b>${dualContractsForYear}</b> Beschäftigten)</span><br><br>
+	
+	Jahr: <b>${this.key}<b><br/>`;
+    }
+},
+    series: [{
+        name: 'Kraftfahrzeugtechnik - Fachkraft',
+        data: [2581,2636,2689,2767,2810,2887,2975,3077,3077,3134]  // Beispielwerte, mit einem NaN als null
+    }, {
+        name: 'Alle Berufe',
+        data: [2876,2954,3024,3083,3133,3209,3304,3401,3427,3516],
+    dashStyle: 'Dash'  // Fluctuating around 12
+    }]
+});
+</script>
+
+<script>
+let hideTimeout;
+
+function showPopup(id) {
+    clearTimeout(hideTimeout); // Cancel any existing hide timeout
+    console.log("showPopup called for:", id); // Debugging line
+
+    // Determine which popup to show based on its class
+    const popup = document.getElementById(id);
+
+    if (popup) {
+        // Check if it's an icon popup or badge popup based on the class
+        if (popup.classList.contains('popup-box')) {
+            console.log("Icon popup triggered for:", id); // Debugging line
+            // Close other icon popups
+            const allIconPopups = document.querySelectorAll('.popup-box');
+            allIconPopups.forEach(iconPopup => {
+                if (iconPopup.id !== id) {
+                    iconPopup.classList.remove('visible');
+                }
+            });
+        } else if (popup.classList.contains('popup-box-badge')) {
+            console.log("Badge popup triggered for:", id); // Debugging line
+            // Close other badge popups
+            const allBadgePopups = document.querySelectorAll('.popup-box-badge');
+            allBadgePopups.forEach(badgePopup => {
+                if (badgePopup.id !== id) {
+                    badgePopup.classList.remove('visible');
+                }
+            });
+        }
+
+        // Show the requested popup
+        popup.classList.add('visible');
+    }
+}
+
+function hidePopup(id) {
+    console.log("hidePopup called for:", id); // Debugging line
+    hideTimeout = setTimeout(() => {
+        const popup = document.getElementById(id);
+        if (popup) {
+            popup.classList.remove('visible');
+            console.log("Popup hidden:", id); // Debugging line
+        }
+    }, 1000); // 1-second delay before hiding
+}
+
+
+</script>
+
+</div>
+</body>
+</html>
