@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Wer macht was?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Make sizing predictable */
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  padding: 12px;
+  font-family: "Inter", -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Optional: a max width wrapper so the chart doesn't get crazy wide on desktops */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Slim, responsive chart box */
+#container {
+  width: 100%;
+  /* Height follows width; keeps things smooth on resize */
+  aspect-ratio: 16 / 10;
+  /* Safety bounds so it’s usable everywhere */
+  min-height: 320px;
+  max-height: 85vh;
+
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* If you still want a “card” feel without layout penalty */
+#container {
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+/* Tweak Highcharts title wrapping on narrow screens */
+#container .highcharts-title {
+  white-space: normal !important;
+}
+  </style>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/treemap.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/themes/adaptive.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div id="container"></div>
+</div>
+  </div>
+
+<script>
+Highcharts.chart('container', {
+    credits: {
+        enabled: false   // 🔹 hides the "Highcharts" link
+    },
+    series: [{
+        type: 'treemap',
+        name: 'Bevölkerung',
+        backgroundColor: 'var(--highcharts-background, #fff)', // light/dark mode
+        allowTraversingTree: true, 
+        alternateStartingDirection: true, 
+        dataLabels: {
+            format: '{point.name}',
+            style: {
+                textOutline: 'none'
+            }
+        },
+        borderRadius: 1, 
+        borderColor: '#333333',   // frame color
+        borderWidth: 1,           // thickness
+        nodeSizeBy: 'leaf', 
+        levels: [{
+            level: 1,
+            layoutAlgorithm: 'squarified',    //options: 'sliceAndDice', 'stripes', 'squarified'
+            groupPadding: 3, 
+            dataLabels: {
+                headers: true,
+                enabled: true, 
+                style: {
+                    fontSize: '0.6em',
+                    fontWeight: 'normal',
+                    textTransform: 'uppercase',
+                    color: 'var(--highcharts-neutral-color-100, #000)'
+                }
+            },
+            borderRadius: 3,
+            borderWidth: 1,
+            colorByPoint: true
+
+        }, {
+            level: 2,
+            dataLabels: {
+                enabled: true,
+                inside: false  
+            }
+        }],
+        data: [
+  { id: 'A', name: 'Erwerbstätigkeit (Berufsbereiche)', color: '#93ACD1' }, // highlight
+  { name: 'Militär', parent: 'A', value: 177362 },
+  { name: 'Land-, Forst-, Tierwirtschaft, Gartenbau', parent: 'A', value: 940511 },
+  { name: 'Produktion, Fertigung', parent: 'A', value: 8169276 },
+  { name: 'Bau, Architektur, Vermessung, Gebäudetechnik', parent: 'A', value: 2595577 },
+  { name: 'Naturwissenschaften, Geografie, Informatik, Mathematik', parent: 'A', value: 2059161 },
+  { name: 'Verkehr, Logistik, Schutz und Sicherheit', parent: 'A', value: 5539100 },
+  { name: 'Gesundheit, Soziales, Lehre und Erziehung', parent: 'A', value: 5149063 },
+  { name: 'Unternehmensorganisation, Rechnungswesen, Recht, Verwaltung', parent: 'A', value: 8379247 },
+  { name: 'Kaufmännische Dienstleistungen, Warenhandel, Vertrieb, Tourismus', parent: 'A', value: 8758497 },
+  { name: 'Sprach-, Literatur-, Geistes-, Gesellschafts-, Wirtschaftswissenschaften, Kunst, Kultur, Gestaltung, Medien', parent: 'A', value: 1308985 },
+
+  { id: 'B', name: 'Rente/Pension', color: '#D3D3D3' }, // gray
+  { name: 'Rente/Pension', parent: 'B', value: 16429125 },
+
+  { id: 'C', name: 'Allgemeinbildung', color: '#d3d3d3' },
+  { name: 'Grundschule', parent: 'C', value: 3217593 },
+  { name: 'Sonstige Sekundarstufe', parent: 'C', value: 1527607 },
+  { name: 'Förderschule', parent: 'C', value: 157659 },
+  { name: 'Hauptschule', parent: 'C', value: 332616 },
+  { name: 'Realschule', parent: 'C', value: 1227058 },
+  { name: 'Gymnasium', parent: 'C', value: 3135302 },
+
+  { id: 'D', name: 'Nichterwerbsperson', color: '#d3d3d3' },
+  { name: 'Nichterwerbsperson', parent: 'D', value: 9287948 },
+
+  { id: 'E', name: 'Berufl. Bildung/Hochschule', color: '#D3D3D3'}, // highlight
+  { name: 'Berufsvorbereitungsjahr', parent: 'E', value: 92966, color: '#D3D3D3' },
+  { name: 'Schulische/Duale Ausbildung', parent: 'E', value: 1693797, color: '#90C34E'},
+  { name: 'Meister/Techniker Ausbildung', parent: 'E', value: 147432, color: '#90C34E' },
+  { name: 'Hochschule', parent: 'E', value: 3169478, color: '#D3D3D3'},
+
+  { id: 'F', name: 'Kindergarten/Tagesmutter', color: '#d3d3d3' },
+  { name: 'Kindergarten/Tagesmutter', parent: 'F', value: 3197695 },
+
+  { id: 'G', name: 'Erwerbslos', color: '#d3d3d3' },
+  { name: 'Erwerbslos', parent: 'G', value: 1513334 }
+]  }],
+    title: {
+        text: 'Was deckt das Berufe- und Kompetenzradar ab?',
+        align: 'left',
+    },
+    subtitle: {
+        text:
+            'Quelle: <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Zensus2022/_inhalt.html" target="_blank"> Statistisches Bundesamt, Mikrozensus 2022</a>, eigene Darstellung',
+        align: 'left'
+    },
+    tooltip: {
+        useHTML: true,  
+        pointFormat: 'In Deutschland waren 2022 <b>{point.value}</b> \
+            Menschen in: <b>{point.name}</b>.'
+    }
+});
+</script>
+</body>
+</html>

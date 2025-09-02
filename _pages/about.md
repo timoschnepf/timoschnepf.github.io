@@ -21,8 +21,7 @@ Hello! My name ist Timo and I work as a [research associate](https://www.bibb.de
 and Training (BIBB) in Bonn, Germany.
 I graduated with a Master of Science in Sociology and Social Research at the University Cologne.
 
-I'm an applied social scientist interested in data analysis, causal inference, data visualisation and 
-computational methods. 
+I'm an applied social scientist interested in data analysis, computational methods, causal inference and data visualisation. 
 I'm a PhD candidate at [TU Braunschweig](https://www.tu-braunschweig.de/sao) where I study [perceptions
 about occupational inequality](https://www.bibb.de/de/186108.php).
 
