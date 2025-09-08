@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Wer macht was?</title>
+  <title>Was umfasst BKR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     /* Make sizing predictable */
@@ -143,18 +143,22 @@ Highcharts.chart('container', {
   { name: 'Erwerbslos', parent: 'G', value: 1513334 }
 ]  }],
     title: {
-        text: 'Was deckt das Berufe- und Kompetenzradar ab?',
+        text: '',
         align: 'left',
     },
     subtitle: {
         text:
             'Quelle: <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Zensus2022/_inhalt.html" target="_blank"> Statistisches Bundesamt, Mikrozensus 2022</a>, eigene Darstellung',
-        align: 'left'
+        align: 'left',
+        verticalAlign: 'bottom',
     },
     tooltip: {
         useHTML: true,  
         pointFormat: 'In Deutschland waren 2022 <b>{point.value}</b> \
             Menschen in: <b>{point.name}</b>.'
+    },
+    exporting: {
+            enabled: false
     }
 });
 </script>
