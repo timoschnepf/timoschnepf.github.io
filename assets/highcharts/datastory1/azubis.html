@@ -5,182 +5,139 @@
   <title>Welche Ausbildungen sind stark besetzt?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-     /* Make sizing predictable */
-* { box-sizing: border-box; }
-
-html, body { height: 100%; }
-body {
-  margin: 0;
-  padding: 12px;
-  font-family: "Inter", -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-}
-
-/* Optional: a max width wrapper so the chart doesn't get crazy wide on desktops */
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Slim, responsive chart box */
-#container {
-  width: 100%;
-  /* Height follows width; keeps things smooth on resize */
-  aspect-ratio: 16 / 10;
-  /* Safety bounds so it’s usable everywhere */
-  min-height: 320px;
-  max-height: 85vh;
-
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-/* If you still want a “card” feel without layout penalty */
-#container {
-  background: #fff;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-}
-
-/* Tweak Highcharts title wrapping on narrow screens */
-#container .highcharts-title {
-  white-space: normal !important;
-}
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+    }
+    /* Full-bleed chart, no card */
+    #container {
+      width: 100%;
+      height: 100vh;   /* fill the whole page/iframe */
+      margin: 0;
+      border: 0;
+      overflow: hidden;
+    }
+    #container .highcharts-title { white-space: normal !important; }
   </style>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/treemap.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-<script src="https://code.highcharts.com/themes/adaptive.js"></script>
+  <script src="https://code.highcharts.com/12.4.0/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/treemap.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://code.highcharts.com/themes/adaptive.js"></script>
 </head>
 <body>
-<div class="wrap">
   <div id="container"></div>
-</div>
-  </div>
 
-<script>
-Highcharts.chart('container', {
-    credits: {
-        enabled: false   // 🔹 hides the "Highcharts" link
-    },
-    series: [{
-        type: 'treemap',
-        name: 'Meistbesetzte Ausbildungen',
-        backgroundColor: 'var(--highcharts-background, #fff)', // light/dark mode
-        allowTraversingTree: true, 
-        alternateStartingDirection: true, 
-        dataLabels: {
-            format: '{point.name}',
-            style: {
-                textOutline: 'none'
-            }
-        },
-        borderRadius: 1, 
-        borderColor: '#333333',   // frame color
-        borderWidth: 1,           // thickness
-        nodeSizeBy: 'leaf', 
-        levels: [{
-            level: 1,
-            layoutAlgorithm: 'squarified',    //options: 'sliceAndDice', 'stripes', 'squarified'
-            groupPadding: 3, 
-            dataLabels: {
-                headers: true,
-                enabled: true, 
-                style: {
-                    fontSize: '0.6em',
-                    fontWeight: 'normal',
-                    textTransform: 'uppercase',
-                    color: 'var(--highcharts-neutral-color-100, #000)'
-                }
-            },
-            borderRadius: 3,
-            borderWidth: 1,
-            colorByPoint: true
+  <script>
+  Highcharts.chart('container', {
+      credits: { enabled: false },
+      series: [{
+          type: 'treemap',
+          name: 'Meistbesetzte Ausbildungen',
+          backgroundColor: 'var(--highcharts-background, #fff)',
+          allowTraversingTree: true,
+          alternateStartingDirection: true,
+          dataLabels: { format: '{point.name}', style: { textOutline: 'none' } },
+          borderRadius: 1,
+          borderColor: '#333333',
+          borderWidth: 1,
+          nodeSizeBy: 'leaf',
+          levels: [{
+              level: 1,
+              layoutAlgorithm: 'squarified',
+              groupPadding: 3,
+              dataLabels: {
+                  headers: true,
+                  enabled: true,
+                  style: {
+                      fontSize: '0.6em',
+                      fontWeight: 'normal',
+                      textTransform: 'uppercase',
+                      color: 'var(--highcharts-neutral-color-100, #000)'
+                  }
+              },
+              borderRadius: 3,
+              borderWidth: 1,
+              colorByPoint: true
+          }, {
+              level: 2,
+              dataLabels: { enabled: true, inside: false }
+          }],
+          data: [
+            { id: 'A', name: 'Duale Ausbildung', color: '#90C34E' },
+            { name: 'Kraftfahrzeugmechatroniker/-in (IH/Hw/HwEx)', parent: 'A', value: 63195 },
+            { name: 'Kaufmann/Kauffrau für Büromanagement (IH/ÖD/HwEx)', parent: 'A', value: 57282 },
+            { name: 'Kaufmann/Kauffrau im Einzelhandel (IH/HwEx)', parent: 'A', value: 46935 },
+            { name: 'Medizinische/-r Fachangestellte/-r (FB)', parent: 'A', value: 44115 },
+            { name: 'Industriekaufmann/-kauffrau (IH/HwEx)', parent: 'A', value: 40527 },
+            { name: 'Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik (IH/Hw)', parent: 'A', value: 39390 },
+            { name: 'Verkäufer/-in (IH/HwEx)', parent: 'A', value: 36207 },
+            { name: 'Industriemechaniker/-in (IH/HwEx)', parent: 'A', value: 35988 },
+            { name: 'Zahnmedizinische/-r Fachangestellte/-r (FB)', parent: 'A', value: 30777 },
+            { name: 'Kaufmann/Kauffrau für Groß- und Außenhandelsmanagement (IH/HwEx)', parent: 'A', value: 28305 },
+            { name: 'Mechatroniker/-in (IH/HwEx)', parent: 'A', value: 26529 },
+            { name: 'Fachinformatiker/-in FR Systemintegration (VO ab 2020) (IH)', parent: 'A', value: 25581 },
+            { name: 'Fachkraft für Lagerlogistik (IH/HwEx)', parent: 'A', value: 23133 },
+            { name: 'Elektroniker/-in FR Energie- und Gebäudetechnik (VO ab 2021) (Hw)', parent: 'A', value: 22050 },
+            { name: 'Elektroniker/-in für Betriebstechnik (IH/HwEx)', parent: 'A', value: 21951 },
+            { name: 'Bankkaufmann/-kauffrau (ggf. mit Sparkassenkaufmann/-kauffrau) (IH/ÖD)', parent: 'A', value: 20919 },
+            { name: 'Tischler/-in (Hw)', parent: 'A', value: 18072 },
+            { name: 'Elektroniker/-in FR Energie- und Gebäudetechnik (VO bis 2021) (Hw)', parent: 'A', value: 18051 },
+            { name: 'Steuerfachangestellte/-r (FB)', parent: 'A', value: 17316 },
+            { name: 'Fachinformatiker/-in FR Anwendungsentwicklung (VO ab 2020) (IH)', parent: 'A', value: 16686 },
+            { name: 'Maler/-in und Lackierer/-in (Hw)', parent: 'A', value: 15522 },
+            { name: 'Zerspanungsmechaniker/-in (IH/HwEx)', parent: 'A', value: 14466 },
+            { name: 'Koch/Köchin (IH/HwEx)', parent: 'A', value: 14418 },
+            { name: 'Hotelfachmann/-fachfrau (IH/HwEx)', parent: 'A', value: 13995 },
+            { name: 'Friseur/-in (Hw)', parent: 'A', value: 13872 },
+            { name: 'Verwaltungsfachangestellte/-r FR Kommunalverwaltung (ÖD)', parent: 'A', value: 12486 },
+            { name: 'Kaufmann/Kauffrau für Spedition und Logistikdienstleistung (IH/HwEx)', parent: 'A', value: 12216 },
+            { name: 'Metallbauer/-in FR Konstruktionstechnik (Hw)', parent: 'A', value: 12111 },
+            { name: 'Automobilkaufmann/-kauffrau (IH/HwEx)', parent: 'A', value: 11940 },
+            { name: 'Gärtner/-in FR Garten- und Landschaftsbau (Lw)', parent: 'A', value: 10560 },
+            { name: 'Fachlagerist/-in (IH/HwEx)', parent: 'A', value: 10011 },
+            { name: 'Zimmerer/-in (IH/Hw)', parent: 'A', value: 9993 },
+            { name: 'Land- und Baumaschinenmechatroniker/-in (IH/Hw)', parent: 'A', value: 9645 },
+            { name: 'Landwirt/-in (Lw)', parent: 'A', value: 8730 },
+            { name: 'Maurer/-in (IH/Hw)', parent: 'A', value: 8688 },
+            { name: 'Dachdecker/-in (Hw)', parent: 'A', value: 8682 },
+            { name: 'Immobilienkaufmann/-kauffrau (IH/HwEx)', parent: 'A', value: 8328 },
+            { name: 'Kaufmann/Kauffrau für Versicherungen und Finanzen FR Versicherung (IH)', parent: 'A', value: 7485 },
+            { name: 'Elektroniker/-in für Automatisierungstechnik (IH/HwEx)', parent: 'A', value: 7404 },
 
-        }, {
-            level: 2,
-            dataLabels: {
-                enabled: true,
-                inside: false  
-            }
-        }],
-        data: [
-  { id: 'A', name: 'Duale Ausbildung', color: '#90C34E' },
+            { id: 'B', name: 'Schulische Ausbildung', color: '#6EC5E9' },
 
-  { name: 'Kraftfahrzeugmechatroniker/-in (IH/Hw/HwEx)', parent: 'A', value: 63195 },
-  { name: 'Kaufmann/Kauffrau für Büromanagement (IH/ÖD/HwEx)', parent: 'A', value: 57282 },
-  { name: 'Kaufmann/Kauffrau im Einzelhandel (IH/HwEx)', parent: 'A', value: 46935 },
-  { name: 'Medizinische/-r Fachangestellte/-r (FB)', parent: 'A', value: 44115 },
-  { name: 'Industriekaufmann/-kauffrau (IH/HwEx)', parent: 'A', value: 40527 },
-  { name: 'Anlagenmechaniker/-in für Sanitär-, Heizungs- und Klimatechnik (IH/Hw)', parent: 'A', value: 39390 },
-  { name: 'Verkäufer/-in (IH/HwEx)', parent: 'A', value: 36207 },
-  { name: 'Industriemechaniker/-in (IH/HwEx)', parent: 'A', value: 35988 },
-  { name: 'Zahnmedizinische/-r Fachangestellte/-r (FB)', parent: 'A', value: 30777 },
-  { name: 'Kaufmann/Kauffrau für Groß- und Außenhandelsmanagement (IH/HwEx)', parent: 'A', value: 28305 },
-  { name: 'Mechatroniker/-in (IH/HwEx)', parent: 'A', value: 26529 },
-  { name: 'Fachinformatiker/-in FR Systemintegration (VO ab 2020) (IH)', parent: 'A', value: 25581 },
-  { name: 'Fachkraft für Lagerlogistik (IH/HwEx)', parent: 'A', value: 23133 },
-  { name: 'Elektroniker/-in FR Energie- und Gebäudetechnik (VO ab 2021) (Hw)', parent: 'A', value: 22050 },
-  { name: 'Elektroniker/-in für Betriebstechnik (IH/HwEx)', parent: 'A', value: 21951 },
-  { name: 'Bankkaufmann/-kauffrau (ggf. mit Sparkassenkaufmann/-kauffrau) (IH/ÖD)', parent: 'A', value: 20919 },
-  { name: 'Tischler/-in (Hw)', parent: 'A', value: 18072 },
-  { name: 'Elektroniker/-in FR Energie- und Gebäudetechnik (VO bis 2021) (Hw)', parent: 'A', value: 18051 },
-  { name: 'Steuerfachangestellte/-r (FB)', parent: 'A', value: 17316 },
-  { name: 'Fachinformatiker/-in FR Anwendungsentwicklung (VO ab 2020) (IH)', parent: 'A', value: 16686 },
-  { name: 'Maler/-in und Lackierer/-in (Hw)', parent: 'A', value: 15522 },
-  { name: 'Zerspanungsmechaniker/-in (IH/HwEx)', parent: 'A', value: 14466 },
-  { name: 'Koch/Köchin (IH/HwEx)', parent: 'A', value: 14418 },
-  { name: 'Hotelfachmann/-fachfrau (IH/HwEx)', parent: 'A', value: 13995 },
-  { name: 'Friseur/-in (Hw)', parent: 'A', value: 13872 },
-  { name: 'Verwaltungsfachangestellte/-r FR Kommunalverwaltung (ÖD)', parent: 'A', value: 12486 },
-  { name: 'Kaufmann/Kauffrau für Spedition und Logistikdienstleistung (IH/HwEx)', parent: 'A', value: 12216 },
-  { name: 'Metallbauer/-in FR Konstruktionstechnik (Hw)', parent: 'A', value: 12111 },
-  { name: 'Automobilkaufmann/-kauffrau (IH/HwEx)', parent: 'A', value: 11940 },
-  { name: 'Gärtner/-in FR Garten- und Landschaftsbau (Lw)', parent: 'A', value: 10560 },
-  { name: 'Fachlagerist/-in (IH/HwEx)', parent: 'A', value: 10011 },
-  { name: 'Zimmerer/-in (IH/Hw)', parent: 'A', value: 9993 },
-  { name: 'Land- und Baumaschinenmechatroniker/-in (IH/Hw)', parent: 'A', value: 9645 },
-  { name: 'Landwirt/-in (Lw)', parent: 'A', value: 8730 },
-  { name: 'Maurer/-in (IH/Hw)', parent: 'A', value: 8688 },
-  { name: 'Dachdecker/-in (Hw)', parent: 'A', value: 8682 },
-  { name: 'Immobilienkaufmann/-kauffrau (IH/HwEx)', parent: 'A', value: 8328 },
-  { name: 'Kaufmann/Kauffrau für Versicherungen und Finanzen FR Versicherung (IH)', parent: 'A', value: 7485 },
-  { name: 'Elektroniker/-in für Automatisierungstechnik (IH/HwEx)', parent: 'A', value: 7404 },
-
-  { id: 'B', name: 'Schulische Ausbildung', color: '#6EC5E9' },
-
-  { name: 'Erzieher/in', parent: 'B', value: 104449 },
-  { name: 'Sozialassistent/in', parent: 'B', value: 35698 },
-  { name: 'Physiotherapeut/in', parent: 'B', value: 25111 },
-  { name: 'Sozialpädagogische/r Assistent/in / Kinderpfleger/in', parent: 'B', value: 20761 },
-  { name: 'Heilerziehungspfleger/in', parent: 'B', value: 15632 },
-  { name: 'Ergotherapeut/in', parent: 'B', value: 12545 },
-  { name: 'Notfallsanitäter/in', parent: 'B', value: 9427 },
-  { name: 'Altenpflegehelfer/in', parent: 'B', value: 8024 },
-  { name: 'Logopäde/Logopädin', parent: 'B', value: 3922 },
-  { name: 'Pflegeassistent/in', parent: 'B', value: 2840 },
-  { name: 'Fachkraft - Pflegeassistenz', parent: 'B', value: 2793 },
-  { name: 'Erzieher/in - Jugend- und Heimerziehung', parent: 'B', value: 1821 },
-  { name: 'Pflegefachmann/-frau', parent: 'B', value: 143091 }
-]  }],
-    title: {
-        text: '',
-        align: 'left'
-    },
-    subtitle: {
-        text:
-            'Quelle: <a href="https://www.bibb.de/dienst/dazubi/de/1867.php" target="_blank"> BIBB DAZUBI und Statistisches Bundesamt 2022</a>, eigene Darstellung.',
-        align: 'left',
-        verticalAlign: 'bottom',
-    },
-    tooltip: {
-        useHTML: true,  
-        pointFormat: 'In Deutschland absolvierten 2022 <b>{point.value}</b> <br> \
-            Menschen eine Ausbildung zum/zur <b>{point.name}</b>.'
-    },
-    exporting: {
-         enabled: false
-}
-});
-</script>
+            { name: 'Erzieher/in', parent: 'B', value: 104449 },
+            { name: 'Sozialassistent/in', parent: 'B', value: 35698 },
+            { name: 'Physiotherapeut/in', parent: 'B', value: 25111 },
+            { name: 'Sozialpädagogische/r Assistent/in / Kinderpfleger/in', parent: 'B', value: 20761 },
+            { name: 'Heilerziehungspfleger/in', parent: 'B', value: 15632 },
+            { name: 'Ergotherapeut/in', parent: 'B', value: 12545 },
+            { name: 'Notfallsanitäter/in', parent: 'B', value: 9427 },
+            { name: 'Altenpflegehelfer/in', parent: 'B', value: 8024 },
+            { name: 'Logopäde/Logopädin', parent: 'B', value: 3922 },
+            { name: 'Pflegeassistent/in', parent: 'B', value: 2840 },
+            { name: 'Fachkraft - Pflegeassistenz', parent: 'B', value: 2793 },
+            { name: 'Erzieher/in - Jugend- und Heimerziehung', parent: 'B', value: 1821 },
+            { name: 'Pflegefachmann/-frau', parent: 'B', value: 143091 }
+          ]
+      }],
+      title: { text: '', align: 'left' },
+      subtitle: {
+          text: 'Quelle: <a href="https://www.bibb.de/dienst/dazubi/de/1867.php" target="_blank"> BIBB DAZUBI und Statistisches Bundesamt 2022</a>, eigene Darstellung.',
+          align: 'left',
+          verticalAlign: 'bottom'
+      },
+      tooltip: {
+          useHTML: true,
+          pointFormat: 'In Deutschland absolvierten 2022 <b>{point.value}</b> <br> Menschen eine Ausbildung zum/zur <b>{point.name}</b>.'
+      },
+      exporting: { enabled: false }
+  });
+  </script>
 </body>
 </html>

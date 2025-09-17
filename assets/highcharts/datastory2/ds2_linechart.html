@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Anfänger:innen vs. Stellenanzeigen – Line</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      padding: 30px; /* no outer padding for tight iframe fit */
+      font-family: "Inter", -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    .wrap {
+      width: 100%;
+      height: 100%;
+    }
+    /* Fill the iframe exactly; no extra borders */
+    #container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border: 0;
+    }
+  </style>
+<script src="https://code.highcharts.com/12.4.0/highcharts.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div id="container"></div>
+  </div>
+
+  <script>
+    // Data (nulls allowed, Highcharts will gap lines accordingly)
+    const jahre = [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+
+    const anfaenger = [716040,698115,698420,707625,712550,723890,724610,655265,658080,null,null,null];
+    const stellenanzeigen = [null,null,null,296432,225699,259531,386976,369666,465177,489757,677661,600596];
+
+    Highcharts.chart('container', {
+      credits: { enabled: false },
+      exporting: { enabled: false },
+      chart: {
+        type: 'line',
+        backgroundColor: 'transparent',
+        spacing: [5, 0, 0, 0]
+      },
+      title: { text: null },
+      legend: { enabled: false },
+
+      xAxis: {
+        categories: jahre,
+        tickLength: 4,
+        lineWidth: 1,
+        lineColor: '#000',
+        tickColor: '#000',
+        labels: { style: { fontSize: '12px' } }
+      },
+
+      yAxis: [{
+        title: { text: 'Anfänger:innen', style: { color: '#93ACD1'} },
+        min: 0,
+        max: 800000,
+        tickAmount: 6,
+        gridLineWidth: 1,
+        gridLineColor: 'rgba(0,0,0,0.08)',
+        lineWidth: 1,
+        lineColor: '#000',
+        labels: {
+          format: '{value:,.0f}',
+          style: { fontSize: '12px', color: '#93ACD1'}
+        }
+      }, {
+        title: { text: 'Stellenanzeigen', style: { color: '#90C34E' }},
+        min: 0,
+        max: 800000,
+        tickAmount: 6,
+        gridLineWidth: 0,
+        lineWidth: 1,
+        lineColor: '#000',
+        labels: {
+          format: '{value:,.0f}',
+          style: { fontSize: '12px', color: '#90C34E' }
+        },
+        opposite: true
+      }],
+
+      tooltip: {
+        shared: false,
+        useHTML: true,
+        formatter: function () {
+          const Jahr = this.point.category;
+          const val = Highcharts.numberFormat(this.y, 0, ',', '.');
+          const label = this.series.name;
+          return `<div style="padding:6px 8px">
+                    <div><b>Jahr:</b> ${Jahr}</div>
+                    <div><b>${label}:</b> ${val}</div>
+                  </div>`;
+        }
+      },
+
+      plotOptions: {
+        series: {
+          marker: {
+            enabled: true,
+            radius: 4
+          },
+          lineWidth: 3,
+          states: { hover: { lineWidthPlus: 0 } }
+        }
+      },
+
+      series: [{
+        name: 'Anfänger:innen',
+        data: anfaenger,
+        color: '#93ACD1',
+        yAxis: 0,
+        marker: { symbol: 'circle' }
+      }, {
+        name: 'Stellenanzeigen',
+        data: stellenanzeigen,
+        color: '#90C34E',
+        yAxis: 1,
+        lineWidth: 2,
+        marker: { symbol: 'diamond', radius: 4 }
+      }]
+    });
+  </script>
+</body>
+</html>
