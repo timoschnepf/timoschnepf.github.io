@@ -80,51 +80,45 @@ Highcharts.chart('container', {
             }
         }],
         data: [
-  { id: 'A', name: 'Erwerbstätigkeit (Berufsbereiche)', color: '#93ACD1' }, // highlight
-  { name: 'Militär', parent: 'A', value: 177362 },
-  { name: 'Land-, Forst-, Tierwirtschaft, Gartenbau', parent: 'A', value: 940511 },
-  { name: 'Produktion, Fertigung', parent: 'A', value: 8169276 },
-  { name: 'Bau, Architektur, Vermessung, Gebäudetechnik', parent: 'A', value: 2595577 },
-  { name: 'Naturwissenschaften, Geografie, Informatik, Mathematik', parent: 'A', value: 2059161 },
-  { name: 'Verkehr, Logistik, Schutz und Sicherheit', parent: 'A', value: 5539100 },
-  { name: 'Gesundheit, Soziales, Lehre und Erziehung', parent: 'A', value: 5149063 },
-  { name: 'Unternehmensorganisation, Rechnungswesen, Recht, Verwaltung', parent: 'A', value: 8379247 },
-  { name: 'Kaufmännische Dienstleistungen, Warenhandel, Vertrieb, Tourismus', parent: 'A', value: 8758497 },
-  { name: 'Sprach-, Literatur-, Geistes-, Gesellschafts-, Wirtschaftswissenschaften, Kunst, Kultur, Gestaltung, Medien', parent: 'A', value: 1308985 },
+  { id: 'A', name: 'Erwerbstätigkeit'}, // highlight
+  { name: 'Helferberufe', parent: 'A', value: 4315000, color: '#d3d3d3'  },
+  { name: 'Fachkräfte- bzw. Ausbildungsberufe', parent: 'A', value:  22770000, color: '#93ACD1'},
+  { name: 'Fort- und Weiterbildungsberufe', parent: 'A', value: 6497000, color: '#93ACD1'},
+  { name: '(Fach-)Hochschulberufe', parent: 'A', value: 8771000, color: '#d3d3d3'},
 
   { id: 'B', name: 'Rente/Pension', color: '#D3D3D3' }, // gray
-  { name: 'Rente/Pension', parent: 'B', value: 16429125 },
+  { name: 'Rente/Pension', parent: 'B', value: 16429100 },
 
   { id: 'C', name: 'Allgemeinbildung', color: '#d3d3d3' },
-  { name: 'Grundschule', parent: 'C', value: 3217593 },
-  { name: 'Sonstige Sekundarstufe', parent: 'C', value: 1527607 },
-  { name: 'Förderschule', parent: 'C', value: 157659 },
-  { name: 'Hauptschule', parent: 'C', value: 332616 },
-  { name: 'Realschule', parent: 'C', value: 1227058 },
-  { name: 'Gymnasium', parent: 'C', value: 3135302 },
+  { name: 'Grundschule', parent: 'C', value: 3217600 },
+  { name: 'Sonstige Sekundarstufe', parent: 'C', value: 1527600 },
+  { name: 'Förderschule', parent: 'C', value: 157700 },
+  { name: 'Hauptschule', parent: 'C', value: 332600 },
+  { name: 'Realschule', parent: 'C', value: 1227100 },
+  { name: 'Gymnasium', parent: 'C', value: 3135300 },
 
   { id: 'D', name: 'Nichterwerbsperson', color: '#d3d3d3' },
-  { name: 'Nichterwerbsperson', parent: 'D', value: 9287948 },
+  { name: 'Nichterwerbsperson', parent: 'D', value: 9287900 },
 
   { id: 'E', name: 'Berufl. Bildung/Hochschule', color: '#D3D3D3'}, // highlight
-  { name: 'Berufsvorbereitungsjahr', parent: 'E', value: 92966, color: '#D3D3D3' },
-  { name: 'Schulische/Duale Ausbildung', parent: 'E', value: 1693797, color: '#90C34E'},
-  { name: 'Meister/Techniker Ausbildung', parent: 'E', value: 147432, color: '#90C34E' },
-  { name: 'Hochschule', parent: 'E', value: 3169478, color: '#D3D3D3'},
+  { name: 'Berufsvorbereitungsjahr', parent: 'E', value: 92900, color: '#90C34E'},
+  { name: 'Schulische/Duale Ausbildung', parent: 'E', value: 1693800, color: '#90C34E'},
+  { name: 'Meister/Techniker Ausbildung', parent: 'E', value: 147400, color: '#90C34E' },
+  { name: 'Hochschule', parent: 'E', value: 3169500, color: '#D3D3D3'},
 
   { id: 'F', name: 'Kindergarten/Tagesmutter', color: '#d3d3d3' },
-  { name: 'Kindergarten/Tagesmutter', parent: 'F', value: 3197695 },
+  { name: 'Kindergarten/Tagesmutter', parent: 'F', value: 3197700 },
 
   { id: 'G', name: 'Erwerbslos', color: '#d3d3d3' },
-  { name: 'Erwerbslos', parent: 'G', value: 1513334 }
-]  }],
+  { name: 'Erwerbslos', parent: 'G', value: 1513300 }
+] }],
     title: {
         text: '',
         align: 'left',
     },
     subtitle: {
         text:
-            'Quelle: <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Zensus2022/_inhalt.html" target="_blank"> Statistisches Bundesamt, Mikrozensus 2022</a>, eigene Darstellung',
+            'Grafik 1. Quelle: <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Zensus2022/_inhalt.html" target="_blank"> Statistisches Bundesamt, Mikrozensus 2022</a>, eigene Darstellung',
         align: 'left',
         verticalAlign: 'bottom',
     },
