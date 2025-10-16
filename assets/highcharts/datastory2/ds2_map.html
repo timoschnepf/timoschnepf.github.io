@@ -39,6 +39,8 @@
       const vmax = finite.length ? Math.max(...finite) : 1;
 
       Highcharts.mapChart('container', {
+        credits: { enabled: false },
+        exporting: { enabled: false },
         chart: {
           map: geojson,
           mapView: {
