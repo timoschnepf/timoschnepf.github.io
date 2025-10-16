@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>Choropleth: mean_share_ratio nach Region</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Load proj4 BEFORE Highcharts (safe order) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.6/proj4.js"></script>
+
+<!-- Highcharts Maps -->
+<script src="https://code.highcharts.com/maps/12.4.0/highmaps.js"></script>
+<script src="https://code.highcharts.com/12.4.0/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #container { width: 100%; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+<script>
+  fetch('./germany_regions.geojson')
+    .then(r => r.json())
+    .then(geojson => {
+      const data = geojson.features.map(f => ({
+        index: String(f.properties.index),
+        region: String(
+          f.properties.region ??
+          [f.properties.GEN, f.properties.BEZ].filter(Boolean).join(' - ')
+        ),
+        value: f.properties.mean_share_ratio == null ? null : Number(f.properties.mean_share_ratio)
+      }));
+
+      const finite = data.map(d => d.value).filter(v => Number.isFinite(v));
+      const vmin = finite.length ? Math.min(...finite) : 0;
+      const vmax = finite.length ? Math.max(...finite) : 1;
+
+      Highcharts.mapChart('container', {
+        chart: {
+          map: geojson,
+          mapView: {
+            // Use built-in projection (note exact case)
+            projection: {
+              name: 'LambertConformalConic',
+              parallels: [47, 55],   // good for DE
+              rotation: [-10, 0]     // center over ~10°E
+            }
+          },
+          panning: false,
+          pinchType: ''
+        },
+
+        title: { text: ' ' },
+        mapNavigation: { enabled: false },
+
+        colorAxis: {
+          min: vmin,
+          max: vmax,
+          nullColor: '#eeeeee',
+          stops: [
+            [0.0, '#f7fbff'],
+            [0.5, '#6baed6'],
+            [1.0, '#08306b']
+          ]
+        },
+
+        legend: { title: { text: 'Verhältnis Online vs. gemeldete Stellen' } },
+
+        tooltip: {
+          pointFormat:
+            '<b>{point.region}</b><br/>' +
+            '<b>Verhältnis Online vs. gemeldete Stellen:</b> {point.value:.2f}'
+        },
+
+        series: [{
+          type: 'map',
+          name: 'Regionen',
+          mapData: geojson,
+          data,
+          joinBy: ['index', 'index'],
+          borderColor: '#ffffff',
+          borderWidth: 0.5,
+          states: { hover: { brightness: 0.2 } },
+          dataLabels: { enabled: false }
+        }]
+      });
+    });
+</script>
+</body>
+</html>
