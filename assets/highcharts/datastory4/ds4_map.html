@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>Mikrotechnologen Azubis 2023 nach Bundesland</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Load proj4 BEFORE Highcharts (safe order) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.6/proj4.js"></script>
+
+  <!-- Highcharts Maps (version-locked like your example) -->
+  <script src="https://code.highcharts.com/maps/12.4.0/highmaps.js"></script>
+  <script src="https://code.highcharts.com/12.4.0/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+  <!-- Germany geometry at Bundesland level (GeoJSON JS bundle) -->
+  <script src="https://code.highcharts.com/mapdata/countries/de/de-all.js"></script>
+
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #container { width: 100%; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+<script>
+  // --- Inline data (your values) mapped to Bundesländer ---
+  // Keys follow Highcharts' hc-key for DE states (e.g., "de-bw", "de-by", ...)
+  const data = [
+    { code: 'de-bw', name: 'Baden-Württemberg', value: 60 },
+    { code: 'de-by', name: 'Bayern', value: 54 },
+    { code: 'de-be', name: 'Berlin', value: 45 },
+    { code: 'de-bb', name: 'Brandenburg', value: 9 },
+    { code: 'de-hb', name: 'Bremen', value: 3 },
+    { code: 'de-hh', name: 'Hamburg', value: 0 },
+    { code: 'de-he', name: 'Hessen', value: 6 },
+    { code: 'de-mv', name: 'Mecklenburg-Vorpommern', value: 0 },
+    { code: 'de-ni', name: 'Niedersachsen', value: 9 },
+    { code: 'de-nw', name: 'Nordrhein-Westfalen', value: 12 },
+    { code: 'de-rp', name: 'Rheinland-Pfalz', value: 0 },
+    { code: 'de-sl', name: 'Saarland', value: 0 },
+    { code: 'de-sn', name: 'Sachsen', value: 162 },
+    { code: 'de-st', name: 'Sachsen-Anhalt', value: 3 },
+    { code: 'de-sh', name: 'Schleswig-Holstein', value: 21 },
+    { code: 'de-th', name: 'Thüringen', value: 36 }
+  ];
+
+  // Compute color axis limits
+  const finite = data.map(d => d.value).filter(v => Number.isFinite(v));
+  const vmin = finite.length ? Math.min(...finite) : 0;
+  const vmax = finite.length ? Math.max(...finite) : 1;
+
+  Highcharts.mapChart('container', {
+    credits: { enabled: false },
+    exporting: { enabled: false },
+
+    chart: {
+      // Use the string key exposed by the included de-all.js file
+      map: 'countries/de/de-all',
+      mapView: {
+        // Same style: built-in Lambert Conformal Conic
+        projection: {
+          name: 'LambertConformalConic',
+          parallels: [47, 55],
+          rotation: [-10, 0]
+        }
+      },
+      panning: false,
+      pinchType: ''
+    },
+
+    title: { text: ' ' },
+    mapNavigation: { enabled: false },
+
+    colorAxis: {
+      min: vmin,
+      max: vmax + (vmin === vmax ? 1 : 0), // guard against flat scales
+      nullColor: '#eeeeee',
+      stops: [
+        [0.0, '#f7fbff'],
+        [0.5, '#6baed6'],
+        [1.0, '#08306b']
+      ]
+    },
+
+    legend: { enabled: false },
+
+    tooltip: {
+      headerFormat: '',
+      pointFormat:
+        '<b>{point.name}</b><br/>' +
+        '<b>Auszubildende:</b> {point.value}'
+    },
+
+    caption: {
+  text:'Datenquelle: <a href="https://www.bibb.de/dienst/dazubi/dazubi/datasheet/download/30-26322010.pdf" ' +
+    'target="_blank" style="color:#0066cc; text-decoration:none;">' +
+    'BIBB DAZUBI</a>, Auszubildendenzahlen Mikrotechnologe/-technologin 2023.',
+  align: 'center',
+  verticalAlign: 'bottom',
+  style: {
+    fontSize: '12px',
+    color: '#555'
+  }
+},
+
+    series: [{
+      type: 'map',
+      name: 'Bundesländer',
+      data,
+      joinBy: ['hc-key', 'code'],
+      borderColor: '#000000',   // 🟩 change this
+      borderWidth: 1,           // 🟩 and this
+      states: { hover: { brightness: 0.2 } },
+      dataLabels: { enabled: true }
+    }]
+  });
+</script>
+</body>
+</html>
