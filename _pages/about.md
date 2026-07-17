@@ -25,5 +25,4 @@ I'm an applied social scientist interested in data analysis, computational metho
 I'm a PhD candidate at [TU Braunschweig](https://www.tu-braunschweig.de/sao) where I study [perceptions
 about occupational inequality](https://www.bibb.de/de/186108.php).
 
-At BIBB, I'm currently leading the development of a new data portal called the [Occupations and Skills Radar](https://www.bibb.de/de/170512.php).
-The BMBF-funded project aims to provide an unified database and research tool for the user-friendly study of occupations and skills.
+At BIBB, I developed the data portal [Occupations and Skills Radar](https://www.bibb.de/de/170512.php). Currently, my team works on expanding this project with deepening analysis of skills and interoperability with international classification systems such as ESCO and ISCO.

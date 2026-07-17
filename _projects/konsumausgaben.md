@@ -8,7 +8,7 @@ importance: 3
 category: work
 bibliography: projects.bib
 toc:
-  sidebar: left
+  sidebar: false
 ---
 
 <style>
@@ -33,12 +33,8 @@ gefördert hat.
 </strong>
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/konsumausgaben_einkommensgruppe.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+  <iframe src="{{ 'assets/highcharts/konsumausgaben_einkommensgruppe.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
 </div>
-<div class="caption">
-  <a style="font-size: 16px;" href="http://www.timoschnepf.de/konsumausgaben_einkommensgruppe/">Vollbild hier entlang</a>
-</div>
-<div style="background-color: rgb(240,235,255);">
 
 Zum Dashboard im Vollbild geht's <a style="font-size: 16px;" href="http://www.timoschnepf.de/highcharts_konsumausgaben_chart/">hier entlang</a>.
 <br><br>

@@ -1,1 +1,207 @@
-body{font-family:Arial,sans-serif;margin:0;padding:0}.rounded-box{border-radius:30px;background-color:#f7f7f7}.dropdown-container{margin-top:10px}h1::before{content:"";width:15px;height:15px;border-radius:50%;background-color:#299e9e;display:inline-block;margin-right:10px}.ausbildung::before{background-color:#299e9e}.struktur::before{background-color:#bd3030}.atraktivitaet::before{background-color:#77a93a}.kompetenzen::before{background-color:#633a97}.container{display:flex;flex-direction:row;width:100%}.iframe-section{width:70%;padding:10px}.text-section p{margin:0}.text-section{width:30%;padding:10px;display:flex;flex-direction:column;justify-content:space-between;position:relative}.description-box{border:1px solid #ddd;padding:15px;background-color:#f9f9f9;border-radius:10px;font-size:14px;color:#555;box-shadow:0 4px 8px rgba(0,0,0,0.1);line-height:1.6;width:auto;max-width:400px}.icons{display:flex;gap:15px;margin-top:20px;justify-content:flex-end;position:absolute;bottom:10px;right:10px}.icon-circle{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;background-color:#007bff;color:white;font-size:20px;cursor:pointer;position:relative;background-color:#003571}.icon-circle .fa-quote-left{font-size:24px}.popup-box{display:none;position:absolute;bottom:60px;right:15px;background-color:white;padding:20px;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.1);max-width:1400px;min-width:700px;z-index:10}.popup-box p{font-size:14px;color:#666;margin:0}h1{display:inline;margin:0;font-size:1.5em;vertical-align:middle}.badge{background-color:#003571;color:white;border-radius:50%;padding:.3em .6em;font-size:1em;cursor:pointer;display:inline-block;margin-left:10px;vertical-align:middle}.popup-box-badge{display:none;position:absolute;background-color:white;color:#666;padding:12px;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1);font-size:14px;z-index:100;width:220px;top:calc(100%+10px);right:0;transform:translate(100px,0)}.popup-box-badge.visible{display:block}.popup-box-badge p{font-size:14px;color:#666;margin:0}.popup-box,.popup-box-badge{display:none}.popup-box.visible,.popup-box-badge.visible{display:block!important}.popup-box-badge p{font-size:14px;color:#666;margin:0}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.rounded-box {
+    border-radius: 30px;
+    background-color: #f7f7f7;
+}
+
+.dropdown-container {
+    margin-top: 10px; /* Abstand zwischen dem Titel und dem Dropdown-Menü */
+}
+
+h1::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #299E9E;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Spezifische Farben für die verschiedenen Gruppen */
+.ausbildung::before {
+    background-color: #299E9E; /* Farbe für Gruppe 1 */
+}
+
+.struktur::before {
+    background-color: #BD3030; /* Farbe für Gruppe 2 */
+}
+
+.atraktivitaet::before {
+    background-color: #77A93A; /* Farbe für Gruppe 3 */
+}
+
+.kompetenzen::before {
+    background-color: #633A97; /* Farbe für Gruppe 4 */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+.iframe-section {
+    width: 70%;
+    padding: 10px;
+}
+
+
+.text-section p {
+    margin: 0;
+}
+
+/* Container für die Textbox und Icons */
+.text-section {
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.description-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #555;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    width: auto;                      
+    max-width: 400px;
+}
+
+
+/* Icons-Container */
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-end; /* Rechts ausrichten */
+    position: absolute;
+    bottom: 10px; /* Abstand vom unteren Rand */
+    right: 10px; /* Abstand vom rechten Rand */
+}
+
+
+/* Styling für die blauen Kreise um die Icons */
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #007bff; /* Blau für den Kreis */
+    color: white; /* Weißes Icon im Kreis */
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    background-color: #003571;
+}
+
+/* Größerer Font-Size für das Zitat-Icon */
+.icon-circle .fa-quote-left {
+    font-size: 24px;
+}
+
+/* Popup-Box Styling */
+.popup-box {
+    display: none;
+    position: absolute;
+    bottom: 60px; /* Position relativ zu den Icons */
+    right: 15px;
+    background-color: white;
+    padding: 20px; /* Mehr Padding für mehr Innenabstand */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1400px; /* Breitere Box */
+    min-width: 700px; /* Breitere Box */
+    z-index: 10;
+}
+
+.popup-box p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Style for the badge */
+/* Ensure the <h1> and badge align in a row */
+h1 {
+    display: inline; /* Keep h1 inline with the badge */
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Adjust font size as needed */
+    vertical-align: middle; /* Align h1 with the badge */
+}
+
+
+
+/* Style for the badge */
+.badge {
+    background-color: #003571; /* Vorher #003571, #D09520 */
+    color: white;
+    border-radius: 50%;
+    padding: 0.3em 0.6em;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px; /* Space between h1 and badge */
+    vertical-align: middle; /* Aligns badge with h1 text */
+}
+
+/* Style for the badge popup box */
+.popup-box-badge {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: #666;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 100;
+    width: 220px; /* Adjust width as necessary */
+
+    /* Positioning below and slightly to the right of the badge */
+    top: calc(100% + 10px); /* Places the popup 10px below the badge */
+    right: 0; /* Aligns with the right edge of the badge */
+    transform: translate(100px, 0); /* Adds a slight shift to the right (5px) */
+}
+
+
+
+/* Show the popup when visible */
+.popup-box-badge.visible {
+    display: block;
+}
+
+.popup-box-badge p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+.popup-box, .popup-box-badge {
+    display: none;
+}
+
+/* Show popups when they have the 'visible' class */
+.popup-box.visible, .popup-box-badge.visible {
+    display: block !important;
+}
+
+
+.popup-box-badge p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
