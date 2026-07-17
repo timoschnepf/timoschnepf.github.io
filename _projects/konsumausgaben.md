@@ -32,7 +32,15 @@ gefördert hat.
 <br><br>
 </strong>
 
-Zum Dashboard geht's <a style="font-size: 16px;" href="http://www.timoschnepf.de/highcharts_konsumausgaben_chart/">hier entlang</a>.
+<div class="l-page">
+  <iframe src="{{ '/assets/plotly/konsumausgaben_einkommensgruppe.html' | relative_url }}" scrolling='no' frameborder='0' height="400px" width="100%"></iframe>
+</div>
+<div class="caption">
+  <a style="font-size: 16px;" href="http://www.timoschnepf.de/konsumausgaben_einkommensgruppe/">Vollbild hier entlang</a>
+</div>
+<div style="background-color: rgb(240,235,255);">
+
+Zum Dashboard im Vollbild geht's <a style="font-size: 16px;" href="http://www.timoschnepf.de/highcharts_konsumausgaben_chart/">hier entlang</a>.
 <br><br>
 
 Für weitere Einblicke empfehle ich das Kapitel 5.2 im Sozialbericht der Bundeszentrale für politische Bildung.
